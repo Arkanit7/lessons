@@ -1,0 +1,102 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li,
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background-image: linear-gradient(45deg, #02001f, #1f1b4e);
+  font-family: "Gilroy ExtraBold", system-ui, sans-serif;
+}
+
+.wrapper {
+  overflow-x: hidden;
+  width: 100dvw;
+  height: 100dvh;
+  display: grid;
+  place-items: center;
+}
+
+.text-hover {
+  --line-height: 1.3;
+  --transition: 0.3s;
+  --clr-text: hsl(340, 94%, 58%);
+  --clr-hover: hsl(0, 0%, 100%);
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--clr-text);
+  line-height: var(--line-height);
+}
+.text-hover > * + * {
+  padding-top: 0.2em;
+}
+.text-hover__link {
+  position: relative;
+  display: inline-block;
+  transition: var(--transition);
+}
+.text-hover__link:hover {
+  color: var(--clr-hover);
+}
+.text-hover__link:hover::before {
+  transform: skew(12deg) translateX(0.025em);
+}
+.text-hover__link:hover span {
+  transform: skew(12deg) translateX(-0.025em);
+}
+.text-hover__link:hover::after {
+  height: 0.05em;
+  width: 120%;
+}
+.text-hover__link[disabled] {
+  color: gray;
+  pointer-events: none;
+}
+.text-hover__link::before {
+  transition: inherit;
+  content: attr(data-text);
+  overflow: hidden;
+  display: block;
+  height: calc(var(--line-height) * 0.5em);
+}
+.text-hover__link::after {
+  transition: inherit;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 0;
+  width: 0;
+  border-radius: 9em;
+  background-color: var(--clr-text);
+}
+.text-hover__link span {
+  transition: inherit;
+  height: calc(var(--line-height) * 0.5em);
+  overflow: hidden;
+  display: grid;
+  align-content: end;
+}
