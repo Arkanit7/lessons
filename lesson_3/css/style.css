@@ -1,0 +1,58 @@
+/* Reset styles */
+@import "reset.css";
+
+/* Utility classes */
+
+/* .container {
+} */
+
+/* Main styles */
+
+/* Header */
+
+.header .header__brand {
+  color: royalblue;
+}
+
+.header li {
+  color: seagreen;
+}
+
+.header .nav__list li > .nav__sub-list li {
+  color: orchid;
+}
+
+.header .nav .nav__list .nav__item.nav__item_active ~ * {
+  color: red;
+}
+
+/* Blog */
+
+.blog :is(h1, h3, h5) {
+  color: goldenrod;
+}
+
+.blog :is(h2, h4, h6) {
+  color: blue;
+}
+
+.blog p {
+  color: mediumseagreen;
+}
+
+.blog p + p {
+  color: magenta;
+}
+
+.blog li {
+  color: darkslateblue;
+}
+
+.blog span {
+  color: red;
+}
+
+/* ID */
+#conclusion {
+  color: darkorange;
+}

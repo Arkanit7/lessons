@@ -1,0 +1,91 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title Discover Ukraine
+		link(rel="stylesheet" href="css/style.css")
+	body
+		header.header
+			.container
+				// Brand
+				a.header__brand(href="#")
+					img(src="img/logo.svg" alt="Company logo")
+					| Explore
+				// Navigation
+				.header__nav.nav
+					ol.nav__list
+						li.nav__item
+							a.nav__link(href="#introduction") Introduction
+						li.nav__item
+							a.nav__link(href="#culture") Culture
+							ol.nav__sub-list
+								li.nav__item
+									a.nav__link(href="#culture-embracing") Embracing Tradition and Creativity
+						li.nav__item.nav__item_active
+							a.nav__link(href="#landmarks") Landmarks
+						li.nav__item
+							a.nav__link(href="#economy") Economy
+						li.nav__item
+							a.nav__link(href="#conclusion") Conclusion
+		main
+			.wrapper
+				// Article
+				.blog
+					.container
+						h1 Discover Ukraine: A Brief Overview
+						// Introduction
+						.section
+							h2#introduction Introduction
+							p.
+								Nestled in Eastern Europe, Ukraine boasts a rich cultural heritage, stunning landscapes, and a complex history. Let's explore this diverse country!
+							img(src="img/flag.png" alt="Flag of Ukraine")
+						// Culture
+						.section
+							h2#culture Culture
+							ul
+								li.
+									Ukrainian culture is deeply rooted in traditions, folklore, and arts.
+
+								li.
+									Traditional Ukrainian cuisine includes borscht, varenyky (dumplings), and salo (cured pork fat).
+
+								li.
+									Folk music, dance, and embroidery play significant roles in Ukrainian culture, with the country's vibrant festivals showcasing these traditions.
+						// Culture embracing
+						.section
+							h3#culture-embracing Culture: Embracing Tradition and Creativity
+							p.
+								Ukrainian culture is a vibrant tapestry woven with threads of tradition and creativity. From colorful folk festivals to intricate embroidery, Ukraine's cultural heritage is deeply cherished and proudly celebrated.
+							p
+								| Folk music and dance bring communities together, showcasing the country's rich musical heritage and energetic rhythms. Yet, alongside these cherished traditions, Ukraine's creative spirit thrives, 
+								span with modern artists, musicians,
+								|  and writers pushing boundaries and exploring new forms of expression. This fusion of tradition and innovation makes Ukrainian culture truly unique and continues to captivate audiences both at home and abroad.
+						// Landmarks
+						.section
+							h2#landmarks Landmarks
+							ul
+								li.
+									Kyiv Pechersk Lavra: A UNESCO World Heritage Site, this monastery complex is renowned for its underground caves and golden-domed churches.
+								li.
+									Lviv: Known as the "Little Paris of Ukraine," Lviv boasts a well-preserved historic center with stunning architecture and cozy cafes.
+								li.
+									Chernobyl Exclusion Zone: This site, infamous for the 1986 nuclear disaster, attracts visitors interested in exploring its eerie remains and learning about its tragic history.
+						// Economy
+						.section
+							h2#economy Economy
+							ul
+								li.
+									Ukraine has a diverse economy with sectors like agriculture, industry, and services.
+								li.
+									It is known as the "breadbasket of Europe" due to its fertile soils and extensive agricultural production.
+								li.
+									The country has been working to strengthen its economy and attract foreign investment, particularly in sectors like IT and renewable energy.
+						// Conclusion
+						.section
+							h2#conclusion Conclusion
+							p.
+								From its picturesque landscapes to its rich cultural heritage, Ukraine offers a wealth of experiences for visitors and residents alike. Despite its challenges, the country continues to evolve, showcasing its resilience and spirit.
+		footer.footer
+			.container
+				p All rights reserved.
