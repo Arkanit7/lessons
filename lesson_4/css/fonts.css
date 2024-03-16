@@ -1,0 +1,73 @@
+/* Video Alchemist fonts */
+
+/* Orbitron 500, 900 */
+@import url("https://fonts.googleapis.com/css?family=Orbitron:500,900&display=swap");
+
+/* Exo 400, 700 */
+@import url("https://fonts.googleapis.com/css?family=Exo:regular,700&display=swap");
+
+/* Krovato fonts */
+
+/* Rubik 400 */
+@import url("https://fonts.googleapis.com/css?family=Rubik:&display=swap");
+
+/* Proxima Nova 300, 400, 600 */
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/proxima-nova-light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/proxima-nova-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/proxima-nova-semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* SHOP.CO fonts */
+
+/* Satoshi 400, 500, 700 */
+@font-face {
+  font-family: Satoshi;
+  src: url("../fonts/satoshi-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Satoshi;
+  src: url("../fonts/satoshi-medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Satoshi;
+  src: url("../fonts/satoshi-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Integral CF 700 */
+@font-face {
+  font-family: "Integral CF";
+  src: url("../fonts/integral-cf-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
