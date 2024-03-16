@@ -12,7 +12,7 @@ body {
 /* Utility classes */
 
 [class*="h1"] {
-	font-size: 48px;
+  font-size: 48px;
 }
 
 /* Font weights */
@@ -76,7 +76,7 @@ body {
 }
 
 .ff-satoshi {
-	font-family: Satoshi, sans-serif;
+  font-family: Satoshi, sans-serif;
 }
 
 /* Text decoration */
@@ -94,13 +94,13 @@ body {
 /* Showcase */
 
 .showcase {
-	font-size: 18px;
+  font-size: 18px;
 }
 
 .showcase .h2 {
   font-size: 32px;
   line-height: 3;
-	white-space: nowrap;
+  white-space: nowrap;
 }
 
 /* Playground */
