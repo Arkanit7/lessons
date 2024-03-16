@@ -11,7 +11,7 @@ body {
 
 /* Utility classes */
 
-[class="h1"] {
+[class*="h1"] {
 	font-size: 48px;
 }
 
