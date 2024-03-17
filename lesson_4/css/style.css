@@ -5,8 +5,8 @@
 @import url("reset.css");
 
 body {
-  font-size: 16px;
   line-height: 1.5;
+	color: #333;
 }
 
 /* Utility classes */
@@ -137,7 +137,7 @@ body {
   text-align: center;
 }
 
-.blog__text {
+.blog__content {
   line-height: 1.87;
 }
 
