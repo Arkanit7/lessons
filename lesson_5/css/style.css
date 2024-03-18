@@ -1,0 +1,153 @@
+/* Fonts */
+@import url("fonts.css");
+
+/* Reset styles */
+@import url("reset.css");
+
+body {
+  font-family: "Proxima Nova", sans-serif;
+  color: #2b2929;
+}
+
+/* Utility classes */
+
+.wrapper {
+  overflow: hidden;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+.h1 {
+	font-weight: 600;
+	font-size: 56px;
+}
+
+/* ===================================================== */
+
+/* Follow */
+
+.follow {
+  line-height: normal;
+  color: black;
+  background-color: hsl(210deg 25% 16% / 5%);
+  font-family: Roboto, sans-serif;
+}
+
+.follow__container {
+  padding: 100px 16px 76px;
+  margin: 0 auto;
+  max-width: calc(1320px + 2 * 16px);
+}
+
+.follow__title {
+  font-weight: 500;
+  font-size: 50px;
+  text-transform: capitalize;
+  margin-bottom: 60px;
+}
+
+.follow__row {
+  margin: 0 -12px;
+  font-size: 0;
+}
+
+.follow__col {
+  display: inline-block;
+  padding: 0 12px;
+  margin-bottom: 24px;
+  width: calc((1320px + 12px * 2) / 6);
+}
+
+.follow-item,
+.follow-item img {
+  width: 100%;
+}
+
+/* Blog */
+
+.blog__container {
+  padding: 40px 16px;
+  margin: 0 auto;
+  max-width: calc(1070px + 2 * 16px);
+}
+
+.blog__content {
+  line-height: 1.87;
+}
+
+.blog__content p {
+  margin-bottom: 11px;
+}
+
+.blog__content img {
+  width: 100%;
+}
+
+.blog__title,
+.blog__content,
+.blog__content :is(ul, ol, dl, img) {
+  margin-bottom: 40px;
+}
+
+.blog__content li {
+  padding-left: 47px;
+  margin-bottom: 20px;
+}
+
+.blog__sub-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: 30px;
+}
+
+/* It */
+
+.it {
+  background-color: #f8f8f8;
+}
+
+.it__container {
+  padding: 70px 16px 40px;
+  margin: 0 auto;
+  max-width: calc(1290px + 2 * 16px);
+}
+
+.it__title {
+  margin-bottom: 40px;
+}
+
+.it__row {
+  margin: 0 -15px;
+}
+
+.it__col {
+  vertical-align: top;
+  display: inline-block;
+  padding: 0 15px;
+  margin-bottom: 30px;
+  width: calc((1290px + 15px * 2) / 4);
+}
+
+.it-item img,
+.it-item__title {
+  margin-bottom: 20px;
+}
+
+.it-item__title {
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 1.31;
+}
+
+.it-item__content {
+  line-height: 1.87;
+}
