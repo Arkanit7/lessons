@@ -127,6 +127,7 @@ body {
 
 .it__row {
   margin: 0 -15px;
+	font-size: 0;
 }
 
 .it__col {
@@ -150,4 +151,5 @@ body {
 
 .it-item__content {
   line-height: 1.87;
+	font-size: 16px;
 }
