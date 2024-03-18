@@ -66,8 +66,7 @@
 /* Integral CF 700 */
 @font-face {
   font-family: "Integral CF";
-  src: local("Integral CF Bold"), local("IntegralCF-Bold"),
-    url("../fonts/integral-cf-bold.woff2") format("woff2");
+  src: url("../fonts/integral-cf-bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
