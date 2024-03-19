@@ -26,8 +26,8 @@ body {
 }
 
 .h1 {
-	font-weight: 600;
-	font-size: 56px;
+  font-weight: 600;
+  font-size: 56px;
 }
 
 /* ===================================================== */
@@ -66,8 +66,8 @@ body {
   width: calc((1320px + 12px * 2) / 6);
 }
 
-.follow-item,
-.follow-item img {
+.follow__item,
+.follow__item img {
   width: 100%;
 }
 
@@ -127,15 +127,15 @@ body {
 
 .it__row {
   margin: 0 -15px;
-	font-size: 0;
+  font-size: 0;
 }
 
 .it__col {
-  vertical-align: top;
   display: inline-block;
+  vertical-align: top;
   padding: 0 15px;
-  margin-bottom: 30px;
   width: calc((1290px + 15px * 2) / 4);
+  margin-bottom: 30px;
 }
 
 .it-item img,
@@ -151,5 +151,5 @@ body {
 
 .it-item__content {
   line-height: 1.87;
-	font-size: 16px;
+  font-size: 16px;
 }
