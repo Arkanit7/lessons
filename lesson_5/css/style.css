@@ -73,6 +73,10 @@ body {
 
 /* Blog */
 
+.blog {
+  background-color: hsl(0deg 0% 97%);
+}
+
 .blog__container {
   padding: 40px 16px;
   margin: 0 auto;
@@ -112,7 +116,7 @@ body {
 /* It */
 
 .it {
-  background-color: #f8f8f8;
+  background-color: hsl(0deg 0% 97%);
 }
 
 .it__container {
