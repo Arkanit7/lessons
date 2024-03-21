@@ -175,20 +175,24 @@
 }
 
 .hero__title {
-  margin-bottom: 52px;
+  /* margin-bottom: 52px; */
+  margin-bottom: 49px;
   font-size: 74px;
   font-weight: 300;
   line-height: 0.74;
 }
 
 .hero__content {
-  margin-bottom: 66px;
+  /* margin-bottom: 66px; */
+	margin-bottom: 62px;
   font-size: 30px;
-  line-height: 1.83;
+  line-height: 2.1;
+  /* line-height: 1.83; */
 }
 
 .hero__button {
-  padding: 19px 26px 19px 64px;
+  /* padding: 19px 26px 19px 64px; */
+	padding: 21px 27px 22px 64px;
   font-size: 29px;
   color: hsl(0deg 0% 100%);
   background: url("../img/hero/bag.svg") 26px center no-repeat
