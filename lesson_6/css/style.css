@@ -101,6 +101,7 @@
 }
 
 .explore__main {
+  padding-block: 34px;
   max-width: 600px;
 }
 
@@ -122,11 +123,11 @@
 }
 
 .explore__button {
-  padding: 11.5px 20px;
+  padding: 11.5px 20px 11.5px 41px;
   font-weight: 700;
   line-height: 1.56;
   color: hsl(207deg 26% 7%);
-  background: hsl(0deg 0% 100%);
+  background: url("../img/explore/hat.png") 20px no-repeat hsl(0deg 0% 100%);
   border-radius: 8px;
 }
 
@@ -167,7 +168,7 @@
 }
 
 .hero__main {
-	padding-top: 54px;
+  padding-block: 54px;
   max-width: 682px;
 }
 
