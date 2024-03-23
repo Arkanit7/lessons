@@ -102,7 +102,6 @@
 
 .explore__main {
   max-width: 600px;
-  padding-block: 32px;
 }
 
 .explore__title,
@@ -157,7 +156,6 @@
 .hero__row {
   margin-inline: calc(-116px / 2);
   font-size: 0;
-  text-align: center;
 }
 
 .hero__col {
@@ -165,13 +163,15 @@
   padding-inline: calc(116px / 2);
   margin-bottom: 52px;
   font-size: 16px;
-  text-align: start;
   vertical-align: top;
+}
+
+.hero__col_margin {
+	margin-top: 54px;
 }
 
 .hero__main {
   max-width: 682px;
-  padding-top: 54px;
 }
 
 .hero__title {
