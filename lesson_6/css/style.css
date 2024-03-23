@@ -166,11 +166,8 @@
   vertical-align: top;
 }
 
-.hero__col_margin {
-	margin-top: 54px;
-}
-
 .hero__main {
+	padding-top: 54px;
   max-width: 682px;
 }
 
