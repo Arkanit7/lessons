@@ -1,0 +1,408 @@
+/* Fonts */
+@import url("fonts.css");
+
+/* Reset styles */
+@import url("reset.css");
+
+/* Main styles */
+body {
+  font-family: Exo, sans-serif;
+}
+
+.wrapper,
+.inner {
+  overflow: hidden;
+}
+
+/* Utility classes */
+.align-center {
+  text-align: center;
+}
+
+.container {
+  margin-inline: auto;
+  padding-inline: 16px;
+  max-width: 1304px;
+}
+
+.title {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 1.17;
+  text-transform: uppercase;
+  color: hsl(0deg 0% 100%);
+}
+
+.title::after {
+  content: "";
+  display: block;
+  margin-top: 20px;
+  margin-right: -14.2%;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    hsl(0deg 100% 50%),
+    hsl(104deg 100% 50%),
+    hsl(248deg 100% 50%)
+  );
+}
+
+.title_center::after {
+  margin-inline: -16.6%;
+}
+
+/* ================================= */
+.hero {
+  font-size: 48px;
+}
+
+.game__container {
+  padding: 24px 16px;
+  margin-inline: auto;
+  max-width: 732px;
+}
+
+.game__container > *:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.game__title {
+  font-size: 36px;
+}
+
+.game__constructor {
+  font-size: 0;
+  border-radius: 50px;
+  box-shadow: inset 35px 35px 70px hsl(0deg 0% 64%),
+    inset -35px -35px 70px hsl(0deg 0% 87%);
+  background: url("../img/game/creeper.jpg") center/cover, hsl(0deg 0% 75%);
+}
+
+.game__constructor:has(
+    .brick_play:hover,
+    .brick_start:hover,
+    .brick_finish:hover
+  )
+  > :is(.brick_play, .brick_finish) {
+  visibility: visible;
+}
+
+.game__finish {
+  text-align: center;
+  display: none;
+}
+
+.game__finish:target {
+  display: block;
+}
+
+.game__finish img {
+  border-radius: 5px;
+}
+
+.brick {
+  display: inline-block;
+  height: 40px;
+}
+
+.brick_1 {
+  width: 35px;
+}
+
+.brick_2 {
+  width: 70px;
+}
+
+.brick_3 {
+  width: 105px;
+}
+
+.brick_4 {
+  width: 140px;
+}
+
+.brick_5 {
+  width: 175px;
+}
+
+.brick_6 {
+  width: 210px;
+}
+
+.brick_7 {
+  width: 245px;
+}
+
+.brick_8 {
+  width: 280px;
+}
+
+.brick_9 {
+  width: 315px;
+}
+
+.brick_10 {
+  width: 350px;
+}
+
+.brick_11 {
+  width: 385px;
+}
+
+.brick_12 {
+  width: 420px;
+}
+
+.brick_13 {
+  width: 455px;
+}
+
+.brick_14 {
+  width: 490px;
+}
+
+.brick_15 {
+  width: 525px;
+}
+
+.brick_16 {
+  width: 560px;
+}
+
+.brick_17 {
+  width: 595px;
+}
+
+.brick_18 {
+  width: 630px;
+}
+
+.brick_19 {
+  width: 665px;
+}
+
+.brick_20 {
+  width: 700px;
+}
+
+.brick_start,
+.brick_finish {
+  background-color: crimson;
+}
+
+.brick_finish {
+  visibility: hidden;
+}
+
+.brick_finish:hover {
+  background-image: repeating-radial-gradient(
+    circle,
+    crimson 0 4px,
+    hsl(53deg 83% 57%) 4px 8px
+  );
+}
+
+.brick_play {
+  visibility: hidden;
+  background: linear-gradient(
+    to right,
+    hsl(178deg 100% 25%),
+    hsl(112deg 100% 25%)
+  );
+}
+
+/* About */
+.about {
+  color: hsl(0deg 0% 100%);
+  background: linear-gradient(hsl(0deg 0% 0% / 90%), hsl(0deg 0% 0% / 99%)),
+    url("../img/about/bg.jpg") center/cover;
+}
+
+.about__container {
+  padding-block: 120px 90px;
+}
+
+.about__desc {
+  /* Аби декор заголовків не входив за межі контейнера */
+  overflow: hidden;
+  max-width: 992px;
+  margin-inline: auto;
+}
+
+.about__desc:not(:last-child) {
+  margin-bottom: 60px;
+}
+
+.about__title:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.about__text {
+  font-size: 18px;
+  line-height: 2.22;
+  letter-spacing: -0.02em;
+  text-transform: capitalize;
+}
+
+.about__text:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.about__row {
+  margin-inline: -30px;
+  font-size: 0;
+  text-align: center;
+}
+
+.about__row:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.about__col {
+  padding-inline: 30px;
+  display: inline-block;
+
+  /* Для адаптивності */
+  margin-bottom: 30px;
+}
+
+.about__item {
+  font-family: Orbitron, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.25;
+  text-transform: capitalize;
+}
+
+.about__item::after {
+  content: "";
+  vertical-align: middle;
+  width: 10px;
+  height: 11px;
+  border-radius: 50%;
+  margin-left: 60px;
+  background-image: linear-gradient(
+    90deg,
+    hsl(0deg 100% 50%) 0%,
+    hsl(104deg 100% 50%) 48.9%,
+    hsl(248deg 100% 50%) 100%
+  );
+}
+
+.consult {
+  color: hsl(0deg 0% 100%);
+  background-color: hsl(240deg 100% 0%);
+}
+
+.consult__container {
+  padding-block: 160px 91px;
+}
+
+.consult__inner {
+  /* Аби декор заголовків не входив за межі контейнера */
+  overflow: hidden;
+}
+
+.consult__inner > *:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.consult__row {
+  margin-inline: -40px;
+  font-size: 0;
+}
+
+.consult__col {
+  display: inline-block;
+  padding-inline: 40px;
+
+  /* Для адаптивності */
+  margin-bottom: 20px;
+}
+
+.consult__link {
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  text-transform: capitalize;
+	
+  /* А по макету 1, що є погано -_- */
+  line-height: 1.4;
+}
+
+.consult__link[href^="tel:"] {
+  white-space: nowrap;
+}
+
+.consult__link:is(:hover, :focus-visible) {
+  color: hsl(0deg 0% 80%);
+  text-decoration: underline;
+}
+
+/* Чому Firefox підсвічує її навіть після натискання? Додав псевдоклас :hover аби працювало як у Chrome */
+.consult__link:hover:active {
+  color: hsl(0deg 0% 60%);
+}
+
+.consult__link-img {
+  vertical-align: middle;
+  margin-right: 23px;
+}
+
+/* Blog */
+.blog {
+  font-family: "Proxima Nova", sans-serif;
+  color: hsl(0deg 2% 16%);
+  background-color: hsl(0deg 0% 97%);
+}
+
+.blog__container {
+  max-width: 1102px;
+  padding: 40px 16px;
+  margin: 0 auto;
+}
+
+.blog__title {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.blog__content {
+  line-height: 1.87;
+}
+
+.blog__content p:not(:last-child) {
+  margin-bottom: 11px;
+}
+
+.blog__content img {
+  width: 100%;
+}
+
+/* Ого! Багато я коду скоротив :D */
+:where(.blog__title, .blog__content, .blog__content :is(ul, ol, dl, img)):not(
+    :last-child
+  ) {
+  margin-bottom: 40px;
+}
+
+.blog__content li {
+  min-height: 32px;
+  padding-left: 47px;
+  background: url("../img/blog/check.svg") no-repeat;
+}
+
+.blog__content li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.blog__sub-title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.blog__sub-title:not(:last-child) {
+  margin-bottom: 30px;
+}
