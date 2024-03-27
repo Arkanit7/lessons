@@ -10,7 +10,8 @@ body {
   font-size: 18px;
 }
 
-.wrapper {
+.wrapper,
+.inner {
   overflow: hidden;
 }
 
@@ -27,7 +28,6 @@ body {
 
 .title {
   display: inline-block;
-  padding-right: 199px;
   font-weight: 700;
   font-size: 60px;
   line-height: 1.17;
@@ -39,7 +39,7 @@ body {
   content: "";
   display: block;
   margin-top: 20px;
-  margin-right: -199px;
+  margin-right: -14.2%;
   height: 1px;
   background-image: linear-gradient(
     to right,
@@ -49,12 +49,8 @@ body {
   );
 }
 
-.title_center {
-  padding-inline: 50px;
-}
-
 .title_center::after {
-  margin-inline: -50px;
+  margin-inline: -16.6%;
 }
 
 /* ================================= */
@@ -84,7 +80,6 @@ body {
   background: url("../img/game/creeper.jpg") center/cover, hsl(0deg 0% 75%);
 }
 
-/* Валідатор не любить :has() :( */
 .game__constructor:has(
     .brick_play:hover,
     .brick_start:hover,
@@ -230,6 +225,8 @@ body {
 }
 
 .about__desc {
+  /* Аби декор заголовків не входив за межі контейнера */
+  overflow: hidden;
   max-width: 992px;
   margin-inline: auto;
 }
@@ -243,7 +240,6 @@ body {
 }
 
 .about__text {
-  font-size: 18px;
   line-height: 2.22;
   letter-spacing: -0.02em;
   text-transform: capitalize;
@@ -267,10 +263,7 @@ body {
   padding-inline: 30px;
   display: inline-block;
 
-}
-
-/* Для адаптивності */
-.about__col:not(:last-child) {
+  /* Для адаптивності */
   margin-bottom: 30px;
 }
 
@@ -306,7 +299,12 @@ body {
   padding-block: 160px 91px;
 }
 
-.consult__container > *:not(:last-child) {
+.consult__inner {
+  /* Аби декор заголовків не входив за межі контейнера */
+  overflow: hidden;
+}
+
+.consult__inner > *:not(:last-child) {
   margin-bottom: 40px;
 }
 
@@ -328,15 +326,14 @@ body {
   letter-spacing: -0.02em;
   text-transform: capitalize;
   line-height: 1.4;
-
 }
 
 .consult__link[href^="tel:"] {
-	white-space: nowrap;
+  white-space: nowrap;
 }
 
 .consult__link:is(:hover, :focus-visible) {
-	color: hsl(0deg 0% 80%);
+  color: hsl(0deg 0% 80%);
   text-decoration: underline;
 }
 
