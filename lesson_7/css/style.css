@@ -226,7 +226,7 @@ body {
 }
 
 .about__container {
-  padding-block: 120px 90px;
+  padding-block: 120px;
 }
 
 .about__desc {
@@ -256,21 +256,19 @@ body {
 }
 
 .about__row {
-  margin-inline: -30px;
+  margin: 0 -30px -30px;
   font-size: 0;
   text-align: center;
 }
 
 .about__row:not(:last-child) {
-  margin-bottom: 30px;
+  /* Що дасть відступ у 30px */
+  margin-bottom: 0;
 }
 
 .about__col {
-  padding-inline: 30px;
+  padding: 0 30px 30px;
   display: inline-block;
-
-  /* Для адаптивності */
-  margin-bottom: 30px;
 }
 
 .about__item {
@@ -303,7 +301,7 @@ body {
 }
 
 .consult__container {
-  padding-block: 160px 91px;
+  padding-block: 160px 111px;
 }
 
 .consult__inner {
@@ -316,16 +314,18 @@ body {
 }
 
 .consult__row {
-  margin-inline: -40px;
+  margin: 0 -40px -20px;
   font-size: 0;
+}
+
+.consult__row:not(:last-child) {
+  /* Що дасть відступ у 40px */
+  margin-bottom: 20px;
 }
 
 .consult__col {
   display: inline-block;
-  padding-inline: 40px;
-
-  /* Для адаптивності */
-  margin-bottom: 20px;
+  padding: 0 40px 20px;
 }
 
 .consult__link {
@@ -384,6 +384,7 @@ body {
 }
 
 .blog__content img {
+  border-radius: 8px;
   width: 100%;
 }
 
