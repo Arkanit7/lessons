@@ -148,6 +148,7 @@ body {
     top left repeat;
   border: 1px solid hsl(0deg 0% 80%);
   text-align: center;
+	font-size: 0;
 }
 
 .item__box::after {
