@@ -4,8 +4,8 @@ html(lang="uk")
 		meta(charset="UTF-8")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0")
 		title Інтернет-магазин Krovato технології сну
-		link(rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png")
-		link(rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png")
+		link(rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png")
+		link(rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png")
 	body
 		.wrapper
 			// Header
@@ -43,98 +43,93 @@ html(lang="uk")
 							button.lang__button(type="button")
 								| UA
 								img(src="img/icons/arrow.svg" alt)
-							//- ul.lang__list
-							//- 	li.lang__item
-							//- 		a.lang__link(href="#") UA
-							//- 	li.lang__item
-							//- 		a.lang__link(href="#") EN
-							//- 	li.lang__item
-							//- 		a.lang__link(href="#") PL
-							// Body
-							.body-header
-								.body-header__container
-									a.body-header__brand.brand(href="#")
-										img(src="img/coach.svg" alt)
-										img(src="img/logo.svg" alt="Krovato технології сну")
-									//
-									button.body-header__catalog.button(type="button")
-										img(src="img/icons/catalog.svg" alt)
-										|  Каталог
-									// Search
-									form.body-header__search.search(method="get")
-										input.search__field(type="search" name="search" placeholder="Пошук товарів" required autofocus)
-										button.search__submit(type="submit")
-											img(src="img/icons/search.svg" alt="Шукати")
-									// Phone
-									.body-header__phone.phone
-										// Icon
-										.phone__icon
-											img(src="img/icons/phone.svg" alt="Телефон")
-										// Main
-										.phone__main
-											p.phone__hours Щодня з 9:00 до 18:00
-											a.phone__number(href="tel:+0679294545") 067 929-45-45
-										//- // Expand
-										//- button.phone__expand
-										//- 	img(src="img/icons/arrow.svg" alt="Розгорнути телефони")
-										//- // List
-										//- ul.phone__list
-										//- 	li.phone__item
-										//- 		a.phone__number(href="tel:+0669294545") 066 929-45-45
-										//- 	li.phone__item
-										//- 		a.phone__number(href="tel:+0939294545") 093 929-45-45
-										// Actions
-										.body-header__actions.actions
-											button.actions__item.icon-button(type="button" title="Обране")
-												img(src="img/icons/heart.svg", alt)
-											button.actions__item.icon-button(type="button" title="Кошик")
-												img(src="img/icons/cart.svg", alt)
-							// Feet
-							.feet-header
-								.feet-header__container
-									// Promo
-									ul.feet-header__list
-										li.feet-header__item
-											a.feet-header__link(href="#")
-												img(src="img/icons/star.svg" alt)
-												|  Акції
-										li.feet-header__item
-											a.feet-header__link(href="#")
-												img(src="img/icons/sale.svg" alt)
-												|  Розпродаж
-										li.feet-header__item
-											a.feet-header__link(href="#")
-												img(src="img/icons/credit.svg" alt)
-												|  Купити в кредит
-									// Categories
-									ul.feet-header__list
-										li.feet-header__item
-											a.feet-header__link(href="#") Дитяча
-										li.feet-header__item
-											a.feet-header__link(href="#") Кухня
-										li.feet-header__item
-											a.feet-header__link(href="#") Ванна
-										li.feet-header__item
-											a.feet-header__link(href="#") Спальня
-										li.feet-header__item
-											a.feet-header__link(href="#") Передпокій
-										li.feet-header__item
-											a.feet-header__link(href="#") Вітальня
-										li.feet-header__item
-											a.feet-header__link(href="#") Офіс
+				// Body
+				.body-header
+					.body-header__container
+						a.body-header__brand.brand(href="#")
+							img(src="img/coach.svg" alt)
+							img(src="img/logo.svg" alt="Krovato технології сну")
+						//
+						button.body-header__catalog.button(type="button")
+							img(src="img/icons/catalog.svg" alt)
+							|  Каталог
+						// Search
+						form.body-header__search.search(method="get")
+							input.search__field(type="search" name="search" placeholder="Пошук товарів" required autofocus)
+							button.search__submit(type="submit")
+								img(src="img/icons/search.svg" alt="Шукати")
+						// Phone
+						.body-header__phone.phone
+							// Icon
+							.phone__icon
+								img(src="img/icons/phone.svg" alt="Телефон")
+							// Main
+							.phone__main
+								p.phone__hours Щодня з 9:00 до 18:00
+								a.phone__number(href="tel:+0679294545") 067 929-45-45
+							//- // Expand
+							//- button.phone__expand
+							//- 	img(src="img/icons/arrow.svg" alt="Розгорнути телефони")
+							//- // List
+							//- ul.phone__list
+							//- 	li.phone__item
+							//- 		a.phone__number(href="tel:+0669294545") 066 929-45-45
+							//- 	li.phone__item
+							//- 		a.phone__number(href="tel:+0939294545") 093 929-45-45
+							// Actions
+							.body-header__actions.actions
+								button.actions__item.icon-button(type="button" title="Обране")
+									img(src="img/icons/heart.svg", alt)
+								button.actions__item.icon-button(type="button" title="Кошик")
+									img(src="img/icons/cart.svg", alt)
+				// Feet
+				.feet-header
+					.feet-header__container
+						// Promo
+						ul.feet-header__list
+							li.feet-header__item
+								a.feet-header__link(href="#")
+									img(src="img/icons/star.svg" alt)
+									|  Акції
+							li.feet-header__item
+								a.feet-header__link(href="#")
+									img(src="img/icons/sale.svg" alt)
+									|  Розпродаж
+							li.feet-header__item
+								a.feet-header__link(href="#")
+									img(src="img/icons/credit.svg" alt)
+									|  Купити в кредит
+						// Categories
+						ul.feet-header__list
+							li.feet-header__item
+								a.feet-header__link(href="#") Дитяча
+							li.feet-header__item
+								a.feet-header__link(href="#") Кухня
+							li.feet-header__item
+								a.feet-header__link(href="#") Ванна
+							li.feet-header__item
+								a.feet-header__link(href="#") Спальня
+							li.feet-header__item
+								a.feet-header__link(href="#") Передпокій
+							li.feet-header__item
+								a.feet-header__link(href="#") Вітальня
+							li.feet-header__item
+								a.feet-header__link(href="#") Офіс
 			// Main
 			main.page
 				// Article
 				article.article
 					.article__container
-						h1.article__title.title KROVATO - коли потрібні якісні меблі за доступною ціною!
+						.article__head-block.head-block
+							h1.head-block__title KROVATO - коли потрібні якісні меблі за доступною ціною!
 						.article__text
 							p Якщо в пошуковий рядок браузера ввести запит: «Куплю ліжко, шафу, диван», система видасть сотні продавців, що спеціалізуються з продажу цього товару. Але далеко не всі магазини та сайти в інтернеті можуть запропонувати такий самий різноманітний асортимент, як наша компанія. Та й з нашими цінами конкурувати можуть мало хто. Адже товар ми отримуємо безпосередньо від виробників, не переплачуючи за послуги посередників. До того ж, продажі ми ведемо як онлайн, так і в салоні, при цьому ціна на асортимент онлайн та офлайн - однакова.
 							p Ми співпрацюємо тільки з найкращими вітчизняними та зарубіжними фабриками та компаніями, які отримали визнання покупців та експертів меблевої справи. Для нас важливо, щоб товар, який ми продаємо, відповідав міжнародним стандартам якості, був із сертифікованих матеріалів – довговічних, красивих та екологічно чистих. Ми з особливою ретельністю відбираємо пропозиції для магазину, тому можемо поручитися за їхню якість і впевнено рекомендувати клієнтам. У нас ви легко знайдете меблеві серії в класичному та модерному стилі, лінійки для оформлення житла в дусі романтики або скандинавського лаконізму.
 				// Popular
 				section.popular
 					.popular__container
-						h2.popular__title.title Популярні категорії
+						.popular__head-block.head-block 
+							h2.head-block__title Популярні категорії
 						.popular__grid
 							a.item-popular(href="#")
 								.item-popular__header
@@ -249,8 +244,9 @@ html(lang="uk")
 				// Products
 				section.products
 					.products__container
-						h2.products__title.title Найпопулярніші товари 
-							a.title__link(href="#") Дивитись всі 
+						.products__head-block.head-block 
+							h2.head-block__title Найпопулярніші товари 
+							a.head-block__link(href="#") Дивитись всі 
 								img(src="img/icons/arrow-turn.svg", alt)
 						.products__grid
 							article.product
