@@ -1,0 +1,441 @@
+doctype html
+html(lang="uk")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title Інтернет-магазин Krovato технології сну
+		link(rel="shortcut icon" href="img/favicon.ico" type="image/x-icon")
+	body
+		.wrapper
+			// Header
+			header.header
+				// Head
+				.head-header
+					.head-header__container
+						nav.head-header__nav
+							ul.head-header__list
+								li.head-header__item
+									a.head-header__link(href="#") Про нас
+								li.head-header__item
+									a.head-header__link(href="#") Оплата
+								li.head-header__item
+									a.head-header__link(href="#") Доставка та збірка
+								li.head-header__item
+									a.head-header__link(href="#") Відгуки
+								li.head-header__item
+									a.head-header__link(href="#") Блог
+								li.head-header__item
+									a.head-header__link(href="#") Контакти
+						.head-header__help
+							p.head-header__item.head-header__item--margin Допомога і консультація:
+							ul.head-header__social.social
+								li.social__item
+									a.social__link(href="#" target="_blank")
+										img(src="img/icons/whatsup.svg" alt="WhatsApp")
+								li.social__item
+									a.social__link(href="#" target="_blank")
+										img(src="img/icons/telegram.svg" alt="Telegram")
+								li.social__item
+									a.social__link(href="#" target="_blank")
+										img(src="img/icons/viber.svg" alt="Viber")
+						.head-header__lang.lang
+							button.lang__button(type="button")
+								| UA
+								img(src="img/icons/arrow.svg" alt)
+							//- ul.lang__list
+							//- 	li.lang__item
+							//- 		a.lang__link(href="#") UA
+							//- 	li.lang__item
+							//- 		a.lang__link(href="#") EN
+							//- 	li.lang__item
+							//- 		a.lang__link(href="#") PL
+							// Body
+							.body-header
+								.body-header__container
+									a.body-header__brand.brand(href="#")
+										img(src="img/coach.svg" alt)
+										img(src="img/logo.svg" alt="Krovato технології сну")
+									//
+									button.body-header__catalog.button(type="button")
+										img(src="img/icons/catalog.svg" alt)
+										|  Каталог
+									// Search
+									form.body-header__search.search(method="get")
+										input.search__field(type="search" name="search" placeholder="Пошук товарів" required autofocus)
+										button.search__submit(type="submit")
+											img(src="img/icons/search.svg" alt="Шукати")
+									// Phone
+									.body-header__phone.phone
+										// Icon
+										.phone__icon
+											img(src="img/icons/phone.svg" alt="Телефон")
+										// Main
+										.phone__main
+											p.phone__hours Щодня з 9:00 до 18:00
+											a.phone__number(href="tel:+0679294545") 067 929-45-45
+										//- // Expand
+										//- button.phone__expand
+										//- 	img(src="img/icons/arrow.svg" alt="Розгорнути телефони")
+										//- // List
+										//- ul.phone__list
+										//- 	li.phone__item
+										//- 		a.phone__number(href="tel:+0669294545") 066 929-45-45
+										//- 	li.phone__item
+										//- 		a.phone__number(href="tel:+0939294545") 093 929-45-45
+										// Actions
+										.body-header__actions.actions
+											button.actions__item.icon-button(type="button" title="Обране")
+												img(src="img/icons/heart.svg", alt)
+											button.actions__item.icon-button(type="button" title="Кошик")
+												img(src="img/icons/cart.svg", alt)
+							// Feet
+							.feet-header
+								.feet-header__container
+									// Promo
+									ul.feet-header__list
+										li.feet-header__item
+											a.feet-header__link(href="#")
+												img(src="img/icons/star.svg" alt)
+												|  Акції
+										li.feet-header__item
+											a.feet-header__link(href="#")
+												img(src="img/icons/sale.svg" alt)
+												|  Розпродаж
+										li.feet-header__item
+											a.feet-header__link(href="#")
+												img(src="img/icons/credit.svg" alt)
+												|  Купити в кредит
+									// Categories
+									ul.feet-header__list
+										li.feet-header__item
+											a.feet-header__link(href="#") Дитяча
+										li.feet-header__item
+											a.feet-header__link(href="#") Кухня
+										li.feet-header__item
+											a.feet-header__link(href="#") Ванна
+										li.feet-header__item
+											a.feet-header__link(href="#") Спальня
+										li.feet-header__item
+											a.feet-header__link(href="#") Передпокій
+										li.feet-header__item
+											a.feet-header__link(href="#") Вітальня
+										li.feet-header__item
+											a.feet-header__link(href="#") Офіс
+			// Main
+			main.page
+				// Article
+				article.article
+					.article__container
+						h1.article__title.title KROVATO - коли потрібні якісні меблі за доступною ціною!
+						.article__text
+							p Якщо в пошуковий рядок браузера ввести запит: «Куплю ліжко, шафу, диван», система видасть сотні продавців, що спеціалізуються з продажу цього товару. Але далеко не всі магазини та сайти в інтернеті можуть запропонувати такий самий різноманітний асортимент, як наша компанія. Та й з нашими цінами конкурувати можуть мало хто. Адже товар ми отримуємо безпосередньо від виробників, не переплачуючи за послуги посередників. До того ж, продажі ми ведемо як онлайн, так і в салоні, при цьому ціна на асортимент онлайн та офлайн - однакова.
+							p Ми співпрацюємо тільки з найкращими вітчизняними та зарубіжними фабриками та компаніями, які отримали визнання покупців та експертів меблевої справи. Для нас важливо, щоб товар, який ми продаємо, відповідав міжнародним стандартам якості, був із сертифікованих матеріалів – довговічних, красивих та екологічно чистих. Ми з особливою ретельністю відбираємо пропозиції для магазину, тому можемо поручитися за їхню якість і впевнено рекомендувати клієнтам. У нас ви легко знайдете меблеві серії в класичному та модерному стилі, лінійки для оформлення житла в дусі романтики або скандинавського лаконізму.
+				// Popular
+				section.popular
+					.popular__container
+						h2.popular__title.title Популярні категорії
+						.popular__grid
+							a.item-popular(href="#")
+								.item-popular__header
+									p.item-popular__title Ліжка
+									p.item-popular__number 54
+								.item-popular__body
+									picture
+										source(srcset="img/home/popular/beds.avif" type="image/avif")
+										source(srcset="img/home/popular/beds.webp" type="image/webp")
+										img(src="img/home/popular/beds.png" alt="Королівське зелене ліжко")
+								.item-popular__arrow
+									img(src="img/icons/arrow-turn.svg", alt)
+							a.item-popular(href="#")
+								.item-popular__header
+									p.item-popular__title Матраци
+									p.item-popular__number 54
+								.item-popular__body
+									picture
+										source(srcset="img/home/popular/mattresses.avif" type="image/avif")
+										source(srcset="img/home/popular/mattresses.webp" type="image/webp")
+										img(src="img/home/popular/mattresses.png" alt="Білий компактний матрац")
+								.item-popular__arrow
+									img(src="img/icons/arrow-turn.svg", alt)
+							a.item-popular(href="#")
+								.item-popular__header
+									p.item-popular__title М'які меблі
+									p.item-popular__number 54
+								.item-popular__body
+									picture
+										source(srcset="img/home/popular/upholstered-furniture.avif" type="image/avif")
+										source(srcset="img/home/popular/upholstered-furniture.webp" type="image/webp")
+										img(src="img/home/popular/upholstered-furniture.png" alt="Сірий круглий диван")
+								.item-popular__arrow
+									img(src="img/icons/arrow-turn.svg", alt)
+							a.item-popular(href="#")
+								.item-popular__header
+									p.item-popular__title Шафи
+									p.item-popular__number 54
+								.item-popular__body
+									picture
+										source(srcset="img/home/popular/wardrobes.avif" type="image/avif")
+										source(srcset="img/home/popular/wardrobes.webp" type="image/webp")
+										img(src="img/home/popular/wardrobes.png" alt="простора шафа")
+								.item-popular__arrow
+									img(src="img/icons/arrow-turn.svg", alt)
+							a.item-popular(href="#")
+								.item-popular__header
+									p.item-popular__title Комоди
+									p.item-popular__number 54
+								.item-popular__body
+									picture
+										source(srcset="img/home/popular/chests-of-drawers.avif" type="image/avif")
+										source(srcset="img/home/popular/chests-of-drawers.webp" type="image/webp")
+										img(src="img/home/popular/chests-of-drawers.png" alt="Темний комод")
+								.item-popular__arrow
+									img(src="img/icons/arrow-turn.svg", alt)
+							a.item-popular(href="#")
+								.item-popular__header
+									p.item-popular__title Тумби
+									p.item-popular__number 54
+								.item-popular__body
+									picture
+										source(srcset="img/home/popular/bedside-tables.avif" type="image/avif")
+										source(srcset="img/home/popular/bedside-tables.webp" type="image/webp")
+										img(src="img/home/popular/bedside-tables.png" alt="Коричнева мінімалістична тумба")
+								.item-popular__arrow
+									img(src="img/icons/arrow-turn.svg", alt)
+							a.item-popular(href="#")
+								.item-popular__header
+									p.item-popular__title Столи
+									p.item-popular__number 54
+								.item-popular__body
+									picture
+										source(srcset="img/home/popular/tables.avif" type="image/avif")
+										source(srcset="img/home/popular/tables.webp" type="image/webp")
+										img(src="img/home/popular/tables.png" alt="Дерев'яний стіл")
+								.item-popular__arrow
+									img(src="img/icons/arrow-turn.svg", alt)
+							a.item-popular(href="#")
+								.item-popular__header
+									p.item-popular__title Стільці
+									p.item-popular__number 54
+								.item-popular__body
+									picture
+										source(srcset="img/home/popular/chairs.avif" type="image/avif")
+										source(srcset="img/home/popular/chairs.webp" type="image/webp")
+										img(src="img/home/popular/chairs.png" alt="Мінімалістичний темний стілець")
+								.item-popular__arrow
+									img(src="img/icons/arrow-turn.svg", alt)
+							a.item-popular(href="#")
+								.item-popular__header
+									p.item-popular__title Меблеві стіни
+									p.item-popular__number 54
+								.item-popular__body
+									picture
+										source(srcset="img/home/popular/furniture-walls.avif" type="image/avif")
+										source(srcset="img/home/popular/furniture-walls.webp" type="image/webp")
+										img(src="img/home/popular/furniture-walls.png" alt="Корчинево-біла меблева стіна")
+								.item-popular__arrow
+									img(src="img/icons/arrow-turn.svg", alt)
+							a.item-popular(href="#")
+								.item-popular__header
+									p.item-popular__title Кухні
+									p.item-popular__number 54
+								.item-popular__body
+									picture
+										source(srcset="img/home/popular/kitchens.avif" type="image/avif")
+										source(srcset="img/home/popular/kitchens.webp" type="image/webp")
+										img(src="img/home/popular/kitchens.png" alt="Вбудована кухня")
+								.item-popular__arrow
+									img(src="img/icons/arrow-turn.svg", alt)
+				// Products
+				section.products
+					.products__container
+						h2.products__title.title Найпопулярніші товари 
+							a.title__link(href="#") Дивитись всі 
+								img(src="img/icons/arrow-turn.svg", alt)
+						.products__grid
+							article.product
+								a.product__img(href="#")
+									picture
+										source(srcset="img/home/products/sparta.avif" type="image/avif")
+										source(srcset="img/home/products/sparta.webp" type="image/webp")
+										img(src="img/home/products/sparta.png" alt="Білосніжне ліжко з дерев'яним скелетом Sparta")
+								p.product__dimensions Розмір: 
+									span 61 x 184 x 2130 мм
+								h3.product__title 
+									a.product__link(href="#") Ліжко Спарта / Sparta з підйомним механізмом
+								.product__availability
+									img(src="img/icons/check.svg", alt) 
+									|  В наявності
+								.product__footer.footer-product
+									// Prices
+									.footer-product__prices.prices
+										p.prices__previous 25 400 грн.
+										p.prices__current 15 400 грн.
+									// Actions-product
+									.footer-product__actions.actions-product
+										button.actions-product__button.icon-button.icon-button--plain(type="button" title="В обрані")
+											img(src="img/icons/heart.svg" alt)
+										button.actions-product__button.icon-button.icon-button--orange(type="button" title="В кошик")
+											img(src="img/icons/cart.svg" alt)
+							article.product
+								a.product__img(href="#")
+									picture
+										source(srcset="img/home/products/argon.avif" type="image/avif")
+										source(srcset="img/home/products/argon.webp" type="image/webp")
+										img(src="img/home/products/argon.png" alt="Біле мінімалістичне ліжко Аргон")
+								p.product__dimensions Розмір: 
+									span 61 x 184 x 2130 мм
+								h3.product__title 
+									a.product__link(href="#") Ліжко Аргон з підйомним механізмом
+								.product__availability
+									img(src="img/icons/check.svg", alt) 
+									|  В наявності
+								.product__footer.footer-product
+									// Prices
+									.footer-product__prices.prices
+										p.prices__current 16 400 грн.
+									// Actions-product
+									.footer-product__actions.actions-product
+										button.actions-product__button.icon-button.icon-button--plain(type="button" title="В обрані")
+											img(src="img/icons/heart.svg" alt)
+										button.actions-product__button.icon-button.icon-button--orange(type="button" title="В кошик")
+											img(src="img/icons/cart.svg" alt)
+							article.product
+								a.product__img(href="#")
+									picture
+										source(srcset="img/home/products/prestige.avif" type="image/avif")
+										source(srcset="img/home/products/prestige.webp" type="image/webp")
+										img(src="img/home/products/prestige.png" alt="Синє ліжко Престиж з білим матрацом")
+								p.product__dimensions Розмір: 
+									span 61 x 184 x 2130 мм
+								h3.product__title 
+									a.product__link(href="#") Ліжко Престиж з підйомним механізмом
+								.product__availability
+									img(src="img/icons/check.svg", alt) 
+									|  В наявності
+								.product__footer.footer-product
+									// Prices
+									.footer-product__prices.prices
+										p.prices__current 14 969 грн.
+									// Actions-product
+									.footer-product__actions.actions-product
+										button.actions-product__button.icon-button.icon-button--plain(type="button" title="В обрані")
+											img(src="img/icons/heart.svg" alt)
+										button.actions-product__button.icon-button.icon-button--orange(type="button" title="В кошик")
+											img(src="img/icons/cart.svg" alt)
+							article.product
+								a.product__img(href="#")
+									picture
+										source(srcset="img/home/products/tokio.png.avif" type="image/avif")
+										source(srcset="img/home/products/tokio.png.webp" type="image/webp")
+										img(src="img/home/products/tokio.png.png" alt="Охайний диван з тематичними подушками Токіо-2")
+								p.product__dimensions Розмір: 
+									span 61 x 184 x 2130 мм
+								h3.product__title 
+									a.product__link(href="#") Диван Токіо-2
+								.product__availability
+									img(src="img/icons/check.svg", alt) 
+									|  В наявності
+								.product__footer.footer-product
+									// Prices
+									.footer-product__prices.prices
+										p.prices__current 13 211 грн.
+									// Actions-product
+									.footer-product__actions.actions-product
+										button.actions-product__button.icon-button.icon-button--plain(type="button" title="В обрані")
+											img(src="img/icons/heart.svg" alt)
+										button.actions-product__button.icon-button.icon-button--orange(type="button" title="В кошик")
+											img(src="img/icons/cart.svg" alt)
+							article.product
+								a.product__img(href="#")
+									picture
+										source(srcset="img/home/products/largo-slim.avif" type="image/avif")
+										source(srcset="img/home/products/largo-slim.webp" type="image/webp")
+										img(src="img/home/products/largo-slim.png" alt="Білий матрац Ларго Слім")
+								p.product__dimensions Розмір: 
+									span 61 x 184 x 2130 мм
+								h3.product__title 
+									a.product__link(href="#") Матрац Largo SLIM / Ларго Слім
+								.product__availability
+									img(src="img/icons/check.svg", alt) 
+									|  В наявності
+								.product__footer.footer-product
+									// Prices
+									.footer-product__prices.prices
+										p.prices__previous 3 122 грн.
+										p.prices__current 2 810 грн.
+									// Actions-product
+									.footer-product__actions.actions-product
+										button.actions-product__button.icon-button.icon-button--plain(type="button" title="В обрані")
+											img(src="img/icons/heart.svg" alt)
+										button.actions-product__button.icon-button.icon-button--orange(type="button" title="В кошик")
+											img(src="img/icons/cart.svg" alt)
+							article.product
+								a.product__img(href="#")
+									picture
+										source(srcset="img/home/products/argentum-amaltea.avif" type="image/avif")
+										source(srcset="img/home/products/argentum-amaltea.webp" type="image/webp")
+										img(src="img/home/products/argentum-amaltea.png" alt="Білий матрац Аргентум Амалті")
+								p.product__dimensions Розмір: 
+									span 61 x 184 x 2130 мм
+								h3.product__title 
+									a.product__link(href="#") Матрац ARGENTUM AMALTEA / Аргентум Амалті
+								.product__availability
+									img(src="img/icons/check.svg", alt) 
+									|  В наявності
+								.product__footer.footer-product
+									// Prices
+									.footer-product__prices.prices
+										p.prices__previous 5 966 грн.
+										p.prices__current 5 071 грн.
+									// Actions-product
+									.footer-product__actions.actions-product
+										button.actions-product__button.icon-button.icon-button--plain(type="button" title="В обрані")
+											img(src="img/icons/heart.svg" alt)
+										button.actions-product__button.icon-button.icon-button--orange(type="button" title="В кошик")
+											img(src="img/icons/cart.svg" alt)
+							article.product
+								a.product__img(href="#")
+									picture
+										source(srcset="img/home/products/bravo.avif" type="image/avif")
+										source(srcset="img/home/products/bravo.webp" type="image/webp")
+										img(src="img/home/products/bravo.png" alt="Сірий диван Браво")
+								p.product__dimensions Розмір: 
+									span 61 x 184 x 2130 мм
+								h3.product__title 
+									a.product__link(href="#") Диван Браво
+								.product__availability
+									img(src="img/icons/check.svg", alt) 
+									|  В наявності
+								.product__footer.footer-product
+									// Prices
+									.footer-product__prices.prices
+										p.prices__current 10 008 грн.
+									// Actions-product
+									.footer-product__actions.actions-product
+										button.actions-product__button.icon-button.icon-button--plain(type="button" title="В обрані")
+											img(src="img/icons/heart.svg" alt)
+										button.actions-product__button.icon-button.icon-button--orange(type="button" title="В кошик")
+											img(src="img/icons/cart.svg" alt)
+							article.product
+								a.product__img(href="#")
+									picture
+										source(srcset="img/home/products/mk-5.avif" type="image/avif")
+										source(srcset="img/home/products/mk-5.webp" type="image/webp")
+										img(src="img/home/products/mk-5.png" alt="Сіре ліжко МК-5")
+								p.product__dimensions Розмір: 
+									span 61 x 184 x 2130 мм
+								h3.product__title 
+									a.product__link(href="#") Ліжко МК-5
+								.product__availability
+									img(src="img/icons/check.svg", alt) 
+									|  В наявності
+								.product__footer.footer-product
+									// Prices
+									.footer-product__prices.prices
+										p.prices__current 8 775 грн.
+									// Actions-product
+									.footer-product__actions.actions-product
+										button.actions-product__button.icon-button.icon-button--plain(type="button" title="В обрані")
+											img(src="img/icons/heart.svg" alt)
+										button.actions-product__button.icon-button.icon-button--orange(type="button" title="В кошик")
+											img(src="img/icons/cart.svg" alt)
