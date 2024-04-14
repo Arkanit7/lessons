@@ -433,11 +433,11 @@ body {
 }
 
 .display--j:hover .display__object {
-  transform: skew(60deg);
+  transform: skewX(60deg);
 }
 
 .display--k:hover .display__object {
-  transform: skew(60deg);
+  transform: skewY(60deg);
 }
 
 .display--l:hover .display__object {
