@@ -107,7 +107,12 @@ body {
   height: 100px;
   padding: 12px;
   border-radius: 50px;
-  background: repeating-conic-gradient(hsl(212deg 9% 80%) 0 14deg, hsl(212deg 9% 50%) 14deg 17deg) content-box, hsl(0deg 0% 20%);
+  background: repeating-conic-gradient(
+        hsl(212deg 9% 80%) 0 14deg,
+        hsl(212deg 9% 50%) 14deg 17deg
+      )
+      content-box,
+    hsl(0deg 0% 20%);
 }
 
 /* rear-fender */
@@ -307,7 +312,8 @@ body {
   left: 190px;
   bottom: 50px;
   color: lightblue;
-  box-shadow: 30px 0 40px 0, 100px 0 100px 10px, 230px 0 100px 30px, 350px 0 100px 30px;
+  box-shadow: 30px 0 40px 0, 100px 0 100px 10px, 230px 0 100px 30px,
+    350px 0 100px 30px;
 }
 
 /* scene */
@@ -322,7 +328,15 @@ body {
   bottom: 0;
   width: 100%;
   height: 140px;
-  background: linear-gradient(to right, hsl(0deg 0% 100%) 20px, hsl(0deg 0% 13%) 20px) 0 0/40px 20px repeat-x, linear-gradient(to right, hsl(0deg 0% 100%) 100px, transparent 100px 400px) center/400px 10px repeat-x, hsl(0deg 0% 33%);
+  background: linear-gradient(
+        to right,
+        hsl(0deg 0% 100%) 20px,
+        hsl(0deg 0% 13%) 20px
+      )
+      0 0/40px 20px repeat-x,
+    linear-gradient(to right, hsl(0deg 0% 100%) 100px, transparent 100px 400px)
+      center/400px 10px repeat-x,
+    hsl(0deg 0% 33%);
 }
 
 .scene__car {
@@ -448,7 +462,7 @@ body {
   transition: transform 0.5s ease-in-out;
 }
 
-.display:has( .display__cube) {
+.display:has(.display__cube) {
   perspective: 1000px;
 }
 
@@ -478,7 +492,8 @@ body {
 }
 
 .display--r:hover .display__cube {
-  transform: scale(1.2) translate3d(-300px, -200px, 400px) rotate3d(-15, 17, 3, 360deg);
+  transform: scale(1.2) translate3d(-300px, -200px, 400px)
+    rotate3d(-15, 17, 3, 360deg);
 }
 
 .display__title {
