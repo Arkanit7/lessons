@@ -391,7 +391,6 @@ body {
   text-transform: uppercase;
   background-color: hsl(163deg 100% 59%);
   border-radius: 8px;
-  backdrop-filter: blur(31px);
   box-shadow: 0 0 100px 20px hsl(163deg 100% 59%);
   transition: transform 0.5s ease-in-out;
 }
