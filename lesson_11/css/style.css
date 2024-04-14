@@ -461,7 +461,7 @@ body {
   transform: rotate3d(5, 4, 3, 180deg);
 }
 
-.dosplay--o {
+.display--o {
   position: relative;
   z-index: 1;
 }
