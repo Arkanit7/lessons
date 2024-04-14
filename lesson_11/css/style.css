@@ -461,6 +461,11 @@ body {
   transform: rotate3d(5, 4, 3, 180deg);
 }
 
+.dosplay--o {
+  position: relative;
+  z-index: 1;
+}
+
 .display--o:hover .display__cube {
   transform: scale3d(2, 2, 5);
 }
