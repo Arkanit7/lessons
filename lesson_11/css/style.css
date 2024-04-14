@@ -462,7 +462,7 @@ body {
   transition: transform 0.5s ease-in-out;
 }
 
-.display:has(.display__cube) {
+.display:has( .display__cube) {
   perspective: 1000px;
 }
 
