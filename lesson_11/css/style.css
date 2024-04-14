@@ -107,7 +107,7 @@ body {
   height: 100px;
   padding: 12px;
   border-radius: 50px;
-  background: repeating-conic-gradient(hsl(212deg 9% 80%) 0 7deg, hsl(212deg 9% 50%) 7deg 14deg) content-box, hsl(0deg 0% 20%);
+  background: repeating-conic-gradient(hsl(212deg 9% 80%) 0 14deg, hsl(212deg 9% 50%) 14deg 17deg) content-box, hsl(0deg 0% 20%);
 }
 
 /* rear-fender */
