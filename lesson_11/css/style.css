@@ -547,7 +547,7 @@ body {
 
 .blog ul,
 .blog ol {
-  margin-left: 20px;
+  padding-left: 20px;
 }
 
 .blog li {
