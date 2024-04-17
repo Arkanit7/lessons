@@ -1,0 +1,718 @@
+/* Fonts */
+@import url("fonts.css");
+
+/* Reset styles */
+@import url("reset.css");
+
+/* Keyframes */
+@import url("keyframes.css");
+
+/* Main styles */
+:root {
+  color-scheme: dark;
+}
+
+body {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  line-height: 1.4;
+  background-color: hsl(249deg 11% 12%);
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: clip;
+}
+
+/* door */
+.door__window {
+  width: 164px;
+  height: 46px;
+  overflow: hidden;
+  transform: translate(2px);
+  position: relative;
+}
+
+.door__window::before {
+  content: "";
+  position: absolute;
+  right: 51px;
+  width: 164px;
+  height: 46px;
+  transform: skew(60deg);
+  background: linear-gradient(45deg, hsl(208deg 42% 38%), hsl(210deg 46% 92%));
+}
+
+.door__base {
+  border-inline: 2px solid black;
+  width: 168px;
+  height: 94px;
+  background: radial-gradient(hsl(358deg 58% 39%), hsl(358deg 68% 49%));
+  position: relative;
+}
+
+.door__base::before {
+  content: "";
+  position: absolute;
+  width: 165px;
+  height: 20px;
+  background: radial-gradient(hsl(358deg 58% 39%), hsl(358deg 68% 49%));
+  transform: translateY(-5px) rotate(3deg);
+}
+
+.door__base::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 8px;
+  width: 25px;
+  height: 6px;
+  border-radius: 2px;
+  background-color: black;
+}
+
+.door__number {
+  position: absolute;
+  z-index: 1;
+  left: 40px;
+  bottom: 10px;
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  color: hsl(0deg 0% 0%);
+  border-radius: 50%;
+  line-height: 80px;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.door__mirror {
+  position: absolute;
+  bottom: 90px;
+  right: 25px;
+  border-radius: 10px 30px 0 0;
+  width: 30px;
+  height: 20px;
+  background: radial-gradient(hsl(358deg 58% 39%), hsl(358deg 68% 49%));
+  border: 1px solid black;
+}
+
+.door__line {
+  width: 168px;
+  height: 6px;
+  background-color: black;
+  position: absolute;
+  transform: translateY(-57px) rotate(2deg);
+}
+
+/* wheel */
+.wheel {
+  width: 100px;
+  height: 100px;
+  padding: 12px;
+  border-radius: 50px;
+  background: repeating-conic-gradient(
+        hsl(212deg 9% 80%) 0 14deg,
+        hsl(212deg 9% 50%) 14deg 17deg
+      )
+      content-box,
+    hsl(0deg 0% 20%);
+}
+
+/* rear-fender */
+.rear-fender::before {
+  content: "";
+  position: absolute;
+  left: 34px;
+  bottom: 48px;
+  border: 1px solid black;
+  background-color: red;
+  box-shadow: 0 0 30px 10px red;
+  width: 12px;
+  height: 7px;
+}
+
+.rear-fender::after {
+  content: "";
+  position: absolute;
+  left: 45px;
+  bottom: 48px;
+  border: 1px solid black;
+  background-color: silver;
+  box-shadow: 0 0 30px 10px silver;
+  width: 20px;
+  height: 7px;
+}
+
+.rear-fender__top {
+  background: radial-gradient(hsl(358deg 58% 39%), hsl(358deg 68% 49%));
+  width: 212px;
+  height: 64px;
+  border-top-left-radius: 18px 36px;
+}
+
+.rear-fender__line {
+  width: 212px;
+  height: 6px;
+  background-color: black;
+  position: absolute;
+  transform: translateY(-24px) rotate(2deg);
+}
+
+.rear-fender__bottom {
+  background: radial-gradient(hsl(358deg 58% 39%), hsl(358deg 68% 49%));
+  width: 212px;
+  height: 40px;
+  border-bottom-left-radius: 212px 41px;
+}
+
+/* front-fender */
+.front-fender::before {
+  content: "";
+  position: absolute;
+  right: 51px;
+  bottom: 30px;
+  border: 1px solid black;
+  background-color: orange;
+  box-shadow: 0 0 30px 10px orange;
+  width: 12px;
+  height: 7px;
+}
+
+.front-fender::after {
+  content: "";
+  position: absolute;
+  right: 62px;
+  bottom: 30px;
+  border: 1px solid black;
+  background-color: silver;
+  box-shadow: 0 0 30px 10px silver;
+  width: 20px;
+  height: 7px;
+}
+
+.front-fender__top {
+  background: radial-gradient(hsl(358deg 58% 39%), hsl(358deg 68% 49%));
+  width: 285px;
+  height: 54px;
+  border-top-right-radius: 285px 54px;
+}
+
+.front-fender__line {
+  width: 285px;
+  height: 6px;
+  background-color: black;
+  transform: translateY(-10px) rotate(2deg);
+  position: absolute;
+}
+
+.front-fender__bottom {
+  background: radial-gradient(hsl(358deg 58% 39%), hsl(358deg 68% 49%));
+  width: 285px;
+  height: 40px;
+  border-bottom-right-radius: 140px 30px;
+}
+
+/* car */
+.car {
+  width: 664px;
+  height: 180px;
+}
+
+.car > * {
+  position: absolute;
+  bottom: 0;
+}
+
+.car__door {
+  left: 211px;
+  bottom: 30px;
+}
+
+.car__front-fender {
+  left: 379px;
+  bottom: 30px;
+}
+
+.car__rear-fender {
+  bottom: 30px;
+}
+
+.car__wheel {
+  animation: spin 5s ease-in, spin 1s ease-in 9s, spin 1s linear 10s 18,
+    spin 1s ease-out 28s;
+}
+
+.car__wheel--front {
+  left: 463px;
+}
+
+.car__wheel--rear {
+  left: 91px;
+}
+
+.car__roof-base {
+  width: 22px;
+  height: 45px;
+  background: radial-gradient(hsl(358deg 58% 39%), hsl(358deg 68% 49%));
+  bottom: 130px;
+  left: 186px;
+  transform: rotate(-10deg);
+}
+
+.car__roof {
+  width: 145px;
+  height: 10px;
+  background: radial-gradient(hsl(358deg 58% 39%), hsl(358deg 68% 49%));
+  bottom: 170px;
+  left: 183px;
+  border-radius: 130px 130px 0 0/10px 10px 0 0;
+}
+
+.car__rear-window {
+  width: 100px;
+  height: 46px;
+  background: linear-gradient(45deg, hsl(208deg 42% 38%), hsl(210deg 46% 92%));
+  border-top-left-radius: 100px 46px;
+  bottom: 130px;
+  left: 97px;
+}
+
+.car__rear-window::before {
+  content: "";
+  position: absolute;
+  left: -25px;
+  bottom: -15px;
+  border-right: 40px solid black;
+  border-block: 20px solid transparent;
+}
+
+.car__windshield {
+  width: 40px;
+  height: 55px;
+  transform: skew(60deg);
+  background: linear-gradient(45deg, hsl(208deg 42% 38%), hsl(210deg 46% 92%));
+  border-left: 10px solid black;
+  bottom: 120px;
+  left: 326px;
+}
+
+.car__transmission {
+  width: 110px;
+  height: 75px;
+  background-color: hsl(0deg 0% 0%);
+  border-radius: 100px 100px 0 0;
+  bottom: 30px;
+}
+
+.car__transmission--rear {
+  left: 86px;
+}
+
+.car__transmission--front {
+  left: 458px;
+}
+
+.car__tail-light {
+  width: 14px;
+  height: 28px;
+  background-color: red;
+  border: 1px solid black;
+  border-radius: 50%;
+  box-shadow: -20px 10px 80px 40px red;
+  transform: skew(-15deg);
+  left: 3px;
+  bottom: 103px;
+}
+
+.car__head-light {
+  border-right: 40px solid hsl(358deg 68% 39%);
+  border-block: 20px solid transparent;
+  left: 576px;
+  bottom: 80px;
+  color: white;
+  box-shadow: 30px 0 40px 0;
+}
+
+/* porsche */
+.porsche__tail-lights {
+  position: absolute;
+  bottom: 90px;
+  left: 10px;
+  box-shadow: -10px 0 50px 10px red;
+  width: 10px;
+  height: 15px;
+}
+
+.porsche__head-lights {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  transform: skew(40deg);
+  left: 520px;
+  bottom: 80px;
+  box-shadow: 30px 0 40px white;
+}
+
+.porsche__wheel {
+  position: absolute;
+  width: 88px;
+  bottom: 0;
+  animation: spin 5s ease-in-out 1s, spin 1s ease-in 9s, spin 1s linear 10s 18,
+    spin 1s ease-out 28s;
+}
+
+.porsche__wheel--rear {
+  left: 94px;
+}
+
+.porsche__wheel--front {
+  left: 431px;
+}
+
+/* road */
+.road__start {
+  position: absolute;
+  left: 780px;
+  top: 20px;
+  height: 100%;
+  width: 20px;
+  background: white;
+}
+
+.road__finish {
+  position: absolute;
+  left: 70360px;
+  top: 20px;
+  height: 100%;
+  width: 150px;
+  background: repeating-conic-gradient(transparent 0 90deg, white 90deg 180deg)
+    0/30px 30px;
+}
+
+/* scene */
+.scene__inner {
+  position: relative;
+  background: url("../img/bg.jpg");
+}
+
+.scene__background {
+  display: none;
+  position: absolute;
+  width: 100%;
+}
+
+.scene__background img {
+  width: 100%;
+}
+
+.scene__moon {
+  position: absolute;
+  right: 150px;
+  top: 20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(circle at top right, white 50%, black);
+  box-shadow: 0 0 200px 50px white;
+}
+
+.scene__moon::before,
+.scene__moon::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: radial-gradient(white 56%, black);
+}
+
+.scene__moon::before {
+  left: 20%;
+  top: 10%;
+}
+
+.scene__moon::after {
+  left: 50%;
+  top: 40%;
+  width: 40px;
+  height: 40px;
+}
+
+.scene__notification::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 80px;
+  max-width: 100%;
+  text-align: center;
+  font-size: 160px;
+  font-weight: 700;
+  text-shadow: 0 0 30px black, 0 0 60px black;
+  animation: count 4s linear 6s, announce 3s linear 26s forwards,
+    credits 5s linear 33s forwards;
+}
+
+.scene__camera {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  animation: camera 20s linear 9s forwards;
+}
+
+.scene__lantern {
+  width: 80px;
+  position: absolute;
+  bottom: 600px;
+  left: 50px;
+}
+
+.scene__lantern::after {
+  content: "";
+  position: absolute;
+  left: 50px;
+  top: 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: 100px 450px 200px 70px white;
+}
+
+.scene__lantern:nth-child(1) {
+  left: 1900px;
+}
+
+.scene__lantern:nth-child(2) {
+  left: 3800px;
+}
+
+.scene__lantern:nth-child(3) {
+  left: 5700px;
+}
+
+.scene__lantern:nth-child(4) {
+  left: 7600px;
+}
+
+.scene__lantern:nth-child(5) {
+  left: 9500px;
+}
+
+.scene__lantern:nth-child(6) {
+  left: 11400px;
+}
+
+.scene__lantern:nth-child(7) {
+  left: 13300px;
+}
+
+.scene__lantern:nth-child(8) {
+  left: 15200px;
+}
+
+.scene__lantern:nth-child(9) {
+  left: 17100px;
+}
+
+.scene__lantern:nth-child(10) {
+  left: 19000px;
+}
+
+.scene__lantern:nth-child(11) {
+  left: 20900px;
+}
+
+.scene__lantern:nth-child(12) {
+  left: 22800px;
+}
+
+.scene__lantern:nth-child(13) {
+  left: 24700px;
+}
+
+.scene__lantern:nth-child(14) {
+  left: 26600px;
+}
+
+.scene__lantern:nth-child(15) {
+  left: 28500px;
+}
+
+.scene__lantern:nth-child(16) {
+  left: 30400px;
+}
+
+.scene__lantern:nth-child(17) {
+  left: 32300px;
+}
+
+.scene__lantern:nth-child(18) {
+  left: 34200px;
+}
+
+.scene__lantern:nth-child(19) {
+  left: 36100px;
+}
+
+.scene__lantern:nth-child(20) {
+  left: 38000px;
+}
+
+.scene__lantern:nth-child(21) {
+  left: 39900px;
+}
+
+.scene__lantern:nth-child(22) {
+  left: 41800px;
+}
+
+.scene__lantern:nth-child(23) {
+  left: 43700px;
+}
+
+.scene__lantern:nth-child(24) {
+  left: 45600px;
+}
+
+.scene__lantern:nth-child(25) {
+  left: 47500px;
+}
+
+.scene__lantern:nth-child(26) {
+  left: 49400px;
+}
+
+.scene__lantern:nth-child(27) {
+  left: 51300px;
+}
+
+.scene__lantern:nth-child(28) {
+  left: 53200px;
+}
+
+.scene__lantern:nth-child(29) {
+  left: 55100px;
+}
+
+.scene__lantern:nth-child(30) {
+  left: 57000px;
+}
+
+.scene__lantern:nth-child(31) {
+  left: 58900px;
+}
+
+.scene__lantern:nth-child(32) {
+  left: 60800px;
+}
+
+.scene__lantern:nth-child(33) {
+  left: 62700px;
+}
+
+.scene__lantern:nth-child(34) {
+  left: 64600px;
+}
+
+.scene__lantern:nth-child(35) {
+  left: 66500px;
+}
+
+.scene__lantern:nth-child(36) {
+  left: 68400px;
+}
+
+.scene__tree {
+  width: 400px;
+  position: absolute;
+  bottom: 590px;
+  left: 50px;
+}
+
+.scene__tree:nth-child(1) {
+  left: 6364px;
+}
+
+.scene__tree:nth-child(2) {
+  left: 12728px;
+}
+
+.scene__tree:nth-child(3) {
+  left: 19092px;
+}
+
+.scene__tree:nth-child(4) {
+  left: 25456px;
+}
+
+.scene__tree:nth-child(5) {
+  left: 31820px;
+}
+
+.scene__tree:nth-child(6) {
+  left: 38184px;
+}
+
+.scene__tree:nth-child(7) {
+  left: 44548px;
+}
+
+.scene__tree:nth-child(8) {
+  left: 50912px;
+}
+
+.scene__tree:nth-child(9) {
+  left: 57276px;
+}
+
+.scene__tree:nth-child(10) {
+  left: 63640px;
+}
+
+.scene__tree:nth-child(11) {
+  left: 70004px;
+}
+
+.scene__road {
+  position: absolute;
+  bottom: 0;
+  width: 75000px;
+  height: 600px;
+  background: linear-gradient(
+        to right,
+        hsl(0deg 0% 100%) 20px,
+        hsl(0deg 0% 13%) 20px
+      )
+      0 0/40px 20px repeat-x,
+    linear-gradient(to right, hsl(0deg 0% 100%) 100px, transparent 100px 400px)
+      center/550px 15px repeat-x,
+    hsl(0deg 0% 33%);
+}
+
+.scene__police {
+  position: absolute;
+  width: 664px;
+  left: -664px;
+  bottom: 300px;
+  animation: police 3s linear 30s;
+}
+
+.scene__porsche {
+  position: absolute;
+  left: 0;
+  bottom: 350px;
+  width: 600px;
+  animation: porsche-start 5s ease-in-out 1s both,
+    porsche-race 20s linear 9s forwards;
+}
+
+.scene__car {
+  position: absolute;
+  left: 0;
+  bottom: 50px;
+  animation: car-start 5s ease-in-out both, car-race 20s linear 9s forwards;
+}

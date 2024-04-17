@@ -1,0 +1,312 @@
+/* car */
+@keyframes car-start {
+  0% {
+    transform: translate(-200%, 0);
+  }
+
+  100% {
+    transform: translate(110px);
+  }
+}
+
+@keyframes car-race {
+  0% {
+    transform: translate(110px);
+    animation-timing-function: ease-in;
+  }
+
+  20% {
+    transform: translate(21000px);
+  }
+
+  30% {
+    transform: translate(38000px);
+  }
+
+  50% {
+    transform: translate(56880px);
+  }
+
+  60% {
+    transform: translate(69000px);
+    animation-timing-function: ease-out;
+  }
+
+  80% {
+    transform: translate(70600px);
+  }
+
+  100% {
+    transform: translate(90000px);
+  }
+}
+
+/* porsche */
+@keyframes porsche-start {
+  0% {
+    transform: translate(-200%, 0);
+  }
+
+  100% {
+    transform: translate(175px);
+  }
+}
+
+@keyframes porsche-race {
+  0% {
+    transform: translate(175px);
+    animation-timing-function: ease-in;
+  }
+
+  20% {
+    transform: translate(15000px);
+  }
+
+  30% {
+    transform: translate(41000px);
+  }
+
+  50% {
+    transform: translate(56480px);
+  }
+
+  60% {
+    transform: translate(69000px);
+    animation-timing-function: ease-out;
+  }
+
+  80% {
+    transform: translate(71000px);
+  }
+
+  100% {
+    transform: translate(90000px);
+  }
+}
+
+/* police */
+@keyframes police {
+  0% {
+    transform: translate(70000px);
+  }
+
+  100% {
+    transform: translate(74000px);
+  }
+}
+
+/* camera */
+@keyframes camera {
+  10% {
+    transform: none;
+    animation-timing-function: ease-in;
+  }
+
+  20% {
+    transform: translate(-21000px);
+  }
+
+  30% {
+    transform: translate(-38000px);
+  }
+
+  50% {
+    transform: translate(-56480px);
+  }
+
+  60% {
+    transform: translate(-69000px);
+    animation-timing-function: ease-out;
+  }
+
+  80%,
+  100% {
+    transform: translateX(-70000px);
+  }
+}
+
+/* notification */
+@keyframes announce {
+  6.6666666667% {
+    content: "Y";
+  }
+
+  13.3333333333% {
+    content: "Ye";
+  }
+
+  20% {
+    content: "Yel";
+  }
+
+  26.6666666667% {
+    content: "Yell";
+  }
+
+  33.3333333333% {
+    content: "Yello";
+  }
+
+  40% {
+    content: "Yellow";
+  }
+
+  46.6666666667% {
+    content: "Yellow ";
+  }
+
+  53.3333333333% {
+    content: "Yellow c";
+  }
+
+  60% {
+    content: "Yellow ca";
+  }
+
+  66.6666666667% {
+    content: "Yellow car";
+  }
+
+  73.3333333333% {
+    content: "Yellow car ";
+  }
+
+  80% {
+    content: "Yellow car w";
+  }
+
+  86.6666666667% {
+    content: "Yellow car wo";
+  }
+
+  93.3333333333% {
+    content: "Yellow car won";
+  }
+
+  100% {
+    content: "Yellow car won!";
+  }
+}
+
+@keyframes credits {
+  4.347826087% {
+    content: "T";
+  }
+
+  8.6956521739% {
+    content: "Th";
+  }
+
+  13.0434782609% {
+    content: "Tha";
+  }
+
+  17.3913043478% {
+    content: "Than";
+  }
+
+  21.7391304348% {
+    content: "Thank";
+  }
+
+  26.0869565217% {
+    content: "Thanks";
+  }
+
+  30.4347826087% {
+    content: "Thanks ";
+  }
+
+  34.7826086957% {
+    content: "Thanks f";
+  }
+
+  39.1304347826% {
+    content: "Thanks fo";
+  }
+
+  43.4782608696% {
+    content: "Thanks for";
+  }
+
+  47.8260869565% {
+    content: "Thanks for ";
+  }
+
+  52.1739130435% {
+    content: "Thanks for w";
+  }
+
+  56.5217391304% {
+    content: "Thanks for wa";
+  }
+
+  60.8695652174% {
+    content: "Thanks for wat";
+  }
+
+  65.2173913043% {
+    content: "Thanks for watc";
+  }
+
+  69.5652173913% {
+    content: "Thanks for watch";
+  }
+
+  73.9130434783% {
+    content: "Thanks for watchi";
+  }
+
+  78.2608695652% {
+    content: "Thanks for watchin";
+  }
+
+  82.6086956522% {
+    content: "Thanks for watching";
+  }
+
+  86.9565217391% {
+    content: "Thanks for watching!";
+  }
+
+  91.3043478261% {
+    content: "Thanks for watching! ";
+  }
+
+  95.652173913% {
+    content: "Thanks for watching! ;";
+  }
+
+  100% {
+    content: "Thanks for watching! ;)";
+  }
+}
+
+@keyframes count {
+  0%,
+  24% {
+    content: "3";
+  }
+
+  25%,
+  49% {
+    content: "2";
+  }
+
+  50%,
+  74% {
+    content: "1";
+  }
+
+  75%,
+  100% {
+    content: "GO!";
+  }
+}
+
+/* wheels */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
