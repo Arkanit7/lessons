@@ -30,9 +30,8 @@ body {
 }
 
 .wrapper {
-  overflow-x: hidden;
-  width: 100dvw;
-  height: 100dvh;
+  overflow-x: clip;
+  min-height: 100dvh;
   display: grid;
   place-items: center;
 }
