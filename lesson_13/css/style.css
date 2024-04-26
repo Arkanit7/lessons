@@ -639,7 +639,7 @@ body {
 .slider-promo__wrapper {
   display: flex;
   gap: 30px;
-  overflow-inline: auto;
+  overflow-x: auto;
   scroll-snap-type: inline proximity;
 }
 
