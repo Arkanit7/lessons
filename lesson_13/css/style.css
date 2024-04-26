@@ -189,10 +189,10 @@ body {
 }
 
 .phone__button {
-  /* flex: none;
-  width: 24px; */
+  /* flex: none; */
+  width: 24px;
   height: 24px;
-  flex: 0 1 24px;
+  flex: 0 0 24px;
   background: url("../img/icons/arrow.svg") center/contain no-repeat;
 }
 
@@ -313,12 +313,6 @@ body {
 
 .list-header__link:is(:hover, :focus-visible) {
   color: hsl(36deg 100% 57%);
-}
-
-.header {
-  /* position: sticky;
-  z-index: 100;
-  top: 0; */
 }
 
 .header__primary {
