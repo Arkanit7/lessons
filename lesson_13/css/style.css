@@ -136,7 +136,7 @@ body {
   /* flex: none;
   width: 30px; */
   height: 30px;
-  flex: 0 1 30px;
+  flex: 0 0 30px;
   background: url("../img/icons/search.svg") center/24px 24px no-repeat
     content-box;
   border: 2px solid transparent;
@@ -316,9 +316,9 @@ body {
 }
 
 .header {
-  position: sticky;
+  /* position: sticky;
   z-index: 100;
-  top: 0;
+  top: 0; */
 }
 
 .header__primary {
