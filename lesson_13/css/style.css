@@ -133,9 +133,10 @@ body {
 }
 
 .search__submit {
-  width: 30px;
+  /* flex: none;
+  width: 30px; */
   height: 30px;
-  flex: none;
+  flex: 0 1 30px;
   background: url("../img/icons/search.svg") center/24px 24px no-repeat
     content-box;
   border: 2px solid transparent;
@@ -188,9 +189,10 @@ body {
 }
 
 .phone__button {
-  width: 24px;
+  /* flex: none;
+  width: 24px; */
   height: 24px;
-  flex: none;
+  flex: 0 1 24px;
   background: url("../img/icons/arrow.svg") center/contain no-repeat;
 }
 
@@ -311,6 +313,12 @@ body {
 
 .list-header__link:is(:hover, :focus-visible) {
   color: hsl(36deg 100% 57%);
+}
+
+.header {
+  position: sticky;
+  z-index: 100;
+  top: 0;
 }
 
 .header__primary {
@@ -482,15 +490,13 @@ body {
 }
 
 .categories__card {
-  width: 250px;
+  /* width: 250px; */
   height: 300px;
-  flex: none;
+  flex: 0 1 250px;
 }
 
 /* Popular */
 .card-pop {
-  width: 300px;
-  min-height: 468px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -616,6 +622,7 @@ body {
 
 .card-pop__favorite,
 .card-pop__cart {
+  flex: none;
   transition: background-color 0.5s;
 }
 
@@ -635,6 +642,12 @@ body {
   gap: 30px;
 }
 
+.popular__card {
+  /* width: 300px; */
+  min-height: 468px;
+  flex: 0 1 300px;
+}
+
 /* Promo */
 .slider-promo__wrapper {
   display: flex;
@@ -646,9 +659,11 @@ body {
 .slider-promo__slide {
   overflow: hidden;
   border-radius: 8px;
-  width: 410px;
+
+  /* width: 410px;
+   flex: none; */
+  flex: 0 0 410px;
   height: 280px;
-  flex: none;
   scroll-snap-align: start;
 }
 
@@ -689,8 +704,8 @@ body {
   overflow: hidden;
   width: 60px;
   height: 60px;
-  border-radius: 50%;
   flex: none;
+  border-radius: 50%;
   background-color: hsl(0deg 0% 100%);
   transition: background-color 0.3s;
 }
@@ -754,4 +769,21 @@ body {
 
 .main__promo:not(:last-child) {
   margin-bottom: 70px;
+}
+
+/* Footer */
+.footer {
+  background-color: hsl(0deg 2% 16%);
+}
+
+.footer__container {
+  padding-block: 20px;
+}
+
+.footer__copyrights {
+  color: hsl(0deg 0% 69%);
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.4667;
 }
