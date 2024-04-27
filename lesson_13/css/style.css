@@ -315,6 +315,12 @@ body {
   color: hsl(36deg 100% 57%);
 }
 
+.header {
+  position: sticky;
+  z-index: 100;
+  top: -120px;
+}
+
 .header__primary {
   padding-block: 15px;
   background-color: hsl(0deg 0% 97%);
@@ -322,6 +328,8 @@ body {
 
 .header__secondary {
   padding-block: 25px;
+  position: sticky;
+  top: 60px;
 }
 
 .header__tertiary {
