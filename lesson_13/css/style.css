@@ -638,7 +638,6 @@ body {
 
 .popular__card {
   /* width: 300px; */
-  min-height: 468px;
   flex: 0 1 300px;
 }
 
