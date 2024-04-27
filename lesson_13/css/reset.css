@@ -22,8 +22,12 @@ li {
   list-style: none;
 }
 
-img {
-  vertical-align: top;
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
   max-width: 100%;
 }
 
