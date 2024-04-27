@@ -315,7 +315,7 @@ body {
   color: hsl(36deg 100% 57%);
 }
 
-.header {
+.header--sticky {
   position: sticky;
   z-index: 100;
   top: -120px;
