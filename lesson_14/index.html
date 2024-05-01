@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krovato — Оформлення замовлення</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    >
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon-16x16.png"
+    >
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- header-->
+      <header class="header">
+        <!-- primary-->
+        <div class="header__primary">
+          <div class="header__container">
+            <!-- nav-->
+            <nav class="header__nav nav">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Про нас</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Оплата</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Доставка та збірка</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Відгуки</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Блог</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Контакти</a>
+                </li>
+              </ul>
+            </nav>
+            <!-- help & lang-->
+            <div class="header__box">
+              <!-- help-->
+              <div class="header__help help">
+                <p class="help__label">Допомога і консультація:</p>
+                <ul class="help__list">
+                  <li class="help__item">
+                    <a class="help__link" href="#" target="_blank"
+                      ><img src="img/icons/whatsapp.svg" alt="WhatsApp"
+                    ></a>
+                  </li>
+                  <li class="help__item">
+                    <a class="help__link" href="#" target="_blank"
+                      ><img src="img/icons/telegram.svg" alt="Telegram"
+                    ></a>
+                  </li>
+                  <li class="help__item">
+                    <a class="help__link" href="#" target="_blank"
+                      ><img src="img/icons/viber.svg" alt="Viber"
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+              <!-- lang-->
+              <div class="header__lang lang">
+                <button class="lang__button" type="button" title="Set language">
+                  ua
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- secondary-->
+        <div class="header__secondary">
+          <div class="header__container">
+            <!-- brand--><a class="header__brand brand" href="#"
+              ><img src="img/logo.svg" alt="Krovato – технології сну"></a
+            ><!-- catalog-->
+            <div class="header__catalog catalog">
+              <button class="catalog__button button" type="button">
+                Каталог
+              </button>
+            </div>
+            <!-- search-->
+            <form class="header__search search" method="get">
+              <input
+                class="search__field"
+                type="search"
+                name="search"
+                placeholder="Пошук товарів"
+                required
+                autofocus
+              ><button
+                class="search__submit"
+                type="submit"
+                title="Шукати"
+              ></button>
+            </form>
+            <!-- phone-->
+            <div class="header__phone phone">
+              <div class="phone__main">
+                <p class="phone__schedule">Щодня з 9:00 до 18:00</p>
+                <a class="phone__link" href="tel:+380679294545"
+                  >067 929-45-45</a
+                >
+              </div>
+              <button
+                class="phone__button"
+                type="button"
+                title="Усі телефони"
+              ></button>
+            </div>
+            <!-- actions-->
+            <div class="header__actions">
+              <button
+                class="header__favorites button-round"
+                type="button"
+                title="Улюблені"
+              ></button
+              ><button
+                class="header__cart button-round"
+                type="button"
+                title="Кошик"
+              ></button>
+            </div>
+          </div>
+        </div>
+        <!-- tertiary-->
+        <div class="header__tertiary">
+          <div class="header__container">
+            <ul class="header__list list-header">
+              <li class="list-header__item">
+                <a
+                  class="list-header__link list-header__link--icon--star"
+                  href="#"
+                  >Акції</a
+                >
+              </li>
+              <li class="list-header__item">
+                <a
+                  class="list-header__link list-header__link--icon--sale"
+                  href="#"
+                  >Розпродаж</a
+                >
+              </li>
+              <li class="list-header__item">
+                <a
+                  class="list-header__link list-header__link--icon--credit"
+                  href="#"
+                  >Купити в кредит</a
+                >
+              </li>
+            </ul>
+            <ul class="header__list list-header">
+              <li class="list-header__item">
+                <a class="list-header__link" href="#">Дитяча</a>
+              </li>
+              <li class="list-header__item">
+                <a class="list-header__link" href="#">Кухня</a>
+              </li>
+              <li class="list-header__item">
+                <a class="list-header__link" href="#">Ванна</a>
+              </li>
+              <li class="list-header__item">
+                <a class="list-header__link" href="#">Спальня</a>
+              </li>
+              <li class="list-header__item">
+                <a class="list-header__link" href="#">Передпокій</a>
+              </li>
+              <li class="list-header__item">
+                <a class="list-header__link" href="#">Вітальня</a>
+              </li>
+              <li class="list-header__item">
+                <a class="list-header__link" href="#">Офіс</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <main class="wrapper__main main">
+        <!-- Checkout-->
+        <div class="checkout">
+          <div class="checkout__container">
+            <!-- Heading-->
+            <div class="checkout__heading heading">
+              <h1 class="heading__title">Оформлення замовлення</h1>
+            </div>
+            <form
+              class="checkout__form"
+              action="https://jkorpela.fi/cgi-bin/echo.cgi"
+              method="post"
+            >
+              <div class="checkout__main">
+                <!-- Customer info-->
+                <section class="checkout__section section-checkout">
+                  <h2
+                    class="section-checkout__title section-checkout__title--icon--info"
+                  >
+                    Інформація про покупця
+                  </h2>
+                  <div class="section-checkout__body customer-info">
+                    <div class="customer-info__row">
+                      <div class="customer-info__col">
+                        <input
+                          class="customer-info__field field"
+                          type="text"
+                          name="lastname"
+                          placeholder="Прізвище"
+                          required
+                        ><input
+                          class="customer-info__field field"
+                          type="text"
+                          name="firstname"
+                          placeholder="Ім'я"
+                          required
+                        ><input
+                          class="customer-info__field field"
+                          type="text"
+                          name="middlename"
+                          placeholder="По батькові"
+                          required
+                        >
+                      </div>
+                      <div class="customer-info__col">
+                        <input
+                          class="customer-info__field field"
+                          type="tel"
+                          name="phone"
+                          placeholder="Контактний телефон"
+                          pattern="[0-9]*"
+                          minlength="9"
+                          maxlength="14"
+                          required
+                        ><input
+                          class="customer-info__field field"
+                          type="email"
+                          name="email"
+                          placeholder="E-mail"
+                          required
+                        >
+                      </div>
+                    </div>
+                    <div class="customer-info__control control">
+                      <input
+                        class="control__input checkbox"
+                        id="receiver"
+                        type="checkbox"
+                        name="receiver"
+                      ><label
+                        class="control__label label label--pale"
+                        for="receiver"
+                        >Отримуватиме замовлення інша людина</label
+                      >
+                    </div>
+                  </div>
+                </section>
+                <!-- Delivery method-->
+                <section class="checkout__section section-checkout">
+                  <h2
+                    class="section-checkout__title section-checkout__title--icon--van"
+                  >
+                    Вибір способу доставлення
+                  </h2>
+                  <div class="section-checkout__body delivery-method">
+                    <ul class="delivery-method__list">
+                      <li class="delivery-method__item choose">
+                        <input
+                          class="choose__input"
+                          id="pickup"
+                          type="radio"
+                          name="delivery"
+                          checked
+                        ><label class="choose__box" for="pickup"
+                          ><img
+                            class="choose__img"
+                            src="img/checkout/check-circle.svg"
+                            alt=""
+                          ><span class="choose__title"
+                            >Самовивіз із магазину</span
+                          ><span class="choose__price">Безплатно</span></label
+                        >
+                      </li>
+                      <li class="delivery-method__item choose">
+                        <input
+                          class="choose__input"
+                          id="new-post"
+                          type="radio"
+                          name="delivery"
+                        ><label class="choose__box" for="new-post"
+                          ><img
+                            class="choose__img"
+                            src="img/checkout/np.svg"
+                            alt=""
+                          ><span class="choose__title"
+                            >Доставлення Нова Пошта</span
+                          ><span class="choose__price"
+                            >≈ від 500 грн</span
+                          ></label
+                        >
+                      </li>
+                      <li class="delivery-method__item choose">
+                        <input
+                          class="choose__input"
+                          id="courier"
+                          type="radio"
+                          name="delivery"
+                        ><label class="choose__box" for="courier"
+                          ><img
+                            class="choose__img"
+                            src="img/checkout/courier.svg"
+                            alt=""
+                          ><span class="choose__title"
+                            >Доставлення кур'єром</span
+                          ><span class="choose__price"
+                            >≈ від 200 грн</span
+                          ></label
+                        >
+                      </li>
+                    </ul>
+                    <div class="delivery-method__map delivery-map">
+                      <div class="delivery-map__info">
+                        <div class="delivery-map__schedule">
+                          Графік роботи: щодня з 9:00 до 18:00
+                        </div>
+                        <div class="delivery-map__location">
+                          м. Київ, пров. Ізяславський 52, пов. 2
+                        </div>
+                      </div>
+                      <button class="delivery-map__button button" type="button">
+                        На мапі
+                      </button>
+                    </div>
+                  </div>
+                </section>
+                <!-- Payment-->
+                <section class="checkout__section section-checkout">
+                  <h2
+                    class="section-checkout__title section-checkout__title--icon--wallet"
+                  >
+                    Вибір способу оплати
+                  </h2>
+                  <div class="section-checkout__body payment-method"></div>
+                  <ul class="payment-method__list">
+                    <li class="payment-method__item">
+                      <input
+                        class="payment-method__input radio"
+                        id="cash"
+                        type="radio"
+                        name="payment"
+                      ><label class="payment-method__label label" for="cash"
+                        >Готівкою при отриманні (Післяоплата)</label
+                      >
+                    </li>
+                    <li class="payment-method__item">
+                      <input
+                        class="payment-method__input radio"
+                        id="card"
+                        type="radio"
+                        name="payment"
+                        checked
+                      ><label class="payment-method__label label" for="card"
+                        >Оплата карткою на сайті
+                        <img
+                          src="img/checkout/master-card-logo.svg"
+                          alt="Mastercard"><img
+                          src="img/checkout/visa-card-logo.svg"
+                          alt="Visa"
+                      ></label>
+                    </li>
+                    <li class="payment-method__item">
+                      <input
+                        class="payment-method__input radio"
+                        id="privat-pay"
+                        type="radio"
+                        name="payment"
+                      ><label
+                        class="payment-method__label label"
+                        for="privat-pay"
+                        >Privat Pay
+                        <img src="img/checkout/privat-pay-logo.svg" alt=""
+                      ></label>
+                    </li>
+                    <li class="payment-method__item">
+                      <input
+                        class="payment-method__input radio"
+                        id="credit"
+                        type="radio"
+                        name="payment"
+                      ><label class="payment-method__label label" for="credit"
+                        >Кредит від Krovato</label
+                      >
+                    </li>
+                    <li class="payment-method__item">
+                      <input
+                        class="payment-method__input radio"
+                        id="privat-bank"
+                        type="radio"
+                        name="payment"
+                      ><label
+                        class="payment-method__label label"
+                        for="privat-bank"
+                        >Оплата частинами ПриватБанк
+                        <img src="img/checkout/privat-credit-logo.svg" alt=""
+                      ></label>
+                    </li>
+                    <li class="payment-method__item">
+                      <input
+                        class="payment-method__input radio"
+                        id="mono-bank"
+                        type="radio"
+                        name="payment"
+                      ><label
+                        class="payment-method__label label"
+                        for="mono-bank"
+                        >Оплата частинами МоноБанк
+                        <img src="img/checkout/mono-bank-logo.svg" alt=""
+                      ></label>
+                    </li>
+                  </ul>
+                </section>
+                <!-- Comment-->
+                <section class="checkout__section section-checkout">
+                  <h2
+                    class="section-checkout__title section-checkout__title--icon--comment"
+                  >
+                    Коментар до замовлення
+                  </h2>
+                  <div class="section-checkout__body">
+                    <textarea
+                      class="section-checkout__textarea field"
+                      name="comment"
+                      placeholder="Ваш коментар"
+                    ></textarea>
+                  </div>
+                </section>
+                <!-- Summary-->
+                <section class="checkout__section section-checkout">
+                  <h2 class="section-checkout__title">Разом:</h2>
+                  <div class="section-checkout__body summary">
+                    <ul class="summary__table">
+                      <li class="summary__item">
+                        <span class="summary__key">4 товари на суму:</span
+                        ><span class="summary__value">540 269 грн.</span>
+                      </li>
+                      <li class="summary__item">
+                        <span class="summary__key">Вартість доставлення:</span
+                        ><span class="summary__value"
+                          >За тарифами оператора</span
+                        >
+                      </li>
+                      <li class="summary__item">
+                        <span class="summary__key">До оплати:</span
+                        ><span class="summary__value summary__value--total"
+                          >540 269 грн.</span
+                        >
+                      </li>
+                    </ul>
+                    <div class="summary__control control">
+                      <input
+                        class="control__input checkbox"
+                        id="callback"
+                        type="checkbox"
+                        name="callback"
+                      ><label class="control__label label" for="callback"
+                        >Не передзвонюйте мені для підтвердження
+                        замовлення</label
+                      >
+                    </div>
+                    <button class="summary__submit button">
+                      Оформити замовлення
+                    </button>
+                    <p class="summary__user-agree">
+                      Підтверджуючи замовлення, я приймаю умови
+                      <a class="a" href="#">Угоди користувача</a>
+                    </p>
+                  </div>
+                </section>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+      <!-- footer-->
+      <footer class="footer">
+        <div class="footer__container">
+          <p class="footer__copyrights">
+            © KROVATO - Технології сну - 2022. Всі права захищені.
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
