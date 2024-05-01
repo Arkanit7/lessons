@@ -131,7 +131,6 @@ body {
 }
 
 .search__field {
-  height: 100%;
   width: 100%;
   padding: 9px 56px 9px 14px;
   border-radius: 8px;
@@ -452,6 +451,10 @@ body {
   font-size: 16px;
   line-height: 1.875;
   transition: border-color 0.3s;
+
+  /* &:user-valid {
+    background-color: hsl(120deg 100% 50% / 5%);
+  } */
 }
 
 .field:hover {
@@ -461,10 +464,6 @@ body {
 .field::placeholder {
   opacity: 1;
 }
-
-/* .field:user-valid {
-  background-color: hsl(120deg 100% 50% / 5%);
-} */
 
 .field:user-invalid {
   background-color: hsl(0deg 100% 50% / 5%);
