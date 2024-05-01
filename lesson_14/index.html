@@ -253,12 +253,12 @@
                     <div class="customer-info__control control">
                       <input
                         class="control__input checkbox"
-                        id="receiver"
+                        id="not-me"
                         type="checkbox"
-                        name="receiver"
+                        name="not-me"
                       ><label
                         class="control__label label label--pale"
-                        for="receiver"
+                        for="not-me"
                         >Отримуватиме замовлення інша людина</label
                       >
                     </div>
@@ -279,6 +279,7 @@
                           id="pickup"
                           type="radio"
                           name="delivery"
+                          value="pickup"
                           checked
                         ><label class="choose__box" for="pickup"
                           ><img
@@ -296,6 +297,7 @@
                           id="new-post"
                           type="radio"
                           name="delivery"
+                          value="new-post"
                         ><label class="choose__box" for="new-post"
                           ><img
                             class="choose__img"
@@ -314,6 +316,7 @@
                           id="courier"
                           type="radio"
                           name="delivery"
+                          value="courier"
                         ><label class="choose__box" for="courier"
                           ><img
                             class="choose__img"
@@ -357,6 +360,7 @@
                         id="cash"
                         type="radio"
                         name="payment"
+                        value="cash"
                       ><label class="payment-method__label label" for="cash"
                         >Готівкою при отриманні (Післяоплата)</label
                       >
@@ -367,6 +371,7 @@
                         id="card"
                         type="radio"
                         name="payment"
+                        value="card"
                         checked
                       ><label class="payment-method__label label" for="card"
                         >Оплата карткою на сайті
@@ -383,6 +388,7 @@
                         id="privat-pay"
                         type="radio"
                         name="payment"
+                        value="privat-pay"
                       ><label
                         class="payment-method__label label"
                         for="privat-pay"
@@ -396,6 +402,7 @@
                         id="credit"
                         type="radio"
                         name="payment"
+                        value="credit"
                       ><label class="payment-method__label label" for="credit"
                         >Кредит від Krovato</label
                       >
@@ -406,6 +413,7 @@
                         id="privat-bank"
                         type="radio"
                         name="payment"
+                        value="privat-bank"
                       ><label
                         class="payment-method__label label"
                         for="privat-bank"
@@ -419,6 +427,7 @@
                         id="mono-bank"
                         type="radio"
                         name="payment"
+                        value="mono-bank"
                       ><label
                         class="payment-method__label label"
                         for="mono-bank"
