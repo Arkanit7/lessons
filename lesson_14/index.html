@@ -211,43 +211,56 @@
                   <div class="section-checkout__body customer-info">
                     <div class="customer-info__row">
                       <div class="customer-info__col">
-                        <input
-                          class="customer-info__field field"
-                          type="text"
-                          name="lastname"
-                          placeholder="Прізвище"
-                          required
-                        ><input
-                          class="customer-info__field field"
-                          type="text"
-                          name="firstname"
-                          placeholder="Ім'я"
-                          required
-                        ><input
-                          class="customer-info__field field"
-                          type="text"
-                          name="middlename"
-                          placeholder="По батькові"
-                          required
-                        >
+                        <div class="customer-info__item">
+                          <input
+                            class="customer-info__field field"
+                            type="text"
+                            name="lastname"
+                            placeholder="Прізвище"
+                            required
+                          >
+                        </div>
+                        <div class="customer-info__item">
+                          <input
+                            class="customer-info__field field"
+                            type="text"
+                            name="firstname"
+                            placeholder="Ім'я"
+                            required
+                          >
+                        </div>
+                        <div class="customer-info__item">
+                          <input
+                            class="customer-info__field field"
+                            type="text"
+                            name="middlename"
+                            placeholder="По батькові"
+                            required
+                          >
+                        </div>
                       </div>
                       <div class="customer-info__col">
-                        <input
-                          class="customer-info__field field"
-                          type="tel"
-                          name="phone"
-                          placeholder="Контактний телефон"
-                          pattern="[0-9]*"
-                          minlength="9"
-                          maxlength="14"
-                          required
-                        ><input
-                          class="customer-info__field field"
-                          type="email"
-                          name="email"
-                          placeholder="E-mail"
-                          required
-                        >
+                        <div class="customer-info__item">
+                          <input
+                            class="customer-info__field field"
+                            type="tel"
+                            name="phone"
+                            placeholder="Контактний телефон"
+                            pattern="[0-9]*"
+                            minlength="9"
+                            maxlength="14"
+                            required
+                          >
+                        </div>
+                        <div class="customer-info__item">
+                          <input
+                            class="customer-info__field field"
+                            type="email"
+                            name="email"
+                            placeholder="E-mail"
+                            required
+                          >
+                        </div>
                       </div>
                     </div>
                     <div class="customer-info__control control">
@@ -281,11 +294,9 @@
                           name="delivery"
                           value="pickup"
                           checked
-                        ><label class="choose__box" for="pickup"
-                          ><img
-                            class="choose__img"
-                            src="img/checkout/check-circle.svg"
-                            alt=""
+                        ><label
+                          class="choose__box choose__box--icon--pickup"
+                          for="pickup"
                           ><span class="choose__title"
                             >Самовивіз із магазину</span
                           ><span class="choose__price">Безплатно</span></label
@@ -298,11 +309,9 @@
                           type="radio"
                           name="delivery"
                           value="new-post"
-                        ><label class="choose__box" for="new-post"
-                          ><img
-                            class="choose__img"
-                            src="img/checkout/np.svg"
-                            alt=""
+                        ><label
+                          class="choose__box choose__box--icon--np"
+                          for="new-post"
                           ><span class="choose__title"
                             >Доставлення Нова Пошта</span
                           ><span class="choose__price"
@@ -317,11 +326,9 @@
                           type="radio"
                           name="delivery"
                           value="courier"
-                        ><label class="choose__box" for="courier"
-                          ><img
-                            class="choose__img"
-                            src="img/checkout/courier.svg"
-                            alt=""
+                        ><label
+                          class="choose__box choose__box--icon--courier"
+                          for="courier"
                           ><span class="choose__title"
                             >Доставлення кур'єром</span
                           ><span class="choose__price"

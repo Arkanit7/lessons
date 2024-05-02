@@ -487,19 +487,26 @@ body {
   transition: border-color 0.3s, background-color 0.3s;
 }
 
-.choose__img {
+.choose__box::before {
+  content: "";
   width: 40px;
   height: 40px;
-  object-fit: contain;
-  transition: transform 0.3s ease-in-out;
-}
-
-* + .choose__img {
-  margin-top: 10px;
-}
-
-.choose__img:not(:last-child) {
+  flex: none;
+  background: center/100% no-repeat;
+  transition: transform 0.3s;
   margin-bottom: 10px;
+}
+
+.choose__box--icon--pickup::before {
+  background-image: url("../img/checkout/pickup.svg");
+}
+
+.choose__box--icon--np::before {
+  background-image: url("../img/checkout/np.svg");
+}
+
+.choose__box--icon--courier::before {
+  background-image: url("../img/checkout/courier.svg");
 }
 
 .choose__title {
@@ -518,16 +525,26 @@ body {
   border-color: hsl(36deg 100% 67%);
 }
 
+.choose__input:checked + .choose__box::before {
+  animation: swap-icon 0.3s forwards;
+}
+
+@keyframes swap-icon {
+  50% {
+    transform: scale(0);
+  }
+
+  100% {
+    background-image: url("../img/checkout/check-circle.svg");
+  }
+}
+
 .choose__input:focus-visible + .choose__box {
   outline: 2px solid royalblue;
 }
 
 .choose:hover .choose__box {
   background-color: hsl(0deg 0% 97%);
-}
-
-.choose:hover .choose__img {
-  transform: scale(1.2);
 }
 
 .control {
@@ -630,9 +647,10 @@ body {
 
 .customer-info__col {
   flex: 1 1 325px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+}
+
+.customer-info__item:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .customer-info__field {
