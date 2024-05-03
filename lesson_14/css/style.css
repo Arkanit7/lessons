@@ -476,7 +476,7 @@ body {
 
 .choose__box {
   height: 100%;
-  padding: 20px;
+  padding: 20px 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -561,11 +561,28 @@ body {
   margin-bottom: 40px;
 }
 
+.checkout__form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 15px 30px;
+}
+
 .checkout__main,
 .checkout__cart {
   border-radius: 8px;
   background-color: hsl(0deg 0% 100%);
   box-shadow: -3px 4px 15px 0 hsl(0deg 0% 0% / 5.88%);
+}
+
+.checkout__main {
+  max-width: 740px;
+  flex: 1 1 584px;
+}
+
+.checkout__cart {
+  flex: 0 1 520px;
 }
 
 .checkout__section:not(:last-child) {
@@ -664,7 +681,7 @@ body {
 }
 
 .delivery-method__item {
-  flex: 0 0 240px;
+  flex: 0 0 210px;
 }
 
 .delivery-map {
