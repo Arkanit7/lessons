@@ -566,7 +566,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
-  gap: 15px 30px;
+  gap: 5px 30px;
 }
 
 .checkout__main,
