@@ -288,7 +288,7 @@ body {
   height: 0.25em;
   border-radius: 0.25em;
   background-color: currentcolor;
-  transition: transform 0.3s, background-color 0.3s;
+  transition: transform 0.3s, inset 0.3s;
 }
 
 .burger__icon::before {
