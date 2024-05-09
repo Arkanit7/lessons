@@ -767,11 +767,11 @@ body {
   }
 }
 
-.phone:has( .phone__trigger:checked, .phone__icon:checked) {
+.phone:has(.phone__trigger:checked, .phone__icon:checked) {
   overflow: unset;
 }
 
-.phone:has( .phone__trigger:checked, .phone__icon:checked) .phone__mask {
+.phone:has(.phone__trigger:checked, .phone__icon:checked) .phone__mask {
   padding: 20px;
   border-radius: 8px;
   background-color: hsl(0deg 0% 100%);
@@ -779,7 +779,7 @@ body {
 }
 
 @media (width < 1050px) {
-  .phone:has( .phone__trigger:checked, .phone__icon:checked) .phone__mask {
+  .phone:has(.phone__trigger:checked, .phone__icon:checked) .phone__mask {
     position: absolute;
     right: 35px;
     top: 35px;
@@ -787,25 +787,25 @@ body {
 }
 
 @media (width < 480px) {
-  .phone:has( .phone__trigger:checked, .phone__icon:checked) .phone__mask {
+  .phone:has(.phone__trigger:checked, .phone__icon:checked) .phone__mask {
     right: 12px;
     top: 12px;
   }
 }
 
 @media (1024px <= width) {
-  .phone:has( .phone__trigger:checked, .phone__icon:checked) .phone__mask {
+  .phone:has(.phone__trigger:checked, .phone__icon:checked) .phone__mask {
     margin: -20px;
   }
 }
 
-.phone:has( .phone__trigger:checked, .phone__icon:checked) .phone__heart,
-.phone:has( .phone__trigger:checked, .phone__icon:checked) .phone__callback {
+.phone:has(.phone__trigger:checked, .phone__icon:checked) .phone__heart,
+.phone:has(.phone__trigger:checked, .phone__icon:checked) .phone__callback {
   display: block;
 }
 
-.phone:has( .phone__trigger:checked, .phone__icon:checked) .phone__link,
-.phone:has( .phone__trigger:checked, .phone__icon:checked) .phone__callback {
+.phone:has(.phone__trigger:checked, .phone__icon:checked) .phone__link,
+.phone:has(.phone__trigger:checked, .phone__icon:checked) .phone__callback {
   visibility: visible;
 }
 
@@ -1025,12 +1025,12 @@ body {
   transition: visibility 0.7s, opacity 0.7s;
 }
 
-.header:has( .catalog__trigger:checked) .header__overlay[form="catalog"] {
+.header:has(.catalog__trigger:checked) .header__overlay[form="catalog"] {
   visibility: visible;
   opacity: 1;
 }
 
-.header:has( .burger__trigger:checked) .header__overlay[form="burger"] {
+.header:has(.burger__trigger:checked) .header__overlay[form="burger"] {
   visibility: visible;
   opacity: 1;
 }
@@ -1256,7 +1256,7 @@ body {
 .header__toggle-search:focus-visible,
 .header__favorites:focus-visible,
 .header__cart:focus-visible {
-  background-color: hsl(36deg 100% 57%);
+  background-color: hsl(36deg 100% 67%);
   border-color: currentcolor;
 }
 
@@ -1264,13 +1264,13 @@ body {
   .header__toggle-search:hover,
   .header__favorites:hover,
   .header__cart:hover {
-    background-color: hsl(36deg 100% 57%);
+    background-color: hsl(36deg 100% 67%);
     border-color: currentcolor;
   }
 }
 
 @media (width < 1220px) {
-  .header:has( .header__toggle-search:not(:checked)) .header__search {
+  .header:has(.header__toggle-search:not(:checked)) .header__search {
     visibility: hidden;
     opacity: 0;
   }
@@ -1319,13 +1319,17 @@ body {
   }
 }
 
+.header__list + .header__list {
+  justify-content: flex-end;
+}
+
 @media (width < 1050px) {
-  :has( .burger__trigger:not(:checked)) .header__menu {
+  :has(.burger__trigger:not(:checked)) .header__menu {
     transform: translateX(100%);
   }
 }
 
-body:has( .catalog__trigger:checked, .burger__trigger:checked) {
+body:has(.catalog__trigger:checked, .burger__trigger:checked) {
   overflow: hidden;
 }
 
