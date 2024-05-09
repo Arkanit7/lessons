@@ -627,9 +627,16 @@ body {
 }
 
 .phone {
-  max-height: 50px;
-  min-width: 50px;
+  height: 40px;
+  min-width: 40px;
   overflow: hidden;
+}
+
+@media (480px <= width) {
+  .phone {
+    height: 50px;
+    min-width: 50px;
+  }
 }
 
 .phone__mask {
@@ -1234,6 +1241,7 @@ body {
     width: min(320px, 100%);
     padding: 35px;
     overflow-y: auto;
+    text-align: center;
     background-color: hsl(0deg 0% 100%);
     box-shadow: 0 15px 15px 0 hsl(0deg 0% 0% / 12.2%);
     transition: transform 0.7s;
@@ -1301,7 +1309,8 @@ body:has( .catalog__trigger:checked, .burger__trigger:checked) {
 :where(
     .blog__heading,
     .blog__content,
-    .blog__content :is(ul, ol, dl, img, picture, svg, video)
+    .blog__content,
+    .blog__section :is(ul, ol, dl, img, picture, svg, video)
   ):not(:last-child) {
   margin-bottom: 20px;
 }
@@ -1310,7 +1319,8 @@ body:has( .catalog__trigger:checked, .burger__trigger:checked) {
   :where(
       .blog__heading,
       .blog__content,
-      .blog__content :is(ul, ol, dl, img, picture, svg, video)
+      .blog__content,
+      .blog__section :is(ul, ol, dl, img, picture, svg, video)
     ):not(:last-child) {
     margin-bottom: 40px;
   }
