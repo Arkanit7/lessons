@@ -58,6 +58,24 @@
                 <li class="nav__item">
                   <a class="nav__link" href="#">Контакти</a>
                 </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Про нас</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Оплата</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Доставлення та збірка</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Відгуки</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Блог</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Контакти</a>
+                </li>
               </ul>
             </nav>
             <!-- help & lang-->
@@ -66,6 +84,21 @@
               <div class="header__help help">
                 <p class="help__label">Допомога і консультація:</p>
                 <ul class="help__list">
+                  <li class="help__item">
+                    <a class="help__link" href="#" target="_blank"
+                      ><img src="img/icons/whatsapp.svg" alt="WhatsApp"
+                    ></a>
+                  </li>
+                  <li class="help__item">
+                    <a class="help__link" href="#" target="_blank"
+                      ><img src="img/icons/telegram.svg" alt="Telegram"
+                    ></a>
+                  </li>
+                  <li class="help__item">
+                    <a class="help__link" href="#" target="_blank"
+                      ><img src="img/icons/viber.svg" alt="Viber"
+                    ></a>
+                  </li>
                   <li class="help__item">
                     <a class="help__link" href="#" target="_blank"
                       ><img src="img/icons/whatsapp.svg" alt="WhatsApp"
@@ -105,23 +138,14 @@
             </div>
           </div>
         </div>
-        <!-- secondary-->
+        <!-- Secondary-->
         <div class="header__secondary">
           <div class="header__container">
-            <!-- Burger-->
-            <form class="header__burger burger" id="burger">
-              <input
-                class="burger__trigger"
-                id="burger-trigger"
-                title="Перемкнути меню"
-                type="checkbox"
-              ><label class="burger__icon" for="burger-trigger"
-                ><span class="burger__line"></span
-              ></label>
-            </form>
-            <!-- brand--><a class="header__brand brand" href="#"
+            <!-- Brand--><a class="header__brand brand" href="#"
               ><img src="img/logo.svg" alt="Krovato – технології сну"></a
-            ><!-- Catalog-->
+            ><!-- Division line-->
+            <div class="header__divisor"></div>
+            <!-- Catalog-->
             <form class="header__catalog catalog" id="catalog">
               <input
                 class="catalog__trigger"
@@ -677,7 +701,7 @@
                 </ul>
               </div>
             </form>
-            <!-- form-->
+            <!-- Search-->
             <form class="header__search search" action="#" method="get">
               <input
                 class="search__field field"
@@ -692,7 +716,7 @@
                 title="Шукати"
               ></button>
             </form>
-            <!-- phone-->
+            <!-- Phone-->
             <div class="header__phone phone">
               <div class="phone__mask">
                 <div class="phone__head">
@@ -705,6 +729,21 @@
                   <div class="phone__heart">
                     <p class="phone__schedule">Щодня з 9:00 до 18:00</p>
                     <ul class="phone__list">
+                      <li class="phone__item">
+                        <a class="phone__link" href="tel:+380679294545"
+                          >067 929-45-45</a
+                        >
+                      </li>
+                      <li class="phone__item">
+                        <a class="phone__link" href="tel:+0501334545"
+                          >050 133-45-45</a
+                        >
+                      </li>
+                      <li class="phone__item">
+                        <a class="phone__link" href="tel:+0931707545"
+                          >093 170-75-45</a
+                        >
+                      </li>
                       <li class="phone__item">
                         <a class="phone__link" href="tel:+380679294545"
                           >067 929-45-45</a
@@ -734,9 +773,7 @@
                 </button>
               </div>
             </div>
-            <!-- Divisor-line-->
-            <div class="header__divisor"></div>
-            <!-- actions-->
+            <!-- Actions-->
             <div class="header__actions">
               <input
                 class="header__toggle-search button-round"
@@ -752,6 +789,17 @@
                 title="Кошик"
               >
             </div>
+            <!-- Burger-->
+            <form class="header__burger burger" id="burger">
+              <input
+                class="burger__trigger"
+                id="burger-trigger"
+                title="Перемкнути меню"
+                type="checkbox"
+              ><label class="burger__icon" for="burger-trigger"
+                ><span class="burger__line"></span
+              ></label>
+            </form>
           </div>
         </div>
         <!-- tertiary-->
@@ -780,8 +828,50 @@
                     >Купити в кредит</a
                   >
                 </li>
+                <li class="list-header__item">
+                  <a
+                    class="list-header__link list-header__link--icon--star"
+                    href="#"
+                    >Акції</a
+                  >
+                </li>
+                <li class="list-header__item">
+                  <a
+                    class="list-header__link list-header__link--icon--sale"
+                    href="#"
+                    >Розпродаж</a
+                  >
+                </li>
+                <li class="list-header__item">
+                  <a
+                    class="list-header__link list-header__link--icon--credit"
+                    href="#"
+                    >Купити в кредит</a
+                  >
+                </li>
               </ul>
               <ul class="header__list list-header">
+                <li class="list-header__item">
+                  <a class="list-header__link" href="#">Дитяча</a>
+                </li>
+                <li class="list-header__item">
+                  <a class="list-header__link" href="#">Кухня</a>
+                </li>
+                <li class="list-header__item">
+                  <a class="list-header__link" href="#">Ванна</a>
+                </li>
+                <li class="list-header__item">
+                  <a class="list-header__link" href="#">Спальня</a>
+                </li>
+                <li class="list-header__item">
+                  <a class="list-header__link" href="#">Передпокій</a>
+                </li>
+                <li class="list-header__item">
+                  <a class="list-header__link" href="#">Вітальня</a>
+                </li>
+                <li class="list-header__item">
+                  <a class="list-header__link" href="#">Офіс</a>
+                </li>
                 <li class="list-header__item">
                   <a class="list-header__link" href="#">Дитяча</a>
                 </li>
