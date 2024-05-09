@@ -1139,6 +1139,7 @@ body {
 
 @media (width < 880px) {
   .header__brand {
+    margin-right: auto;
     order: -3;
   }
 }
@@ -1163,12 +1164,6 @@ body {
 @media (width < 480px) {
   .header__search {
     padding: 12px;
-  }
-}
-
-@media (width < 1050px) {
-  .header__phone {
-    margin-left: auto;
   }
 }
 
