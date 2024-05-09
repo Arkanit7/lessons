@@ -1285,7 +1285,7 @@ body {
   .header__menu {
     position: absolute;
     top: 100%;
-    left: 0;
+    right: 0;
     height: calc(100dvh - 100%);
     width: min(320px, 100%);
     padding: 35px;
@@ -1326,7 +1326,7 @@ body {
 
 @media (width < 1050px) {
   :has( .burger__trigger:not(:checked)) .header__menu {
-    transform: translateX(-100%);
+    transform: translateX(100%);
   }
 }
 
