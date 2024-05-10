@@ -19,11 +19,11 @@
 
 /* Main styles */
 body {
-  background-color: hsl(0deg 0% 97%);
-  color: hsl(0deg 0% 33%);
   font-family: "Proxima Nova", sans-serif;
   font-size: 19px;
   line-height: 1.2632;
+  color: hsl(0deg 0% 33%);
+  background-color: hsl(0deg 0% 97%);
 }
 
 .main {
@@ -37,7 +37,7 @@ body {
 }
 
 .wrapper {
-  overflow-x: clip;
+  overflow: clip;
   display: flex;
   flex-direction: column;
   min-height: 100%;
