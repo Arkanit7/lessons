@@ -2,15 +2,14 @@ import mover from './mover.js'
 
 mover()
 
-function setIcon(svg, id) {
-  const useTag = svg.querySelector('use')
-  useTag.setAttribute('xlink:href', `img/icons/symbol-defs.svg#${id}`)
+function setIcon(use, id) {
+  use.setAttribute('xlink:href', `img/icons/symbol-defs.svg#${id}`)
 }
 
 function lang() {
   const block = document.querySelector('.lang-north-header')
   const button = block.querySelector('.lang-north-header__button')
-  const icon = button.querySelector('svg')
+  const icon = button.querySelector('use')
 
   button.addEventListener('click', () => {
     const state = button.hasAttribute('aria-expanded')
@@ -39,7 +38,7 @@ lang()
 function phone() {
   const block = document.querySelector('.phone-central-header')
   const button = block.querySelector('.phone-central-header__button')
-  const icon = button.querySelector('svg')
+  const icon = button.querySelector('use')
 
   button.addEventListener('click', () => {
     const state = button.hasAttribute('aria-expanded')
@@ -67,7 +66,7 @@ phone()
 
 function search() {
   const button = document.querySelector('.central-header__button')
-  const icon = button.querySelector('svg')
+  const icon = button.querySelector('use')
 
   button.addEventListener('click', () => {
     const state = button.hasAttribute('aria-expanded')

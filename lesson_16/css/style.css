@@ -24,7 +24,19 @@ body {
 }
 
 .main {
-  padding-block: 20px;
+  padding-block: 16px;
+}
+
+@media (768px <= width) {
+  .main {
+    padding-block: 20px;
+  }
+}
+
+@media (768px <= width) {
+  .main {
+    padding-block: 40px;
+  }
 }
 
 .wrapper {
@@ -52,7 +64,7 @@ body {
 }
 
 .menu-lock {
-  overflow: hidden;
+  overflow: clip;
 }
 
 /* Components */
@@ -138,16 +150,6 @@ body {
   .button-round {
     width: 50px;
     height: 50px;
-  }
-}
-
-.brand img {
-  max-height: 36px;
-}
-
-@media (480px <= width) {
-  .brand img {
-    max-height: 50px;
   }
 }
 
@@ -729,14 +731,15 @@ body {
 
 @media (width < 1040px) {
   .phone-central-header__underlay {
-    padding-left: 20px;
-    inset: -20px -20px auto auto;
+    padding: 72px 20px 12px;
+    inset: -12px -20px auto auto;
   }
 }
 
 @media (width < 480px) {
   .phone-central-header__underlay {
-    inset: -6px -6px auto auto;
+    padding: 52px 12px 6px;
+    inset: -6px -12px auto auto;
   }
 }
 
@@ -1115,9 +1118,14 @@ body {
 }
 
 .blog__content {
-  line-height: 1.87;
   font-size: 16px;
   color: hsl(0deg 2% 16%);
+}
+
+@media (480px <= width) {
+  .blog__content {
+    line-height: 1.87;
+  }
 }
 
 .blog__content p:not(:last-child) {
@@ -1162,7 +1170,7 @@ body {
 
 .blog__content li {
   min-height: 23px;
-  padding-left: 26px;
+  padding-left: 30px;
   background: url("../img/icons/check-orange.svg") 0 3px/20px no-repeat;
 }
 
