@@ -541,7 +541,6 @@ body {
 
 .north-header__container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   gap: 15px 30px;
 }
@@ -1014,7 +1013,6 @@ body {
 @media (992px <= width) {
   .south-header__container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     gap: 15px 30px;
     padding-block: 18px;
