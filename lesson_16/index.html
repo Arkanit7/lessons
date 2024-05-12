@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krovato – технології сну</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    >
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon-16x16.png"
+    >
+    <script src="js/script.js" type="module"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <!-- North-->
+        <div
+          class="north-header"
+          data-mover=".header__menu; beforeend; (width &lt; 992px)"
+        >
+          <div class="north-header__container">
+            <ul class="north-header__list list-north-header">
+              <li class="list-north-header__item">
+                <a class="list-north-header__link" href="#">Про нас</a>
+              </li>
+              <li class="list-north-header__item">
+                <a class="list-north-header__link" href="#">Оплата</a>
+              </li>
+              <li class="list-north-header__item">
+                <a class="list-north-header__link" href="#"
+                  >Доставка та збірка</a
+                >
+              </li>
+              <li class="list-north-header__item">
+                <a class="list-north-header__link" href="#">Відгуки</a>
+              </li>
+              <li class="list-north-header__item">
+                <a class="list-north-header__link" href="#">Блог</a>
+              </li>
+              <li class="list-north-header__item">
+                <a class="list-north-header__link" href="#">Контакти</a>
+              </li>
+            </ul>
+            <div class="north-header__useful">
+              <div class="north-header__help help-north-header">
+                <p class="help-north-header__label">Допомога і консультація:</p>
+                <ul class="help-north-header__list">
+                  <li class="help-north-header__item">
+                    <a
+                      class="help-north-header__link help-north-header__link--color--green"
+                      href="#"
+                      title="WhatsApp"
+                    >
+                      <svg class="icon">
+                        <use
+                          xlink:href="img/icons/symbol-defs.svg#icon-whatsapp"
+                        ></use></svg
+                    ></a>
+                  </li>
+                  <li class="help-north-header__item">
+                    <a
+                      class="help-north-header__link help-north-header__link--color--blue"
+                      href="#"
+                      title="Telegram"
+                    >
+                      <svg class="icon">
+                        <use
+                          xlink:href="img/icons/symbol-defs.svg#icon-telegram"
+                        ></use></svg
+                    ></a>
+                  </li>
+                  <li class="help-north-header__item">
+                    <a
+                      class="help-north-header__link help-north-header__link--color--purple"
+                      href="#"
+                      title="Viber"
+                    >
+                      <svg class="icon">
+                        <use
+                          xlink:href="img/icons/symbol-defs.svg#icon-viber"
+                        ></use></svg
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="north-header__lang lang-north-header">
+                <button class="lang-north-header__button" type="button">
+                  <span class="lang-north-header__sr">Choose language</span
+                  ><span>ua</span>
+                  <svg class="icon">
+                    <use
+                      xlink:href="img/icons/symbol-defs.svg#icon-expand"
+                    ></use>
+                  </svg>
+                </button>
+                <div class="lang-north-header__underlay">
+                  <ul class="lang-north-header__list">
+                    <li class="lang-north-header__item">
+                      <a class="lang-north-header__link" href="#">eng</a>
+                    </li>
+                    <li class="lang-north-header__item">
+                      <a class="lang-north-header__link" href="#">pl</a>
+                    </li>
+                    <li class="lang-north-header__item">
+                      <a class="lang-north-header__link" href="#">de</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Central-->
+        <div class="central-header">
+          <div class="central-header__container-sky">
+            <a class="central-header__brand" href="#"
+              ><img
+                src="img/logo.svg"
+                alt="Krovato – технології сну"
+            ></a>
+            <div
+              class="central-header__catalog catalog-central-header"
+              data-mover=".central-header__container-floor; beforeend; (width &lt; 920px)"
+            >
+              <button
+                class="catalog-central-header__button button"
+                type="button"
+              >
+                <svg class="icon">
+                  <use
+                    xlink:href="img/icons/symbol-defs.svg#icon-catalog"
+                  ></use>
+                </svg>
+                Каталог
+              </button>
+            </div>
+            <form
+              class="central-header__search search-central-header"
+              action="#"
+              method="get"
+              data-mover=".central-header__container-floor; beforeend; (width &lt; 920px)"
+            >
+              <input
+                class="search-central-header__field field"
+                type="search"
+                name="search"
+                placeholder="Пошук товарів"
+              >
+              <button
+                class="search-central-header__button"
+                type="submit"
+                title="Шукати!"
+              >
+                <svg class="search-central-header__icon icon">
+                  <use xlink:href="img/icons/symbol-defs.svg#icon-zoom"></use>
+                </svg>
+              </button>
+            </form>
+            <div class="central-header__phone phone-central-header">
+              <div class="phone-central-header__display">
+                <button
+                  class="phone-central-header__button"
+                  type="button"
+                  title="Усі телефони"
+                >
+                  <svg class="icon">
+                    <use
+                      xlink:href="img/icons/symbol-defs.svg#icon-phone"
+                    ></use>
+                  </svg>
+                </button>
+                <div
+                  class="phone-central-header__middle"
+                  data-mover=".phone-central-header__underlay; afterbegin; (width &lt; 1040px)"
+                >
+                  <p class="phone-central-header__schedule">
+                    Щодня з 9:00 до 18:00
+                  </p>
+                  <a class="phone-central-header__link" href="tel:0679294545"
+                    >067 929-45-45</a
+                  >
+                </div>
+                <div class="phone-central-header__dummy">
+                  <svg class="icon">
+                    <use
+                      xlink:href="img/icons/symbol-defs.svg#icon-expand"
+                    ></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="phone-central-header__underlay">
+                <ul class="phone-central-header__list">
+                  <li class="phone-central-header__item">
+                    <a class="phone-central-header__link" href="tel:0501334545"
+                      >050 133-45-45</a
+                    >
+                  </li>
+                  <li class="phone-central-header__item">
+                    <a class="phone-central-header__link" href="tel:0931707545"
+                      >093 170-75-45</a
+                    >
+                  </li>
+                  <li class="phone-central-header__item">
+                    <a class="phone-central-header__link" href="tel:0501334545"
+                      >050 133-45-45</a
+                    >
+                  </li>
+                  <li class="phone-central-header__item">
+                    <a class="phone-central-header__link" href="tel:0931707545"
+                      >093 170-75-45</a
+                    >
+                  </li>
+                </ul>
+                <button class="phone-central-header__callback" type="button">
+                  Передзвоніть мені
+                </button>
+              </div>
+            </div>
+            <div
+              class="central-header__actions"
+              data-mover=".central-header__container-floor; beforeend; (width &lt; 920px)"
+            >
+              <button
+                class="button-central-header central-header__button"
+                type="button"
+                title="Перемкнути пошук"
+              >
+                <svg class="icon">
+                  <use xlink:href="img/icons/symbol-defs.svg#icon-zoom"></use>
+                </svg>
+              </button>
+              <button
+                class="button-central-header"
+                type="button"
+                title="Обрані"
+              >
+                <svg class="icon">
+                  <use xlink:href="img/icons/symbol-defs.svg#icon-heart"></use>
+                </svg>
+              </button>
+              <button class="button-central-header" type="button" title="Кошик">
+                <svg class="icon">
+                  <use xlink:href="img/icons/symbol-defs.svg#icon-cart"></use>
+                </svg>
+              </button>
+            </div>
+            <!-- Burger-->
+            <button
+              class="central-header__burger burger"
+              type="button"
+              aria-controls="menu"
+            >
+              <span class="burger__line"></span>
+            </button>
+          </div>
+          <!-- Second floor at 710px-->
+          <div class="central-header__container-floor"></div>
+        </div>
+        <!-- South-->
+        <div
+          class="south-header"
+          data-mover=".header__menu; beforeend; (width &lt; 992px)"
+        >
+          <div class="south-header__container">
+            <!-- List west-->
+            <ul
+              class="south-header__list south-header__list--west list-south-header"
+            >
+              <li class="list-south-header__item">
+                <a class="list-south-header__link" href="#">
+                  <svg class="icon">
+                    <use xlink:href="img/icons/symbol-defs.svg#icon-star"></use>
+                  </svg>
+                  Акції</a
+                >
+              </li>
+              <li class="list-south-header__item">
+                <a class="list-south-header__link" href="#">
+                  <svg class="icon">
+                    <use xlink:href="img/icons/symbol-defs.svg#icon-sale"></use>
+                  </svg>
+                  Розпродаж</a
+                >
+              </li>
+              <li class="list-south-header__item">
+                <a class="list-south-header__link" href="#">
+                  <svg class="icon">
+                    <use
+                      xlink:href="img/icons/symbol-defs.svg#icon-credit"
+                    ></use>
+                  </svg>
+                  Купити в кредит</a
+                >
+              </li>
+            </ul>
+            <!-- List east-->
+            <ul
+              class="south-header__list south-header__list--east list-south-header"
+            >
+              <li class="list-south-header__item">
+                <a class="list-south-header__link" href="#">Дитяча</a>
+              </li>
+              <li class="list-south-header__item">
+                <a class="list-south-header__link" href="#">Кухня</a>
+              </li>
+              <li class="list-south-header__item">
+                <a class="list-south-header__link" href="#">Ванна</a>
+              </li>
+              <li class="list-south-header__item">
+                <a class="list-south-header__link" href="#">Спальня</a>
+              </li>
+              <li class="list-south-header__item">
+                <a class="list-south-header__link" href="#">Передпокій</a>
+              </li>
+              <li class="list-south-header__item">
+                <a class="list-south-header__link" href="#">Вітальня</a>
+              </li>
+              <li class="list-south-header__item">
+                <a class="list-south-header__link" href="#">Офіс</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Overlay-->
+        <div class="header__overlay overlay"></div>
+        <!-- Menu at 992px-->
+        <div class="header__menu" id="menu"></div>
+      </header>
+      <main class="wrapper__main main">
+        <article class="main__blog blog">
+          <div class="blog__container">
+            <!-- Heading-->
+            <div class="blog__heading heading">
+              <h1 class="heading__title">
+                Оформлення вітальні. Які м'які меблі краще вибрати?
+              </h1>
+            </div>
+            <div class="blog__content">
+              <picture>
+                <source
+                  srcset="./img/blog/living-room.avif"
+                  type="image/avif"
+                >
+                <source
+                  srcset="./img/blog/living-room.webp"
+                  type="image/webp"
+                >
+                <img
+                  src="./img/blog/living-room.jpg"
+                  alt="Затишна вітальня кімната"
+                >
+              </picture>
+              <p>
+                Вітальня – це основна кімната у кожному будинку. Саме вона
+                служить для прийому гостей, проведення часу всією сім'єю та
+                просто для відпочинку у приємній теплій атмосфері. Оформляючи
+                свій будинок та вітальню зокрема, всі намагаються зробити її
+                максимально зручною, комфортною та красивою. Основним та
+                центральним елементом оформлення вітальні, як і будь-якої іншої
+                кімнати, є м'які меблі.
+              </p>
+              <p>
+                Будь-які меблі для вітальні повинні бути не тільки стильними і
+                красивими, але і функціональними. На таких меблів має бути
+                зручно та приємно відпочивати та приймати гостей. Однак сьогодні
+                існує величезна різноманітність найрізноманітніших м'яких меблів
+                для вітальні, яка підходить для кімнат різних розмірів і форм.
+                На чому варто зупинити свій вибір? Як краще оформити свою
+                вітальню, щоб вам було комфортно, а гості хотіли приходити до
+                вас знову та знову?
+              </p>
+            </div>
+            <!-- Section-->
+            <div class="blog__section">
+              <p class="blog__sub-title">
+                На сайті інтернет магазину Кровато представлено велику
+                різноманітність м'яких меблів для вітальні, серед яких кожен
+                зможе вибрати для себе найбільш вдалий варіант. У нас ви
+                знайдете:
+              </p>
+              <div class="blog__content">
+                <ul>
+                  <li>
+                    Прямі дивани. Такі дивани вважаються класикою. Вони
+                    підходять для віталень будь-яких форм та розмірів. Прямий
+                    диван виглядає стильно та лаконічно, на ньому зручно
+                    відпочивати, приймати гостей або навіть спати. Прямі дивани
+                    можуть стояти біля стіни, так і в центрі кімнати. Багато
+                    моделей прямих диванів легко розкладаються, перетворюючись
+                    на повноцінне спальне місце. Також більшість диванів мають
+                    великі та місткі ніші, які є додатковим місцем для
+                    зберігання;
+                  </li>
+                  <li>
+                    Кутові дивани Кутові дивани вважаються найзручнішими та
+                    комфортнішими. Вони ідеально підійдуть для приємного
+                    проведення часу в колі сім'ї або друзів. Кутові дивани в
+                    основному використовуються для оформлення великих віталень,
+                    так як вони займають багато місця, і для кімнат з невеликою
+                    площею просто не підійдуть;
+                  </li>
+                  <li>
+                    Тахти. Тахта - це одна з варіацій дивана, але стильніша і
+                    мінімалістична. Виглядають тахти дуже незвично і можуть
+                    підійти для будь-якого інтер'єру. Також тахти більше ніж
+                    звичайні дивани підходять для сну, оскільки в їх основі не
+                    пружинні блоки, а дерев'яні ламелі або ортопедичні матраци;
+                  </li>
+                  <li>
+                    Крісла. Крісло – це особливий предмет інтер'єру. Сучасні
+                    дизайнери не часто використовують його, вважаючи застарілим,
+                    проте саме крісла створюють особливий затишок та комфорт у
+                    будь-якій кімнаті. Сьогодні існує величезна різноманітність
+                    класичних та сучасних моделей крісел, що дозволяє кожному
+                    відшукати ідеальне крісло для свого будинку;
+                  </li>
+                  <li>
+                    Набір меблів. Комплект м'яких меблів – це відмінне рішення
+                    для тих, хто хоче меблювати свою вітальню не лише диваном, а
+                    й кріслами. Існують набори з одним або двома кріслами, із
+                    прямими або кутовими диванами. Основна перевага будь-якого
+                    готового меблевого гарнітура – це те, що предмети меблів у
+                    ньому ідеально поєднуються один з одним, і вам не потрібно
+                    буде витрачати свій час та сили на їхній підбір.
+                  </li>
+                </ul>
+                <p>
+                  Підбір м'яких меблів для вітальні – це заняття непросте. Однак
+                  при виборі та покупці меблів для своєї вітальні пам'ятайте, що
+                  якісні м'які меблі повинні бути не тільки красивими, але й
+                  зручними для вас і всіх мешканців вашого будинку.
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </main>
+      <!-- Footer-->
+      <footer class="footer">
+        <div class="footer__container">
+          <p class="footer__copyrights">
+            © KROVATO - Технології сну - 2024. Всі права захищені.
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
