@@ -391,7 +391,7 @@ body {
   }
 }
 
-.item-style {
+.card-style {
   position: relative;
   isolation: isolate;
   overflow: hidden;
@@ -405,12 +405,12 @@ body {
   line-height: 1.3333;
 }
 
-.item-style:focus-visible {
+.card-style:focus-visible {
   box-shadow: -3px 4px 15px 0 hsl(0deg 0% 0% / 6%), 0 0 0 1px hsl(0deg 0% 0% / 10.2%);
 }
 
 @media (768px <= width) {
-  .item-style {
+  .card-style {
     padding: 25px 36px;
 
     /* typography */
@@ -420,17 +420,17 @@ body {
 }
 
 @media (any-hover) {
-  .item-style:hover {
+  .card-style:hover {
     box-shadow: -3px 4px 15px 0 hsl(0deg 0% 0% / 6%), 0 0 0 1px hsl(0deg 0% 0% / 10.2%);
   }
 }
 
-.item-style__label {
+.card-style__label {
   mix-blend-mode: difference;
   color: hsl(0deg 0% 100%);
 }
 
-.item-style__img {
+.card-style__img {
   position: absolute;
   inset: 0;
   z-index: -1;
@@ -443,20 +443,20 @@ body {
 }
 
 @media (600px <= width) {
-  .item-style__img {
+  .card-style__img {
     transform: scale(1.1);
     transition: transform 0.5s;
   }
 }
 
 @media (600px <= width) {
-  .item-style:focus-visible .item-style__img {
+  .card-style:focus-visible .card-style__img {
     transform: none;
   }
 }
 
 @media (600px <= width) and (any-hover) {
-  .item-style:hover .item-style__img {
+  .card-style:hover .card-style__img {
     transform: none;
   }
 }
@@ -554,11 +554,11 @@ body {
 @media (935px <= width) {
   .style__layout {
     grid-template-columns: minmax(0, 407px) 1fr minmax(0, 407px);
-    grid-auto-rows: 289px;
   }
 }
 
 .style__item {
+  display: grid;
   aspect-ratio: 310/190;
 }
 
@@ -571,9 +571,24 @@ body {
 @media (935px <= width) {
   .style__item {
     aspect-ratio: unset;
+    height: 289px;
   }
 
   .style__item:nth-child(4n+2), .style__item:nth-child(4n+3) {
     grid-column: span 2;
+  }
+}
+
+@media (600px <= width) {
+  .style__item:nth-child(2n+1):last-child {
+    aspect-ratio: 834/289;
+    grid-column: 1/-1;
+  }
+}
+
+@media (935px <= width) {
+  .style__item:nth-child(2n+1):last-child {
+    aspect-ratio: 684/289;
+    height: unset;
   }
 }
