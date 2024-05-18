@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 17: Grid layout</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    >
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon-16x16.png"
+    >
+  </head>
+  <body>
+    <div class="wrapper">
+      <main class="wrapper__main main">
+        <section class="popular">
+          <div class="popular__container">
+            <div class="popular__heading heading">
+              <h1 class="heading__title">Найпопулярніші товари</h1>
+              <a class="heading__link" href="#"
+                >Дивитись всі
+                <svg class="heading__icon icon">
+                  <use
+                    xlink:href="img/icons/symbol-defs.svg#icon-arrow"
+                  ></use></svg
+              ></a>
+            </div>
+            <div class="popular__layout">
+              <article class="item-pop">
+                <!-- Main-->
+                <div class="item-pop__main">
+                  <div class="item-pop__sizes">
+                    Розмір:
+                    <span
+                      >61 x 184 x 2130 мм, 61 x 184 x 2130 мм, 61 x 184 x 2130
+                      мм</span
+                    >
+                  </div>
+                  <h2 class="item-pop__title">
+                    <a class="item-pop__link" href="#"
+                      >Ліжко Спарта / Sparta з підйомним механізмом, колесами та
+                      пультом дистанційного керування</a
+                    >
+                  </h2>
+                  <div class="item-pop__status">
+                    <svg class="item-pop__icon item-pop__icon--color--red icon">
+                      <use
+                        xlink:href="img/icons/symbol-defs.svg#icon-awaiting"
+                      ></use>
+                    </svg>
+                    Очікується
+                  </div>
+                </div>
+                <!-- Picture--><a class="item-pop__painting" href="#">
+                  <picture>
+                    <source
+                      srcset="img/home/popular/sparta.avif"
+                      type="image/avif"
+                    >
+                    <source
+                      srcset="img/home/popular/sparta.webp"
+                      type="image/webp"
+                    >
+                    <img
+                      class="item-pop__img"
+                      src="img/home/popular/sparta.jpg"
+                      alt="Білосніжне ліжко з дерев'яним скелетом Sparta"
+                    > </picture
+                ></a>
+                <!-- Secondary-->
+                <div class="item-pop__secondary">
+                  <div class="item-pop__prices">
+                    <s class="item-pop__previous">999 999.99 грн.</s
+                    ><span class="item-pop__current">999 999.99 грн.</span>
+                  </div>
+                  <div class="item-pop__actions actions-pop">
+                    <button
+                      class="actions-pop__button actions-pop__button--favorite"
+                      type="button"
+                      title="До обраних"
+                    >
+                      <svg class="icon">
+                        <use
+                          xlink:href="img/icons/symbol-defs.svg#icon-heart"
+                        ></use>
+                      </svg>
+                    </button>
+                    <button
+                      class="actions-pop__button"
+                      type="button"
+                      title="До кошика"
+                    >
+                      <svg class="icon">
+                        <use
+                          xlink:href="img/icons/symbol-defs.svg#icon-cart"
+                        ></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article class="item-pop">
+                <!-- Main-->
+                <div class="item-pop__main">
+                  <div class="item-pop__sizes">
+                    Розмір: <span>61 x 184 x 2130 мм</span>
+                  </div>
+                  <h2 class="item-pop__title">
+                    <a class="item-pop__link" href="#"
+                      >Ліжко Аргон з підйомним механізмом</a
+                    >
+                  </h2>
+                  <div class="item-pop__status">
+                    <svg
+                      class="item-pop__icon item-pop__icon--color--yellow icon"
+                    >
+                      <use
+                        xlink:href="img/icons/symbol-defs.svg#icon-info"
+                      ></use>
+                    </svg>
+                    Закінчується
+                  </div>
+                </div>
+                <!-- Picture--><a class="item-pop__painting" href="#">
+                  <picture>
+                    <source
+                      srcset="img/home/popular/argon.avif"
+                      type="image/avif"
+                    >
+                    <source
+                      srcset="img/home/popular/argon.webp"
+                      type="image/webp"
+                    >
+                    <img
+                      class="item-pop__img"
+                      src="img/home/popular/argon.jpg"
+                      alt="Біле мінімалістичне ліжко Аргон"
+                    > </picture
+                ></a>
+                <!-- Secondary-->
+                <div class="item-pop__secondary">
+                  <div class="item-pop__prices">
+                    <span class="item-pop__current">16 400 грн.</span>
+                  </div>
+                  <div class="item-pop__actions actions-pop">
+                    <button
+                      class="actions-pop__button actions-pop__button--favorite"
+                      type="button"
+                      title="До обраних"
+                    >
+                      <svg class="icon">
+                        <use
+                          xlink:href="img/icons/symbol-defs.svg#icon-heart"
+                        ></use>
+                      </svg>
+                    </button>
+                    <button
+                      class="actions-pop__button"
+                      type="button"
+                      title="До кошика"
+                    >
+                      <svg class="icon">
+                        <use
+                          xlink:href="img/icons/symbol-defs.svg#icon-cart"
+                        ></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article class="item-pop">
+                <!-- Main-->
+                <div class="item-pop__main">
+                  <div class="item-pop__sizes">
+                    Розмір: <span>61 x 184 x 2130 мм</span>
+                  </div>
+                  <h2 class="item-pop__title">
+                    <a class="item-pop__link" href="#"
+                      >Ліжко Престиж з підйомним механізмом</a
+                    >
+                  </h2>
+                  <div class="item-pop__status">
+                    <svg
+                      class="item-pop__icon item-pop__icon--color--green icon"
+                    >
+                      <use
+                        xlink:href="img/icons/symbol-defs.svg#icon-available"
+                      ></use>
+                    </svg>
+                    В наявності
+                  </div>
+                </div>
+                <!-- Picture--><a class="item-pop__painting" href="#">
+                  <picture>
+                    <source
+                      srcset="img/home/popular/prestige.avif"
+                      type="image/avif"
+                    >
+                    <source
+                      srcset="img/home/popular/prestige.webp"
+                      type="image/webp"
+                    >
+                    <img
+                      class="item-pop__img"
+                      src="img/home/popular/prestige.jpg"
+                      alt="Синє ліжко Престиж з білим матрацом"
+                    > </picture
+                ></a>
+                <!-- Secondary-->
+                <div class="item-pop__secondary">
+                  <div class="item-pop__prices">
+                    <span class="item-pop__current">14 969 грн.</span>
+                  </div>
+                  <div class="item-pop__actions actions-pop">
+                    <button
+                      class="actions-pop__button actions-pop__button--favorite"
+                      type="button"
+                      title="До обраних"
+                    >
+                      <svg class="icon">
+                        <use
+                          xlink:href="img/icons/symbol-defs.svg#icon-heart"
+                        ></use>
+                      </svg>
+                    </button>
+                    <button
+                      class="actions-pop__button"
+                      type="button"
+                      title="До кошика"
+                    >
+                      <svg class="icon">
+                        <use
+                          xlink:href="img/icons/symbol-defs.svg#icon-cart"
+                        ></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article class="item-pop">
+                <!-- Main-->
+                <div class="item-pop__main">
+                  <div class="item-pop__sizes">
+                    Розмір: <span>61 x 184 x 2130 мм</span>
+                  </div>
+                  <h2 class="item-pop__title">
+                    <a class="item-pop__link" href="#">Диван Токіо-2</a>
+                  </h2>
+                  <div class="item-pop__status">
+                    <svg
+                      class="item-pop__icon item-pop__icon--color--green icon"
+                    >
+                      <use
+                        xlink:href="img/icons/symbol-defs.svg#icon-available"
+                      ></use>
+                    </svg>
+                    В наявності
+                  </div>
+                </div>
+                <!-- Picture--><a class="item-pop__painting" href="#">
+                  <picture>
+                    <source
+                      srcset="img/home/popular/tokio.avif"
+                      type="image/avif"
+                    >
+                    <source
+                      srcset="img/home/popular/tokio.webp"
+                      type="image/webp"
+                    >
+                    <img
+                      class="item-pop__img"
+                      src="img/home/popular/tokio.jpg"
+                      alt="Охайний диван з тематичними подушками Токіо-2"
+                    > </picture
+                ></a>
+                <!-- Secondary-->
+                <div class="item-pop__secondary">
+                  <div class="item-pop__prices">
+                    <span class="item-pop__current">13 211 грн.</span>
+                  </div>
+                  <div class="item-pop__actions actions-pop">
+                    <button
+                      class="actions-pop__button actions-pop__button--favorite"
+                      type="button"
+                      title="До обраних"
+                    >
+                      <svg class="icon">
+                        <use
+                          xlink:href="img/icons/symbol-defs.svg#icon-heart"
+                        ></use>
+                      </svg>
+                    </button>
+                    <button
+                      class="actions-pop__button"
+                      type="button"
+                      title="До кошика"
+                    >
+                      <svg class="icon">
+                        <use
+                          xlink:href="img/icons/symbol-defs.svg#icon-cart"
+                        ></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article class="item-pop">
+                <!-- Main-->
+                <div class="item-pop__main">
+                  <div class="item-pop__sizes">
+                    Розмір: <span>61 x 184 x 2130 мм</span>
+                  </div>
+                  <h2 class="item-pop__title">
+                    <a class="item-pop__link" href="#"
+                      >Матрац Largo SLIM / Ларго Слім</a
+                    >
+                  </h2>
+                  <div class="item-pop__status">
+                    <svg
+                      class="item-pop__icon item-pop__icon--color--green icon"
+                    >
+                      <use
+                        xlink:href="img/icons/symbol-defs.svg#icon-available"
+                      ></use>
+                    </svg>
+                    В наявності
+                  </div>
+                </div>
+                <!-- Picture--><a class="item-pop__painting" href="#">
+                  <picture>
+                    <source
+                      srcset="img/home/popular/largo-slim.avif"
+                      type="image/avif"
+                    >
+                    <source
+                      srcset="img/home/popular/largo-slim.webp"
+                      type="image/webp"
+                    >
+                    <img
+                      class="item-pop__img"
+                      src="img/home/popular/largo-slim.jpg"
+                      alt="Білий матрац Ларго Слім"
+                    > </picture
+                ></a>
+                <!-- Secondary-->
+                <div class="item-pop__secondary">
+                  <div class="item-pop__prices">
+                    <s class="item-pop__previous">3 122 грн.</s
+                    ><span class="item-pop__current">2 810 грн.</span>
+                  </div>
+                  <div class="item-pop__actions actions-pop">
+                    <button
+                      class="actions-pop__button actions-pop__button--favorite"
+                      type="button"
+                      title="До обраних"
+                    >
+                      <svg class="icon">
+                        <use
+                          xlink:href="img/icons/symbol-defs.svg#icon-heart"
+                        ></use>
+                      </svg>
+                    </button>
+                    <button
+                      class="actions-pop__button"
+                      type="button"
+                      title="До кошика"
+                    >
+                      <svg class="icon">
+                        <use
+                          xlink:href="img/icons/symbol-defs.svg#icon-cart"
+                        ></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article class="item-pop">
+                <!-- Main-->
+                <div class="item-pop__main">
+                  <div class="item-pop__sizes">
+                    Розмір: <span>61 x 184 x 2130 мм</span>
+                  </div>
+                  <h2 class="item-pop__title">
+                    <a class="item-pop__link" href="#"
+                      >Матрац ARGENTUM AMALTEA / Аргентум Амалті</a
+                    >
+                  </h2>
+                  <div class="item-pop__status">
+                    <svg
+                      class="item-pop__icon item-pop__icon--color--green icon"
+                    >
+                      <use
+                        xlink:href="img/icons/symbol-defs.svg#icon-available"
+                      ></use>
+                    </svg>
+                    В наявності
+                  </div>
+                </div>
+                <!-- Picture--><a class="item-pop__painting" href="#">
+                  <picture>
+                    <source
+                      srcset="img/home/popular/argentum-amaltea.avif"
+                      type="image/avif"
+                    >
+                    <source
+                      srcset="img/home/popular/argentum-amaltea.webp"
+                      type="image/webp"
+                    >
+                    <img
+                      class="item-pop__img"
+                      src="img/home/popular/argentum-amaltea.jpg"
+                      alt="Білий матрац Аргентум Амалті"
+                    > </picture
+                ></a>
+                <!-- Secondary-->
+                <div class="item-pop__secondary">
+                  <div class="item-pop__prices">
+                    <s class="item-pop__previous">5 966 грн.</s
+                    ><span class="item-pop__current">5 071 грн.</span>
+                  </div>
+                  <div class="item-pop__actions actions-pop">
+                    <button
+                      class="actions-pop__button actions-pop__button--favorite"
+                      type="button"
+                      title="До обраних"
+                    >
+                      <svg class="icon">
+                        <use
+                          xlink:href="img/icons/symbol-defs.svg#icon-heart"
+                        ></use>
+                      </svg>
+                    </button>
+                    <button
+                      class="actions-pop__button"
+                      type="button"
+                      title="До кошика"
+                    >
+                      <svg class="icon">
+                        <use
+                          xlink:href="img/icons/symbol-defs.svg#icon-cart"
+                        ></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article class="item-pop">
+                <!-- Main-->
+                <div class="item-pop__main">
+                  <div class="item-pop__sizes">
+                    Розмір: <span>61 x 184 x 2130 мм</span>
+                  </div>
+                  <h2 class="item-pop__title">
+                    <a class="item-pop__link" href="#">Диван Браво</a>
+                  </h2>
+                  <div class="item-pop__status">
+                    <svg
+                      class="item-pop__icon item-pop__icon--color--green icon"
+                    >
+                      <use
+                        xlink:href="img/icons/symbol-defs.svg#icon-available"
+                      ></use>
+                    </svg>
+                    В наявності
+                  </div>
+                </div>
+                <!-- Picture--><a class="item-pop__painting" href="#">
+                  <picture>
+                    <source
+                      srcset="img/home/popular/bravo.avif"
+                      type="image/avif"
+                    >
+                    <source
+                      srcset="img/home/popular/bravo.webp"
+                      type="image/webp"
+                    >
+                    <img
+                      class="item-pop__img"
+                      src="img/home/popular/bravo.jpg"
+                      alt="Сірий диван Браво"
+                    > </picture
+                ></a>
+                <!-- Secondary-->
+                <div class="item-pop__secondary">
+                  <div class="item-pop__prices">
+                    <span class="item-pop__current">10 008 грн.</span>
+                  </div>
+                  <div class="item-pop__actions actions-pop">
+                    <button
+                      class="actions-pop__button actions-pop__button--favorite"
+                      type="button"
+                      title="До обраних"
+                    >
+                      <svg class="icon">
+                        <use
+                          xlink:href="img/icons/symbol-defs.svg#icon-heart"
+                        ></use>
+                      </svg>
+                    </button>
+                    <button
+                      class="actions-pop__button"
+                      type="button"
+                      title="До кошика"
+                    >
+                      <svg class="icon">
+                        <use
+                          xlink:href="img/icons/symbol-defs.svg#icon-cart"
+                        ></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article class="item-pop">
+                <!-- Main-->
+                <div class="item-pop__main">
+                  <div class="item-pop__sizes">
+                    Розмір: <span>61 x 184 x 2130 мм</span>
+                  </div>
+                  <h2 class="item-pop__title">
+                    <a class="item-pop__link" href="#">Ліжко МК-5</a>
+                  </h2>
+                  <div class="item-pop__status">
+                    <svg
+                      class="item-pop__icon item-pop__icon--color--green icon"
+                    >
+                      <use
+                        xlink:href="img/icons/symbol-defs.svg#icon-available"
+                      ></use>
+                    </svg>
+                    В наявності
+                  </div>
+                </div>
+                <!-- Picture--><a class="item-pop__painting" href="#">
+                  <picture>
+                    <source
+                      srcset="img/home/popular/mk-5.avif"
+                      type="image/avif"
+                    >
+                    <source
+                      srcset="img/home/popular/mk-5.webp"
+                      type="image/webp"
+                    >
+                    <img
+                      class="item-pop__img"
+                      src="img/home/popular/mk-5.jpg"
+                      alt="Сіре ліжко МК-5"
+                    > </picture
+                ></a>
+                <!-- Secondary-->
+                <div class="item-pop__secondary">
+                  <div class="item-pop__prices">
+                    <span class="item-pop__current">8 775 грн.</span>
+                  </div>
+                  <div class="item-pop__actions actions-pop">
+                    <button
+                      class="actions-pop__button actions-pop__button--favorite"
+                      type="button"
+                      title="До обраних"
+                    >
+                      <svg class="icon">
+                        <use
+                          xlink:href="img/icons/symbol-defs.svg#icon-heart"
+                        ></use>
+                      </svg>
+                    </button>
+                    <button
+                      class="actions-pop__button"
+                      type="button"
+                      title="До кошика"
+                    >
+                      <svg class="icon">
+                        <use
+                          xlink:href="img/icons/symbol-defs.svg#icon-cart"
+                        ></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section class="style">
+          <div class="style__container">
+            <h2 class="style__title">Browse by dress style</h2>
+            <div class="style__layout">
+              <a class="style__item item-style" href="#">
+                <div class="item-style__label">Casual</div>
+                <picture>
+                  <source srcset="img/style/casual.avif" type="image/avif">
+                  <source srcset="img/style/casual.webp" type="image/webp">
+                  <img
+                    class="item-style__img"
+                    src="img/style/casual.jpg"
+                    alt="A man in a plain t-shirt."
+                  > </picture></a
+              ><a class="style__item item-style" href="#">
+                <div class="item-style__label">Formal</div>
+                <picture>
+                  <source srcset="img/style/formal.avif" type="image/avif">
+                  <source srcset="img/style/formal.webp" type="image/webp">
+                  <img
+                    class="item-style__img"
+                    src="img/style/formal.jpg"
+                    alt="A man in a plaid suit."
+                  > </picture></a
+              ><a class="style__item item-style" href="#">
+                <div class="item-style__label">Party</div>
+                <picture>
+                  <source srcset="img/style/party.avif" type="image/avif">
+                  <source srcset="img/style/party.webp" type="image/webp">
+                  <img
+                    class="item-style__img"
+                    src="img/style/party.jpg"
+                    alt="A woman smiling in a white sweater."
+                  > </picture></a
+              ><a class="style__item item-style" href="#">
+                <div class="item-style__label">Gym</div>
+                <picture>
+                  <source srcset="img/style/gym.avif" type="image/avif">
+                  <source srcset="img/style/gym.webp" type="image/webp">
+                  <img
+                    class="item-style__img"
+                    src="img/style/gym.jpg"
+                    alt="A young man in a jersey lifting a dumbbell."
+                  > </picture
+              ></a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
