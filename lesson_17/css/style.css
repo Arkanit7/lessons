@@ -160,12 +160,6 @@ body {
   box-shadow: -3px 4px 15px 0 hsl(0deg 0% 0% / 5.88%);
 }
 
-@media (width < 375px) {
-  .item-pop {
-    margin-inline: -12px;
-  }
-}
-
 @media (480px <= width) {
   .item-pop {
     border-radius: 8px;
@@ -373,6 +367,12 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
   gap: 12px;
+}
+
+@media (width < 375px) {
+  .popular__layout {
+    margin-inline: -12px;
+  }
 }
 
 @media (480px <= width) {
