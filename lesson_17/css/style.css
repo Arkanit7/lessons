@@ -160,7 +160,7 @@ body {
   box-shadow: -3px 4px 15px 0 hsl(0deg 0% 0% / 5.88%);
 }
 
-@media (480px <= width) {
+@media (375px <= width) {
   .item-pop {
     border-radius: 8px;
   }
@@ -365,7 +365,7 @@ body {
 
 .popular__layout {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 12px;
 }
 
