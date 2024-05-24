@@ -103,7 +103,7 @@ textarea {
 body {
   font-family: exo, sans-serif;
   font-size: 14px;
-  line-height: 2.1429;
+  line-height: 1;
   color: hsl(0, 0%, 100%);
   background-color: hsl(240, 100%, 0%);
 }
@@ -136,22 +136,22 @@ body {
   }
 }
 
-@keyframes triangle-reverse {
-  33% {
+@keyframes triangle-mirror {
+  33.3% {
     bottom: calc(100% - 30px - 120px);
     right: calc(100% - 36px - 120px);
   }
-  66% {
+  66.6% {
     bottom: calc(100% - 42px - 120px);
     right: 29px;
   }
 }
 @keyframes triangle {
-  33% {
+  33.3% {
     top: calc(100% - 30px - 120px);
     left: calc(100% - 34px - 120px);
   }
-  66% {
+  66.6% {
     top: calc(100% - 43px - 120px);
     left: 34px;
   }
@@ -683,7 +683,7 @@ body {
   .hero::after {
     right: 35px;
     bottom: 30px;
-    animation: triangle-reverse 15s linear infinite;
+    animation: triangle-mirror 15s linear infinite;
   }
 }
 .hero__container {
@@ -799,7 +799,7 @@ body {
   .scene::after {
     right: 35px;
     bottom: 30px;
-    animation: triangle-reverse 15s linear infinite;
+    animation: triangle-mirror 15s linear infinite;
   }
   .scene__container {
     display: grid;

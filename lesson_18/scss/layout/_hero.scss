@@ -103,7 +103,7 @@ $mobile-width: 109px;
     &::after {
       right: 35px;
       bottom: 30px;
-      animation: triangle-reverse 15s linear infinite;
+      animation: triangle-mirror 15s linear infinite;
     }
   }
 
