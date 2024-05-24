@@ -1,0 +1,16 @@
+@use "../abstracts" as *;
+
+.rating {
+	display: flex;
+	flex-direction: row-reverse;
+
+	&__star {
+		width: clamped(24rem, 36rem, $xx-small, $canvas);;
+		aspect-ratio: 1 / 1;
+		fill: $clr-system-neutral;
+
+		&_active, &_active ~ & {
+			fill: $clr-system-warning;
+		}
+	}
+}

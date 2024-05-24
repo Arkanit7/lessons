@@ -1,0 +1,95 @@
+@use "sass:math";
+@use "sass:meta";
+@use "variables" as *;
+
+@function round-to($number, $decimals: 4) {
+  $power: math.pow(10, $decimals);
+  $rounded: math.div(math.round($number * $power), $power);
+
+  @return $rounded;
+}
+
+@function percent($divisor, $dividend) {
+  $quotient: math.percentage(math.div($divisor, $dividend));
+
+  @return round-to($quotient);
+}
+
+@function strip-units($number) {
+  @if meta.type-of($number) == "number" and not math.is-unitless($number) {
+    @return math.div($number, ($number * 0 + 1));
+  }
+
+  @return $number;
+}
+
+@function rem($value) {
+  @if math.unit($value) == "rem" {
+    @return $value;
+  }
+
+  @if math.unit($value) == "em" {
+    @return strip-units($value) * 1rem;
+  }
+
+  $fs-root: 16px !default;
+
+  @return strip-units(math.div($value, $fs-root)) * 1rem;
+}
+
+@function em($value, $base: 16px) {
+  $new-value: rem($value);
+  $new-base: rem($base);
+  $result: math.div($new-value, $new-base) * 1em;
+
+  @return round-to($result);
+}
+
+@function clamped(
+  $min-value,
+  $max-value,
+  $min-view-width: $bp-canvas-min,
+  $max-view-width: $container
+) {
+  $multiplier: round-to(
+    math.div(
+      rem($max-value - $min-value),
+      rem($max-view-width - $min-view-width)
+    )
+  );
+
+  @return clamp(
+    $min-value,
+    calc(#{$min-value} + #{$multiplier} * (100vw - #{$min-view-width})),
+    $max-value
+  );
+}
+
+@function maxed(
+  $min-value,
+  $max-value,
+  $min-view-width: $xx-small,
+  $max-view-width: $container
+) {
+  $multiplier: round-to(
+    math.div(
+      rem($max-value - $min-value),
+      rem($max-view-width - $min-view-width)
+    )
+  );
+
+  @return max(
+    $min-value,
+    calc(#{$min-value} + #{$multiplier} * (100vw - #{$min-view-width}))
+  );
+}
+
+@function calculate-root-fs() {
+  $fs-root: 16px !default;
+
+  @if math.unit($fs-root) != "px" {
+    @error "`#{unit($fs-root)}` is not a valid unit for $fs-root. Use `px`.";
+  }
+
+  @return math.div(strip-units($fs-root), 16) * 1rem;
+}

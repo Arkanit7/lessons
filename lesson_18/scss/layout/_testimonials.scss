@@ -1,0 +1,78 @@
+@use "../abstracts" as *;
+
+.item-test {
+  // Just in case client would change the order
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  // padding: clamped(35px, 70px) clamped(29px, 33px);
+  padding: clamped(20px, 50px) 20px;
+  text-align: center;
+  background-color: $clr-purple;
+
+  &__header {
+  }
+
+  &__title {
+    font-size: clamped(20px, 40px);
+    font-weight: $fw-bold;
+    line-height: 2;
+    text-transform: uppercase;
+
+		&:not(:last-child) {
+			margin-block-end: 10px;
+		}
+
+    @include media-width-from($large) {
+      line-height: 1;
+    }
+  }
+
+  &__position {
+    font-size: clamped(18px, 20px);
+    line-height: 1.1111;
+    text-transform: capitalize;
+
+    @include media-width-from($large) {
+      line-height: 1.75;
+    }
+  }
+
+  &__text {
+    // Just in case buyer would change the order
+    flex-grow: 1;
+    font-size: clamped(14px, 20px);
+    line-height: 2.1429;
+    letter-spacing: -0.28px;
+    text-transform: capitalize;
+
+    @include media-width-from($large) {
+      line-height: 1.75;
+    }
+  }
+}
+
+.testimonials {
+  &__container {
+    padding-block: clamped(40px, 162px) clamped(60px, 150px);
+
+    & > :not(:last-child) {
+      margin-block-end: clamped(20px, 120px);
+    }
+  }
+
+  &__title {
+  }
+
+  &__layout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamped(24px, 80px);
+  }
+
+  &__item {
+		flex: 0 clamped(230px, 300px);
+  }
+}

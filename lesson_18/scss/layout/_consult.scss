@@ -1,0 +1,96 @@
+@use "../abstracts" as *;
+
+.item-consult {
+  display: grid;
+  gap: 12px clamped(12px, 40px);
+  text-align: center;
+
+  @include media-width-from($xx-small) {
+    grid-template-columns: 200px;
+    justify-content: center;
+  }
+
+  @include media-width-from($small) {
+    grid-template-columns: repeat(2, 200px);
+    align-items: center;
+    text-align: unset;
+  }
+
+  @include media-width-from(1000px) {
+    grid-template-columns: repeat(2, auto);
+  }
+
+  &__label {
+    @include media-width-from($small) {
+      justify-self: end;
+    }
+  }
+
+  &__field {
+    @include media-width-from(1000px) {
+      width: 200px;
+    }
+  }
+
+  &__button {
+    cursor: pointer;
+
+    @include media-width-from($xx-small) {
+      justify-self: center;
+    }
+
+    @include media-width-from($small) {
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+.consult {
+  &__container {
+    padding-block: clamped(40px, 160px) clamped(40px, 51px);
+
+    & > :not(:last-child) {
+      margin-block-end: 40px;
+    }
+
+    @include media-width-from($bp-menu) {
+      padding-block-end: 80px;
+    }
+  }
+
+  &__title {
+    @include media-width-to($bp-menu) {
+			grid-template-columns: clamped(207px, 400px, $bp-canvas-min, $bp-menu);
+      justify-content: center;
+      justify-items: center;
+      text-align: center;
+
+      &::after {
+        width: percent(142px, 121px);
+
+        @include media-width-from($medium) {
+          width: percent(401px, 301px);
+        }
+      }
+    }
+  }
+
+  &__form {
+  }
+
+  &__list {
+    @include media-width-from(1000px) {
+      display: flex;
+      gap: 24px 40px;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    @include media-width-to(1000px) {
+      &:not(:last-child) {
+        margin-block-end: 24px;
+      }
+    }
+  }
+}

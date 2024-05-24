@@ -1,0 +1,76 @@
+@use "../abstracts" as *;
+@use "sass:math";
+
+/* Global styles */
+
+:root {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+  scroll-padding-top: 64px;
+}
+
+body {
+  font-family: $ff-exo;
+  font-size: 14px;
+  line-height: 2.1429;
+  color: $clr-white;
+  background-color: $clr-black;
+}
+
+.wrapper {
+	padding-block-start: clamped(87px, 150px);
+  overflow: clip;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__main {
+    flex: auto;
+  }
+}
+
+// .main {
+//   @include media-width-from($bp-menu) {
+//     padding-block-start: 20px;
+//   }
+// }
+
+.menu-lock {
+  @include media-width-to($bp-menu) {
+    overflow: hidden;
+  }
+}
+
+[class*="container"] {
+  max-width: $container;
+  padding-inline: $padding-sm;
+  margin-inline: auto;
+
+  @include media-width-from($xx-small) {
+    padding-inline: $padding;
+  }
+}
+
+@keyframes triangle-reverse {
+  33% {
+    bottom: calc(100% - 30px - 120px);
+    right: calc(100% - 36px - 120px);
+  }
+
+  66% {
+    bottom: calc(100% - 42px - 120px);
+    right: 29px;
+  }
+}
+
+@keyframes triangle {
+  33% {
+    top: calc(100% - 30px - 120px);
+    left: calc(100% - 34px - 120px);
+  }
+
+  66% {
+    top: calc(100% - 43px - 120px);
+    left: 34px;
+  }
+}

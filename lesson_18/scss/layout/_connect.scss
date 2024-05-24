@@ -1,0 +1,81 @@
+@use "../abstracts" as *;
+
+.connect {
+  &__container {
+    padding-block: clamped(40px, 51px) clamped(70px, 111px);
+  }
+
+  &__main {
+    & > :not(:last-child) {
+      margin-block-end: 40px;
+    }
+  }
+
+  &__title {
+    @include media-width-from($bp-menu) {
+      // %visually-hidden
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      height: 1px;
+      overflow: hidden;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+    }
+  }
+
+  &__address {
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamped(12px, 20px) clamped(20px, 80px);
+
+    @include media-width-to($medium) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    font-size: clamped(18px, 20px);
+    line-height: 1.4286;
+    letter-spacing: -0.28px;
+    text-transform: capitalize;
+
+    @include media-width-from($medium) {
+      line-height: 1;
+      letter-spacing: -0.4px;
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    gap: clamped(8px, 20px);
+
+    @media (any-hover) {
+      &:hover {
+        color: $clr-purple;
+      }
+    }
+
+    .icon {
+      color: $clr-purple;
+    }
+  }
+
+  &__socials {
+    &:first-child {
+      margin-block-end: 40px;
+    }
+
+    &:last-child {
+      margin-block-start: 40px;
+    }
+
+    @include media-width-from($bp-menu) {
+      display: none;
+    }
+  }
+}

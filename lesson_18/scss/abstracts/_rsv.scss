@@ -1,0 +1,131 @@
+// SCSS RSV
+
+// Responsive values
+
+// Author: Arkanit (https://github.com/Arkanit7)
+
+@use "variables" as *;
+@use "functions" as *;
+@use "mixins" as *;
+@use "sass:math";
+
+@function rsv-fluid(
+  $min-value,
+  $max-value,
+  $min-view-width: rem($xx-small),
+  $max-view-width: rem($content)
+) {
+  $multiplier: math.div(
+    rem($max-value - $min-value),
+    rem($max-view-width - $min-view-width)
+  );
+
+  @return calc(#{$min-value} + #{$multiplier} * (100vw - #{$min-view-width}));
+}
+
+@function rsv-clamp(
+  $min-value,
+  $max-value,
+  $min-view-width: rem($xx-small),
+  $max-view-width: rem($content)
+) {
+  // 0 value fix
+  @if $min-value == 0 {
+    $min-value: $max-value * 0;
+  }
+
+  @if $max-value == 0 {
+    $min-value: $min-value * 0;
+  }
+
+  @return clamp(
+    $min-value,
+    rsv-fluid($min-value, $max-value, $min-view-width, $max-view-width),
+    $max-value
+  );
+}
+
+@function rsv-min(
+  $min-value,
+  $max-value,
+  $min-view-width: rem($xx-small),
+  $max-view-width: rem($content)
+) {
+  @return min(
+    rsv-fluid($min-value, $max-value, $min-view-width, $max-view-width),
+    $max-value
+  );
+}
+
+@function rsv-max(
+  $min-value,
+  $max-value,
+  $min-view-width: rem($xx-small),
+  $max-view-width: rem($content)
+) {
+  @return max(
+    $min-value,
+    rsv-fluid($min-value, $max-value, $min-view-width, $max-view-width)
+  );
+}
+
+@function rsv-fluid-auto($max-value, $max-view-width: $content) {
+  @return rsv-fluid(
+    math.div($max-value, 2),
+    $max-value,
+    0 * $max-view-width,
+    $max-view-width
+  );
+}
+
+@function rsv-max-auto($max-value, $max-view-width: $content) {
+  @return rsv-max(
+    math.div($max-value, 2.5),
+    $max-value,
+    0 * $max-view-width,
+    $max-view-width
+  );
+}
+
+@function rsv-min-auto($max-value, $max-view-width: $content) {
+  @return rsv-min(
+    math.div($max-value, 2.5),
+    $max-value,
+    0 * $max-view-width,
+    $max-view-width
+  );
+}
+
+@function rsv-clamp-auto($max-value, $max-view-width: $content) {
+  @return rsv-clamp(
+    math.div($max-value, 2.5),
+    $max-value,
+    0 * $max-view-width,
+    $max-view-width
+  );
+}
+
+// Mixin
+// @include rsv(property, minimal value, maximal value, minimal screen width, maximal screen width);
+@mixin rsv(
+  $property,
+  $min-value,
+  $max-value,
+  $min-view-width: rem($xx-small),
+  $max-view-width: rem($content)
+) {
+  #{$property}: $min-value;
+
+  @media (#{$min-view-width} <= width) {
+    #{$property}: rsv-fluid(
+      $min-value,
+      $max-value,
+      $min-view-width,
+      $max-view-width
+    );
+  }
+
+  @media (#{$max-view-width} <= width) {
+    #{$property}: $max-value;
+  }
+}

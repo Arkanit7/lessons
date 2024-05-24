@@ -1,0 +1,43 @@
+@use "../abstracts" as *;
+
+.return {
+  position: fixed;
+  z-index: 100;
+  right: -67px;
+  bottom: 67px;
+  padding: 10px;
+  display: grid;
+  gap: 10px;
+  transform: rotate(-90deg);
+  transition: opacity 0.8s, visibility 0.8s;
+
+  &:not(&--active) {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  @include media-width-to($bp-menu) {
+    display: none;
+  }
+
+  &__label {
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: -0.4px;
+    text-transform: capitalize;
+    transition: color 0.3s;
+  }
+
+  &__arrow {
+  }
+
+  &:focus-visible &__label {
+    color: $clr-purple;
+  }
+
+  @media (any-hover) {
+    &:hover &__label {
+      color: $clr-purple;
+    }
+  }
+}

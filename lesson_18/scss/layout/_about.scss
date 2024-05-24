@@ -1,0 +1,46 @@
+@use "../abstracts" as *;
+
+.about {
+  @include media-width-from($bp-bg) {
+    background: linear-gradient(
+        180deg,
+        hsl(0deg 0% 0% / 90.2%) 0%,
+        hsl(0deg 0% 0% / 98.8%) 85.54%
+      ),
+      url("../img/about/bg.webp") center / cover;
+  }
+
+  &__container {
+    text-align: center;
+    padding-block: clamped(20px, 200px) clamped(35px, 162px);
+
+    & > :not(:last-child) {
+      margin-block-end: clamped(20px, 60px, $bp-menu);
+    }
+  }
+
+  &__body {
+    & > :not(:last-child) {
+      margin-block-end: 20px;
+    }
+
+    @include media-width-from($large) {
+      max-width: 992px;
+      margin-inline: auto;
+    }
+  }
+
+  &__title {
+  }
+
+  &__text {
+    letter-spacing: -0.28px;
+    text-transform: capitalize;
+
+    @include media-width-from($medium) {
+      font-size: 18px;
+      line-height: 2.2222;
+      letter-spacing: -0.36px;
+    }
+  }
+}

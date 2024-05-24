@@ -1,0 +1,36 @@
+@use "../abstracts" as *;
+
+.label {
+  font-size: clamped(18px, 20px);
+  line-height: 1.1111;
+  letter-spacing: clamped(-0.36px, -0.4px);
+  text-transform: capitalize;
+
+  @include media-width-from($medium) {
+    line-height: 1.75;
+  }
+}
+
+.filed {
+  padding: 12px;
+  border: 1px solid $clr-mine-shaft;
+  text-align: center;
+  font-size: clamped(16px, 18px);
+  line-height: 1.125;
+  letter-spacing: clamped(-0.32px, -0.36px);
+
+  @include media-width-from($medium) {
+    line-height: 1.3888;
+  }
+
+  &::placeholder {
+    opacity: 1;
+    color: $clr-boulder;
+    text-transform: capitalize;
+  }
+
+	// &:focus {
+	// 	outline: none;
+	// 	border-color: currentcolor;
+	// }
+}

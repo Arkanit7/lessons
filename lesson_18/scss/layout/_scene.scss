@@ -1,0 +1,45 @@
+@use "../abstracts" as *;
+
+.scene {
+  @include media-width-to($bp-avatar) {
+    min-height: 300px;
+    position: relative;
+    isolation: isolate;
+    margin-block-end: -37px;
+    pointer-events: none;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 120px;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      background-image: $grd-firefly;
+      opacity: 0.3;
+      filter: blur(25px);
+    }
+
+    &::before {
+      left: 36px;
+      top: 20px;
+      animation: triangle 15s linear infinite;
+    }
+
+    &::after {
+      right: 35px;
+      bottom: 30px;
+      animation: triangle-reverse 15s linear infinite;
+    }
+
+    &__container {
+      display: grid;
+      justify-content: center;
+    }
+
+    .avatar {
+      width: 193px;
+    }
+  }
+}

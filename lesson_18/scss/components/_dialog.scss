@@ -1,0 +1,66 @@
+@use "../abstracts" as *;
+
+.dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.8s;
+  translate: -50% -50%;
+
+  &[open] {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__container {
+    max-width: $large;
+		width: 80vw;
+    padding: $padding;
+  }
+
+  &__head {
+    display: flex;
+    gap: 24rem;
+    align-items: start;
+    justify-content: space-between;
+  }
+
+  &__btn {
+    all: unset;
+    flex-shrink: 0;
+    color: $clr-text-barley-corn;
+    cursor: pointer;
+    transition: 0.3s color;
+
+    &:hover {
+      color: $clr-text-hover-tuatara;
+    }
+  }
+
+  &__hr {
+    margin: 24rem 0;
+  }
+
+  &__body {
+    // border-top: 1px solid $clr-bg-barley-corn;
+    margin-top: 24rem;
+  }
+
+  // &::backdrop {
+  //   transition: inherit;
+  // }
+
+  &[open]::backdrop {
+		cursor: pointer;
+    background-color: hsl(0deg 0% 0% / 90%);
+  }
+
+  video {
+    margin-inline: auto;
+
+    // max-height: 75vh;
+  }
+}

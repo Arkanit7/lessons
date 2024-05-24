@@ -1,0 +1,55 @@
+@use "../abstracts" as *;
+
+.link-button {
+  display: inline-block;
+  vertical-align: top;
+  padding: em(10, 16);
+  transition: background-color 0.3s;
+
+  // typography
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: $fw-medium;
+  font-family: $ff-orbitron;
+  text-transform: uppercase;
+
+  &:focus-visible {
+    background-color: $clr-purple;
+  }
+
+  @media (any-hover) {
+    &:hover {
+      background-color: $clr-purple;
+    }
+  }
+}
+
+.button {
+  display: inline-block;
+  vertical-align: top;
+  padding: clamped(12px, 15px) clamped(40px, 60px);
+  text-align: center;
+  background-color: $clr-purple;
+  transition: background-color 0.3s;
+
+  // typography
+  font-family: $ff-orbitron;
+  font-size: clamped(14px, 20px);
+
+  // Заради одної кнопки не підключати ж шрифт :)
+  // font-weight: 900;
+  font-weight: $fw-medium;
+  line-height: 1.4286;
+  text-transform: uppercase;
+
+  &:focus-visible {
+    background-color: $clr-stratos;
+  }
+
+  @media (any-hover) {
+    &:hover {
+      background-color: $clr-stratos;
+    }
+  }
+}

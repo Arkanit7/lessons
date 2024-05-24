@@ -1,0 +1,21 @@
+@use "../abstracts" as *;
+
+.arrow {
+  @extend %rainbow-gradient;
+
+  background-repeat: no-repeat;
+  width: 203px;
+  height: 39px;
+  mask-image: url("../img/arrow.svg");
+  animation: flow 2s linear infinite;
+
+  @keyframes flow {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      background-position: 203px;
+    }
+  }
+}

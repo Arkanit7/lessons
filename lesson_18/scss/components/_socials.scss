@@ -1,0 +1,47 @@
+@use "../abstracts" as *;
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  // gap: 12px;
+  gap: 10px 23px;
+
+	&--adaptive {
+		flex: 0 0 95px;
+	}
+
+  &__item {
+  }
+
+  &__link {
+    // Важливі навігаційні вузли збільшуємо
+    // font-size: 15px;
+    font-size: 30px;
+    transition: color 0.3s;
+
+    @include media-width-from($medium) {
+      font-size: 15px;
+    }
+
+    &--youtube {
+      font-size: 37px;
+
+      @include media-width-from($medium) {
+        font-size: 19px;
+      }
+    }
+
+    &:focus-visible {
+      color: $clr-purple;
+    }
+
+    @media (any-hover) {
+      &:hover {
+        color: $clr-purple;
+      }
+    }
+  }
+}

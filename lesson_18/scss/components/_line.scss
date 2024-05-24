@@ -1,0 +1,56 @@
+@use "../abstracts" as *;
+
+.line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+	@media (any-hover) {
+		&:hover &__list{
+			animation-play-state: paused;
+		}
+	}
+
+  &__list {
+    all: inherit;
+    flex: none;
+    gap: clamped(20px, 60px);
+    animation: run 10s linear infinite;
+
+    &:not(:last-child) {
+      padding-inline-end: clamped(20px, 60px);
+    }
+  }
+
+  &__item {
+    flex: none;
+    display: flex;
+    align-items: center;
+    gap: inherit;
+    font-family: $ff-orbitron;
+    font-size: clamped(14px, 20px);
+    font-style: normal;
+    font-weight: $fw-medium;
+    line-height: 1.0714;
+    text-transform: capitalize;
+
+    @include media-width-from($bp-menu) {
+      line-height: 1.25;
+    }
+
+    &::after {
+      content: "";
+      width: clamped(4px, 10px);
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      background-image: $grd-rainbow;
+      flex: none;
+    }
+  }
+
+  @keyframes run {
+    from {
+      transform: translateX(100%);
+    }
+  }
+}

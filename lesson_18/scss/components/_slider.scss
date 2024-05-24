@@ -1,0 +1,121 @@
+@use "../abstracts" as *;
+
+.slider {
+	position: relative;
+	
+  &__swiper {
+		height: 100vh;
+    height: 100dvh;
+
+		@media (any-hover: hover) {
+			margin-right: $scrollbar;
+		}
+  }
+
+  &__wrapper {
+    counter-reset: slide;
+  }
+
+  &__slide {
+    position: relative;
+    height: initial !important;
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 50%;
+      font-size: rsvp-fluid-auto(60rem);
+      font-weight: 700;
+      line-height: normal;
+      color: $clr-text-whitish;
+      content: counter(slide, decimal-leading-zero);
+      counter-increment: slide;
+      transform: translateX(50%);
+
+      @include media-width-from($medium) {
+        top: 50%;
+        right: calc(120px / $canvas * 100%);
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &__pagination {
+    position: absolute;
+    z-index: 11;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include media-width-to($medium - 1px) {
+      bottom: 20px;
+      left: 50%;
+      gap: 12px;
+			justify-content: center;
+      width: 95%;
+      transform: translateX(-50%);
+    }
+
+    @include media-width-from($medium) {
+      top: 50%;
+      left: calc(120px / $canvas * 100%);
+      flex-direction: column;
+      gap: 18px 12px;
+      max-height: calc(600 / 1080) * 100%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__bullet {
+    box-sizing: content-box;
+    display: block;
+    flex-shrink: 0;
+
+    // mix-blend-mode: difference;
+    width: 20px;
+    aspect-ratio: 8 / 1;
+    cursor: pointer;
+    background-color: $clr-bg-black;
+    border: 1px solid $clr-bg-white;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+
+    @include media-width-from($medium) {
+      width: 4px;
+      aspect-ratio: 1 / 8;
+    }
+
+    &_active {
+      opacity: 1;
+    }
+  }
+
+  &__scrollbar {
+    @media (hover: none) {
+      display: none;
+    }
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 11;
+    width: $scrollbar;
+    background-color: $clr-bg-whitish;
+  }
+
+  &__drag-scroll {
+    background-color: $clr-bg-gray;
+  }
+
+  &__decor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: calc(720px / $canvas * 100%);
+    height: 100%;
+    background-color: $clr-bg-whitish;
+  }
+}

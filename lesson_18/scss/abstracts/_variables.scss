@@ -1,0 +1,70 @@
+// 1 rem = $fs-root px
+// $fs-root: 1px;
+
+// Default paddings
+$padding-sm: 12px;
+$padding: 20px;
+
+// Container - content with paddings
+$content: 1272px;
+$container: $content + 2 * $padding;
+
+// $container-small: 879px + 2 * $padding;
+// $canvas: 1440px;
+
+// Material UI BP
+$xs: 0;
+$sm: 600px;
+$md: 900px;
+$lg: 1200px;
+$xl: 1536px;
+
+// Bootstrap BP
+$xx-small: 375px;
+$x-small: 480px;
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+$x-large: 1200px;
+$xx-large: 1400px;
+
+// Custom BP
+
+$bp-canvas-min: 393px;
+$bp-menu: $medium;
+$bp-bg: $medium;
+$bp-avatar: $medium;
+
+// Font Families
+$ff-exo: exo, sans-serif;
+$ff-orbitron: orbitron, sans-serif;
+
+// Font Sizes
+
+// Font weights
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-bold: 700;
+
+// Colors
+$clr-white: hsl(0deg 0 100%);
+$clr-black: hsl(240deg 100% 0%);
+$clr-purple: hsl(279deg 100% 33%);
+$clr-stratos: hsl(250deg 100% 14%);
+$clr-boulder: hsl(0deg 0% 47%);
+$clr-mine-shaft: hsl(0deg 0% 13%);
+
+// Gradients
+$grd-rainbow: linear-gradient(
+  90deg,
+  hsl(0deg 100% 50%) 0%,
+  hsl(104deg 100% 50%) 48.9%,
+  hsl(248deg 100% 50%) 100%
+);
+$grd-firefly: linear-gradient(
+  90deg,
+  hsl(276deg 100% 50% / 60%) 0%,
+  hsl(104deg 100% 55% / 60%) 36.9%,
+  hsl(0deg 100% 50% / 60%) 67.4%,
+  hsl(227deg 100% 50% / 60%) 100%
+);

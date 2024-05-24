@@ -1,0 +1,44 @@
+@use "../abstracts" as *;
+
+.title {
+  display: grid;
+  justify-content: start;
+  gap: clamped(3px, 19px);
+  overflow: hidden;
+  font-size: clamped(24px, 60px, $bp-canvas-min);
+  line-height: 1.25;
+  font-weight: $fw-bold;
+  text-transform: uppercase;
+
+  @include media-width-from($medium) {
+    line-height: 1.1667;
+  }
+
+  &::after {
+    @extend %rainbow-gradient;
+
+    content: "";
+    width: percent(193px, 171px);
+    height: 1px;
+
+		@include media-width-from($medium) {
+			width: percent(571px, 427px);
+		}
+  }
+
+  &--align {
+    &--center {
+      justify-content: center;
+      justify-items: center;
+      text-align: center;
+
+      &::after {
+        width: percent(142px, 121px);
+
+        @include media-width-from($medium) {
+          width: percent(401px, 301px);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,163 @@
+@use "../abstracts" as *;
+
+// Don't forget to exclude this padding from the whole block
+$compensate: 21px;
+
+.slide {
+  $dur: 0.3s;
+
+  display: grid;
+  gap: clamped(22px, 40px);
+  text-align: center;
+
+  &__media {
+    position: relative;
+    isolation: isolate;
+    aspect-ratio: 1 / 1;
+
+    &::before {
+      content: "play video";
+      position: absolute;
+      inset: 50% 0 auto;
+      transform: translateY(percent(20, 40));
+      font-size: clamped(21px, 40px);
+      font-weight: $fw-bold;
+      line-height: 1;
+      text-transform: uppercase;
+      opacity: 0;
+      transition: transform $dur, opacity $dur;
+    }
+
+    &::after {
+      content: "";
+      z-index: -1;
+      position: absolute;
+      inset: 0;
+      border: clamped(5px, 10px) solid transparent;
+      background-color: hsl(0deg 0% 0% / 50%);
+      transition: border-color $dur, background-color $dur;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: clamped(54px, 100px);
+    transition: transform $dur;
+  }
+
+  &__preview {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__label {
+    order: 1;
+
+    // padding-block-end: .2em;
+    font-size: clamped(14px, 40px, $bp-canvas-min);
+    font-weight: $fw-bold;
+    line-height: 1.0714;
+    text-transform: uppercase;
+    transition: color $dur;
+  }
+
+  // Hover & focus effects
+
+  &:focus-visible &__media::before {
+    transform: translateY(-50%) translateY(percent(70, 40));
+    opacity: unset;
+  }
+
+  &:focus-visible &__icon {
+    transform: translate(-50%, -50%) translateY(percent(-15, 100));
+  }
+
+  &:focus-visible &__media::after {
+    border-color: $clr-purple;
+    background-color: hsl(0deg 0% 0% / 80%);
+  }
+
+  &:focus-visible &__label {
+    color: $clr-purple;
+  }
+
+  @media (any-hover) {
+    &:hover &__media::before {
+      transform: translateY(-50%) translateY(percent(70, 40));
+      opacity: unset;
+    }
+
+    &:hover &__icon {
+      transform: translate(-50%, -50%) translateY(percent(-15, 100));
+    }
+
+    &:hover &__media::after {
+      border-color: $clr-purple;
+      background-color: hsl(0deg 0% 0% / 80%);
+    }
+
+    &:hover &__label {
+      color: $clr-purple;
+    }
+  }
+}
+
+.slider {
+  &__wrapper {
+    display: flex;
+    gap: clamped(21px, 40px, $bp-canvas-min);
+    overflow: auto;
+    scroll-snap-type: x proximity;
+    padding-block-end: $compensate;
+  }
+
+  &__slide {
+    scroll-snap-align: start;
+    flex: 0 0 clamped(193px, 360px, $bp-canvas-min);
+  }
+}
+
+.portfolio {
+  position: relative;
+  isolation: isolate;
+  padding-block: clamped(40px, 200px) clamped(40px - $compensate, 162px);
+
+  &::before {
+    @include media-width-from($bp-bg) {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      background: url("../img/portfolio/bg.webp") center / cover;
+      opacity: 0.05;
+    }
+  }
+
+  &__container {
+    & > :not(:last-child) {
+      margin-block-end: clamped(20px, 40px);
+    }
+  }
+
+  &__title {
+  }
+
+  &__arrow {
+		display: flex;
+		justify-content: end;
+
+    @include media-width-to($bp-menu) {
+      display: none;
+    }
+  }
+
+  &__slider {
+  }
+}

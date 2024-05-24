@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000001">
+    <title>Jimmy Turner – The Video Alchemist</title>
+    <!-- Favicon-->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/apple-touch-icon.png"
+    >
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    >
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon-16x16.png"
+    >
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/script.js" type="module"></script>
+  </head>
+  <body>
+    <!-- Content wrapper-->
+    <div class="wrapper">
+      <!-- Header-->
+      <header class="header header--position--fixed">
+        <div class="header__container">
+          <div class="header__body">
+            <!-- Brand--><a class="header__brand" href="#"
+              ><img src="img/logo.svg" alt="Video Alchemist"
+            ></a>
+            <!-- Burger-->
+            <button
+              class="header__burger burger"
+              aria-controls="menu"
+              title="Toggle the menu"
+            >
+              <span class="burger__icon"
+                ><span class="burger__line"></span
+              ></span>
+            </button>
+            <!-- Mobile menu-->
+            <div class="header__menu menu" id="menu">
+              <nav class="menu__nav">
+                <ul class="menu__list">
+                  <li class="menu__item">
+                    <a class="menu__link link-button" href="#home">home</a>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link link-button" href="#about">about</a>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link link-button" href="#portfolio"
+                      >portfolio</a
+                    >
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link link-button" href="#testimonials"
+                      >testimonials</a
+                    >
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link link-button" href="#contact"
+                      >contact</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- Main-->
+      <main class="wrapper__main">
+        <!--Hero-->
+        <section class="hero" id="home">
+          <div class="hero__container">
+            <div class="hero__layout">
+              <div class="hero__main">
+                <div class="hero__name title">Jimmy Turner</div>
+                <h1 class="hero__title">Professional video editor</h1>
+                <div class="hero__text">
+                  <p>Making your videos look more cool.</p>
+                </div>
+                <a class="hero__button button" href="#contact">lets talk</a>
+              </div>
+              <div class="hero__composition composition">
+                <picture>
+                  <source srcset="img/hero/current.avif" type="image/avif">
+                  <source srcset="img/hero/current.webp" type="image/webp">
+                  <img
+                    class="composition__current"
+                    src="img/hero/current.png"
+                    alt=""
+                  >
+                </picture>
+                <picture>
+                  <source srcset="img/hero/current.avif" type="image/avif">
+                  <source srcset="img/hero/current.webp" type="image/webp">
+                  <img
+                    class="composition__current composition__current--mirror"
+                    src="img/hero/current.png"
+                    alt=""
+                  >
+                </picture>
+                <picture data-prllx-mouse="-75">
+                  <source srcset="img/hero/premiere.avif" type="image/avif">
+                  <source srcset="img/hero/premiere.webp" type="image/webp">
+                  <img
+                    class="composition__premiere"
+                    src="img/hero/premiere.png"
+                    alt=""
+                  >
+                </picture>
+                <picture data-prllx-mouse="75">
+                  <source
+                    srcset="img/hero/after-effects.avif"
+                    type="image/avif"
+                  >
+                  <source
+                    srcset="img/hero/after-effects.webp"
+                    type="image/webp"
+                  >
+                  <img
+                    class="composition__after-effects"
+                    src="img/hero/after-effects.png"
+                    alt=""
+                  >
+                </picture>
+              </div>
+            </div>
+            <div
+              class="line"
+              data-mover=".about__container; beforeend; (768px &lt;= width);"
+            >
+              <ul class="line__list">
+                <li class="line__item">Cash cow editing</li>
+                <li class="line__item">Reels editing</li>
+                <li class="line__item">logo animation</li>
+                <li class="line__item">podcast edit</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <!-- Scene-->
+        <div class="scene">
+          <div class="scene__container">
+            <picture data-mover=".composition; beforeend; (768px &lt;= width);">
+              <source srcset="img/avatar.avif" type="image/avif">
+              <source srcset="img/avatar.webp" type="image/webp">
+              <img class="avatar" src="img/avatar.png" alt="Jimmy Turner">
+            </picture>
+          </div>
+        </div>
+        <!-- About-->
+        <section class="about" id="about">
+          <div class="about__container">
+            <div class="about__body">
+              <h2 class="about__title title title--align--center">About me</h2>
+              <div class="about__text">
+                <p>
+                  Welcome to the cinematic realm of Jimmy, where creativity
+                  meets technology to craft visually stunning narratives. With a
+                  passion for storytelling and a keen eye for detail, I embark
+                  on a journey to transform ordinary footage into extraordinary
+                  visual experiences.
+                </p>
+              </div>
+              <ul
+                class="socials socials--adaptive"
+                data-mover=".header__menu; afterend; (768px &lt;= width);"
+              >
+                <li class="socials__item">
+                  <a
+                    class="socials__link"
+                    href="#"
+                    target="_blank"
+                    title="Facebook"
+                  >
+                    <svg class="icon">
+                      <use
+                        xlink:href="img/icons/symbol-defs.svg#icon-facebook"
+                      ></use></svg
+                  ></a>
+                </li>
+                <li class="socials__item">
+                  <a
+                    class="socials__link"
+                    href="#"
+                    target="_blank"
+                    title="Linkedin"
+                  >
+                    <svg class="icon">
+                      <use
+                        xlink:href="img/icons/symbol-defs.svg#icon-linkedin"
+                      ></use></svg
+                  ></a>
+                </li>
+                <li class="socials__item">
+                  <a
+                    class="socials__link socials__link--youtube"
+                    href="#"
+                    target="_blank"
+                    title="YouTube"
+                  >
+                    <svg class="icon">
+                      <use
+                        xlink:href="img/icons/symbol-defs.svg#icon-youtube"
+                      ></use></svg
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <!-- Portfolio-->
+        <section class="portfolio" id="portfolio">
+          <div class="portfolio__container">
+            <h2 class="portfolio__title title">my best edits</h2>
+            <div class="portfolio__arrow">
+              <button class="arrow" type="button"></button>
+            </div>
+            <div class="portfolio__slider slider">
+              <div class="slider__wrapper">
+                <a class="slider__slide slide" href="#" target="_blank">
+                  <h3 class="slide__label">CAsh cow</h3>
+                  <div class="slide__media">
+                    <picture>
+                      <source
+                        srcset="img/portfolio/cash-cow.avif"
+                        type="image/avif"
+                      >
+                      <source
+                        srcset="img/portfolio/cash-cow.webp"
+                        type="image/webp"
+                      >
+                      <img
+                        class="slide__preview"
+                        src="img/portfolio/cash-cow.jpg"
+                        alt="alt"
+                      >
+                    </picture>
+                    <svg class="slide__icon icon">
+                      <use
+                        xlink:href="img/icons/symbol-defs.svg#icon-play"
+                      ></use>
+                    </svg></div></a
+                ><a class="slider__slide slide" href="#" target="_blank">
+                  <h3 class="slide__label">Reel</h3>
+                  <div class="slide__media">
+                    <picture>
+                      <source
+                        srcset="img/portfolio/reel.avif"
+                        type="image/avif"
+                      >
+                      <source
+                        srcset="img/portfolio/reel.webp"
+                        type="image/webp"
+                      >
+                      <img
+                        class="slide__preview"
+                        src="img/portfolio/reel.jpg"
+                        alt="alt"
+                      >
+                    </picture>
+                    <svg class="slide__icon icon">
+                      <use
+                        xlink:href="img/icons/symbol-defs.svg#icon-play"
+                      ></use>
+                    </svg></div></a
+                ><a class="slider__slide slide" href="#" target="_blank">
+                  <h3 class="slide__label">Vlog</h3>
+                  <div class="slide__media">
+                    <picture>
+                      <source
+                        srcset="img/portfolio/vlog.avif"
+                        type="image/avif"
+                      >
+                      <source
+                        srcset="img/portfolio/vlog.webp"
+                        type="image/webp"
+                      >
+                      <img
+                        class="slide__preview"
+                        src="img/portfolio/vlog.jpg"
+                        alt="alt"
+                      >
+                    </picture>
+                    <svg class="slide__icon icon">
+                      <use
+                        xlink:href="img/icons/symbol-defs.svg#icon-play"
+                      ></use>
+                    </svg></div></a
+                ><a class="slider__slide slide" href="#" target="_blank">
+                  <h3 class="slide__label">Cash cow</h3>
+                  <div class="slide__media">
+                    <picture>
+                      <source
+                        srcset="img/portfolio/cash-cow-2.avif"
+                        type="image/avif"
+                      >
+                      <source
+                        srcset="img/portfolio/cash-cow-2.webp"
+                        type="image/webp"
+                      >
+                      <img
+                        class="slide__preview"
+                        src="img/portfolio/cash-cow-2.jpg"
+                        alt="alt"
+                      >
+                    </picture>
+                    <svg class="slide__icon icon">
+                      <use
+                        xlink:href="img/icons/symbol-defs.svg#icon-play"
+                      ></use>
+                    </svg></div></a
+                ><a class="slider__slide slide" href="#" target="_blank">
+                  <h3 class="slide__label">Cash cow</h3>
+                  <div class="slide__media">
+                    <picture>
+                      <source
+                        srcset="img/portfolio/cash-cow-3.avif"
+                        type="image/avif"
+                      >
+                      <source
+                        srcset="img/portfolio/cash-cow-3.webp"
+                        type="image/webp"
+                      >
+                      <img
+                        class="slide__preview"
+                        src="img/portfolio/cash-cow-3.jpg"
+                        alt="alt"
+                      >
+                    </picture>
+                    <svg class="slide__icon icon">
+                      <use
+                        xlink:href="img/icons/symbol-defs.svg#icon-play"
+                      ></use>
+                    </svg></div></a
+                ><a class="slider__slide slide" href="#" target="_blank">
+                  <h3 class="slide__label">podcast</h3>
+                  <div class="slide__media">
+                    <picture>
+                      <source
+                        srcset="img/portfolio/podcast.avif"
+                        type="image/avif"
+                      >
+                      <source
+                        srcset="img/portfolio/podcast.webp"
+                        type="image/webp"
+                      >
+                      <img
+                        class="slide__preview"
+                        src="img/portfolio/podcast.jpg"
+                        alt="alt"
+                      >
+                    </picture>
+                    <svg class="slide__icon icon">
+                      <use
+                        xlink:href="img/icons/symbol-defs.svg#icon-play"
+                      ></use>
+                    </svg></div
+                ></a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Testimonials-->
+        <section class="testimonials" id="testimonials">
+          <div class="testimonials__container">
+            <h2 class="testimonials__title title title--align--center">
+              Testimonials
+            </h2>
+            <div class="testimonials__layout">
+              <article class="testimonials__item item-test">
+                <header class="item-test__header">
+                  <h3 class="item-test__title">Marcus</h3>
+                  <p class="item-test__position">Co founder</p>
+                </header>
+                <div class="item-test__text">
+                  <p>
+                    Perfect communication and exceptional skills. This guy is
+                    King.
+                  </p>
+                </div>
+              </article>
+              <article class="testimonials__item item-test">
+                <header class="item-test__header">
+                  <h3 class="item-test__title">peter</h3>
+                  <p class="item-test__position">Manager</p>
+                </header>
+                <div class="item-test__text">
+                  <p>did a great job. Understood all the requirements.</p>
+                </div>
+              </article>
+              <article class="testimonials__item item-test">
+                <header class="item-test__header">
+                  <h3 class="item-test__title">jane</h3>
+                  <p class="item-test__position">CEO</p>
+                </header>
+                <div class="item-test__text">
+                  <p>
+                    Jimmy was wonderful to work with. Will definitely hire him
+                    again
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+        <!-- Decor-->
+        <div class="decor"></div>
+        <!-- Consult-->
+        <section class="consult" id="contact">
+          <div class="consult__container">
+            <h2 class="consult__title title">I am ready to consult you</h2>
+            <form class="consult__form" action="#" method="POST">
+              <ul class="consult__list">
+                <li class="consult__item item-consult">
+                  <label class="item-consult__label label" for="name"
+                    >My name is</label
+                  >
+                  <input
+                    class="item-consult__field filed"
+                    id="name"
+                    name="name"
+                    placeholder="Name"
+                    required
+                  >
+                </li>
+                <li class="consult__item item-consult">
+                  <label class="item-consult__label label" for="message"
+                    >I am interested in</label
+                  >
+                  <input
+                    class="item-consult__field filed"
+                    id="message"
+                    name="message"
+                    placeholder="Message"
+                    required
+                  >
+                </li>
+                <li class="consult__item item-consult">
+                  <input
+                    class="item-consult__button button"
+                    type="submit"
+                    value="send"
+                  >
+                </li>
+              </ul>
+            </form>
+          </div>
+        </section>
+        <!-- Connect-->
+        <section class="connect">
+          <div class="connect__container">
+            <div class="connect__main">
+              <h2 class="connect__title title">Connect with me</h2>
+              <address class="connect__address">
+                <ul class="connect__list">
+                  <li class="connect__item">
+                    <a class="connect__link" href="tel:+92455478112">
+                      <svg class="icon">
+                        <use
+                          xlink:href="img/icons/symbol-defs.svg#icon-phone"
+                        ></use>
+                      </svg>
+                      +92 455 478 112</a
+                    >
+                  </li>
+                  <li class="connect__item">
+                    <a
+                      class="connect__link"
+                      href="mailto:videoeditor@gmail.com"
+                    >
+                      <svg class="icon">
+                        <use
+                          xlink:href="img/icons/symbol-defs.svg#icon-mail"
+                        ></use>
+                      </svg>
+                      videoeditor@gmail.com</a
+                    >
+                  </li>
+                  <li class="connect__item">
+                    <a
+                      class="connect__link"
+                      href="https://maps.app.goo.gl/9YNN2zSLW9PSNDSQA"
+                      target="_blank"
+                    >
+                      <svg class="icon">
+                        <use
+                          xlink:href="img/icons/symbol-defs.svg#icon-pin"
+                        ></use>
+                      </svg>
+                      defense phase 3, lahore pakistan</a
+                    >
+                  </li>
+                </ul>
+              </address>
+            </div>
+            <ul class="connect__socials socials">
+              <li class="socials__item">
+                <a
+                  class="socials__link"
+                  href="#"
+                  target="_blank"
+                  title="Facebook"
+                >
+                  <svg class="icon">
+                    <use
+                      xlink:href="img/icons/symbol-defs.svg#icon-facebook"
+                    ></use></svg
+                ></a>
+              </li>
+              <li class="socials__item">
+                <a
+                  class="socials__link"
+                  href="#"
+                  target="_blank"
+                  title="Linkedin"
+                >
+                  <svg class="icon">
+                    <use
+                      xlink:href="img/icons/symbol-defs.svg#icon-linkedin"
+                    ></use></svg
+                ></a>
+              </li>
+              <li class="socials__item">
+                <a
+                  class="socials__link socials__link--youtube"
+                  href="#"
+                  target="_blank"
+                  title="YouTube"
+                >
+                  <svg class="icon">
+                    <use
+                      xlink:href="img/icons/symbol-defs.svg#icon-youtube"
+                    ></use></svg
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- Go back--><a class="return" href="#">
+          <div class="return__label">Go back to the top</div>
+          <div class="return__arrow arrow"></div
+        ></a>
+      </main>
+    </div>
+  </body>
+</html>

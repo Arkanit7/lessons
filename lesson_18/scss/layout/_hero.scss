@@ -1,0 +1,198 @@
+@use "../abstracts" as *;
+
+$mobile-width: 109px;
+
+.composition {
+  $avatar-width: 376px;
+  $avatar-height: 508px;
+
+  position: relative;
+  z-index: -1;
+
+  @include media-width-to($xx-small) {
+    display: none;
+  }
+
+  @include media-width-to($bp-avatar) {
+    margin-right: -$padding;
+  }
+
+  &__current {
+    position: absolute;
+    z-index: -1;
+    bottom: 12px;
+    right: 0;
+    width: clamped(97px, 354px);
+
+    @include media-width-from($bp-avatar) {
+      bottom: 0;
+      right: percent(189px, $avatar-width);
+    }
+
+    &--mirror {
+      width: clamped(97px, 322px);
+      transform: scale(-1, 1);
+      left: percent(201px, $avatar-width);
+
+      @include media-width-to($bp-avatar) {
+        display: none;
+      }
+    }
+  }
+
+  &__premiere {
+    position: absolute;
+    z-index: -1;
+    top: 20px;
+    right: percent(76px, $mobile-width);
+    width: clamped(29px, 110px);
+    transform: rotate(-15deg);
+
+    @include media-width-from($bp-avatar) {
+      inset: percent(41px, $avatar-height) auto auto
+        percent(-111px, $avatar-width);
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__after-effects {
+    position: absolute;
+    z-index: -1;
+    top: 37px;
+    right: percent(45px, $mobile-width);
+    width: clamped(20px, 70px);
+    transform: rotate(18deg);
+
+    @include media-width-from($bp-avatar) {
+      top: percent(86px, $avatar-height);
+      right: percent(-65px, $avatar-width);
+      transform: rotate(30deg);
+    }
+  }
+
+  .avatar {
+    width: 376px;
+  }
+}
+
+.hero {
+  @include media-width-from($bp-avatar) {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -10;
+      width: 480px;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      background-image: $grd-firefly;
+      opacity: 0.3;
+      filter: blur(40px);
+    }
+
+    &::before {
+      left: 36px;
+      top: 20px;
+      animation: triangle 15s linear infinite;
+    }
+
+    &::after {
+      right: 35px;
+      bottom: 30px;
+      animation: triangle-reverse 15s linear infinite;
+    }
+  }
+
+  &__container {
+    padding-block: 23px clamped(37px, 80px, $bp-canvas-min, $bp-avatar);
+
+    @include media-width-from($bp-avatar) {
+      padding-block: 0;
+    }
+
+    & > :not(:last-child) {
+      margin-block-end: 40px;
+    }
+  }
+
+  &__layout {
+    display: flex;
+    justify-content: space-between;
+    gap: 31px;
+
+    @include media-width-from($bp-avatar) {
+      align-items: center;
+      gap: 35px;
+      padding-right: 88px;
+    }
+  }
+
+  &__main {
+    & > :not(:last-child) {
+      margin-block-end: clamped(12px, 20px);
+    }
+
+    flex: 233px;
+
+    @include media-width-from($bp-avatar) {
+      flex: 0 584px;
+      padding-block: clamped(60px, 120px, $bp-avatar)
+        clamped(80px, 160px, $bp-avatar);
+    }
+  }
+
+  &__name {
+    gap: clamped(3px, 9px);
+    font-size: clamped(14px, 18px);
+    font-weight: $fw-regular;
+    line-height: 1.0714;
+    letter-spacing: -0.28px;
+
+    @include media-width-from($bp-avatar) {
+      letter-spacing: -0.36px;
+      line-height: 1.1111;
+    }
+  }
+
+  &__title {
+    font-size: clamped(32px, 80px);
+    font-weight: $fw-bold;
+    line-height: 1.0938;
+    text-transform: uppercase;
+
+    @include media-width-from($bp-avatar) {
+      line-height: 0.875;
+    }
+  }
+
+  &__text {
+    font-size: clamped(14px, 18px);
+    line-height: 1.0714;
+    letter-spacing: -0.28px;
+    text-transform: capitalize;
+
+    @include media-width-from($bp-avatar) {
+      line-height: 2.2222;
+      letter-spacing: -0.36px;
+    }
+  }
+
+  &__button {
+    @include media-width-to($xx-small) {
+      width: 100%;
+    }
+  }
+
+  &__composition {
+    flex: 1 $mobile-width;
+
+    @include media-width-from($bp-avatar) {
+      align-self: end;
+      flex: 0 376px;
+    }
+  }
+}
