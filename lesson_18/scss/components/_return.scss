@@ -3,11 +3,11 @@
 .return {
   position: fixed;
   z-index: 100;
-  right: -67px;
-  bottom: 67px;
+  right: -112px + $padding;
+  bottom: 112px + $padding;
   padding: 10px;
-  display: grid;
-  gap: 10px;
+  width: 223px;
+  transform-origin: bottom;
   transform: rotate(-90deg);
   transition: opacity 0.8s, visibility 0.8s;
 

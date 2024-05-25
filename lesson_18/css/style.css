@@ -103,7 +103,7 @@ textarea {
 body {
   font-family: exo, sans-serif;
   font-size: 14px;
-  line-height: 1;
+  line-height: 1.4;
   color: hsl(0, 0%, 100%);
   background-color: hsl(240, 100%, 0%);
 }
@@ -388,7 +388,7 @@ body {
 }
 @keyframes flow {
   from {
-    opacity: 0;
+    background-position: -203px;
   }
   to {
     background-position: 203px;
@@ -398,11 +398,11 @@ body {
 .return {
   position: fixed;
   z-index: 100;
-  right: -67px;
-  bottom: 67px;
+  right: -92px;
+  bottom: 132px;
   padding: 10px;
-  display: grid;
-  gap: 10px;
+  width: 223px;
+  transform-origin: bottom;
   transform: rotate(-90deg);
   transition: opacity 0.8s, visibility 0.8s;
 }
@@ -834,6 +834,7 @@ body {
 .about__text {
   letter-spacing: -0.28px;
   text-transform: capitalize;
+  line-height: 2.1429;
 }
 @media (768px <= width) {
   .about__text {
