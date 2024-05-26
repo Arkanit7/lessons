@@ -207,6 +207,50 @@ body {
   }
 }
 
+.burger {
+  padding: 10px 5px;
+  transition: color 0.3s;
+}
+.burger:focus-visible {
+  color: hsl(279, 100%, 33%);
+}
+@media (any-hover) {
+  .burger:hover {
+    color: hsl(279, 100%, 33%);
+  }
+}
+.burger__icon {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 21px;
+}
+.burger__icon::before, .burger__line, .burger__icon::after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  border-radius: 1.5px;
+  content: "";
+  background-color: currentcolor;
+  transition: transform 0.3s;
+}
+.burger__line {
+  transform: translateY(9px);
+}
+.burger__icon::after {
+  transform: translateY(18px);
+}
+.burger[aria-expanded=true] .burger__icon::before {
+  transform: translateY(9px) rotate(-45deg);
+}
+.burger[aria-expanded=true] .burger__line {
+  transform: translateY(9px) scaleX(0);
+}
+.burger[aria-expanded=true] .burger__icon::after {
+  transform: translateY(9px) rotate(45deg);
+}
+
 .title {
   display: grid;
   justify-content: start;
@@ -431,55 +475,6 @@ body {
   }
 }
 
-.burger {
-  padding: 10px 5px;
-  transition: color 0.3s;
-}
-@media (768px <= width) {
-  .burger {
-    display: none;
-  }
-}
-.burger:focus-visible {
-  color: hsl(279, 100%, 33%);
-}
-@media (any-hover) {
-  .burger:hover {
-    color: hsl(279, 100%, 33%);
-  }
-}
-.burger__icon {
-  display: block;
-  position: relative;
-  width: 30px;
-  height: 21px;
-}
-.burger__icon::before, .burger__line, .burger__icon::after {
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 3px;
-  border-radius: 1.5px;
-  content: "";
-  background-color: currentcolor;
-  transition: transform 0.3s;
-}
-.burger__line {
-  transform: translateY(9px);
-}
-.burger__icon::after {
-  transform: translateY(18px);
-}
-.burger[aria-expanded=true] .burger__icon::before {
-  transform: translateY(9px) rotate(-45deg);
-}
-.burger[aria-expanded=true] .burger__line {
-  transform: translateY(9px) scaleX(0);
-}
-.burger[aria-expanded=true] .burger__icon::after {
-  transform: translateY(9px) rotate(45deg);
-}
-
 .menu__list {
   display: flex;
   flex-wrap: wrap;
@@ -586,6 +581,11 @@ body {
 .header__burger {
   z-index: 110;
   flex: none;
+}
+@media (768px <= width) {
+  .header__burger {
+    display: none;
+  }
 }
 
 .composition {

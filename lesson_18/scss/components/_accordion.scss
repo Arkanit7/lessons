@@ -2,38 +2,39 @@
 
 .accordion {
   &__panel {
-		transition: .4s ease-in-out;
+    transition: 0.4s ease-in-out;
   }
 
   &__title {
-		transition: inherit;
+    transition: inherit;
   }
 
   &__trigger {
-		text-align: start;
+    text-align: start;
     display: flex;
     gap: 12rem;
     align-items: baseline;
     justify-content: space-between;
     width: 100%;
     background-color: transparent;
-		transition: inherit;
+    transition: inherit;
+
+    svg {
+      flex-shrink: 0;
+      transition: inherit;
+      width: 1em;
+      height: 1em;
+      fill: none;
+
+      // stroke: $clr-text-black;
+    }
 
     &[disabled] {
       cursor: auto;
 
-			svg {
-				display: none;
-			}
-    }
-
-    svg {
-			flex-shrink: 0;
-			transition: inherit;
-      width: 1em;
-      height: 1em;
-      fill: none;
-      stroke: $clr-text-black;
+      svg {
+        display: none;
+      }
     }
 
     &[aria-expanded="true"] {
@@ -53,7 +54,7 @@
 
     &[hidden] {
       grid-template-rows: 0fr;
-			visibility: hidden;
+      visibility: hidden;
     }
 
     & > * {
