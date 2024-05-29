@@ -84,6 +84,9 @@
   // .header__container
 
   &__container {
+    @include media-width-from(em($large)) {
+      padding-block-start: rem(6px);
+    }
   }
 
   // .header__sky
@@ -97,7 +100,7 @@
     gap: rem(10px) rsv-min(rem(12px), rem(22px));
 
     @include media-width-from(em($large)) {
-      min-height: rem(85px);
+      min-height: rem(50px + 33px);
     }
   }
 
@@ -126,7 +129,7 @@
     color: $clr-ebony-clay;
     font-family: $ff-roboto;
     font-size: rem(18px);
-    line-height: calc-line-height(21, 18);
+    line-height: line-height(21, 18);
 
     @include media-width-to(em($bp-menu)) {
       font-size: 0;
@@ -229,7 +232,7 @@
     padding-block: rem($padding-sm);
     transition: transform 0.4s, opacity 0.4s, visibility 0.4s;
     background-color: $clr-athens-gray;
-    border: 1px solid $clr-mercury;
+    border: rem(1px) solid $clr-mercury;
     box-shadow: 0 0 rem(32px) 0 rgb(0 0 0 / 10%);
 
     @include media-width-from(em($bp-menu)) {
@@ -249,6 +252,6 @@
 
   &__sky + &__earth,
   &__earth + &__sky {
-    border-block-start: 1px solid $clr-mercury;
+    border-block-start: rem(1px) solid $clr-mercury;
   }
 }

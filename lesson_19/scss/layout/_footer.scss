@@ -26,7 +26,10 @@
   }
 
   &__title {
+    @extend %interaction;
+
     font-weight: $fw-semi-bold;
+    cursor: pointer;
   }
 
   // .section-sky-footer__list
@@ -89,7 +92,8 @@
     }
 
     & > :not(:last-child) {
-      margin-block-end: rsv-clamp(rem(12px), rem(32px));
+      // Delete excess margin that comes from the huge line-height (half of 9px)
+      margin-block-end: rsv-clamp(rem(12px), rem(32px - 4.5px));
     }
   }
 
@@ -108,7 +112,7 @@
 
   &__filling {
     color: rgba($clr-ebony-clay, 0.75);
-    line-height: 1.8;
+    line-height: line-height(21.8px + 9px, 16px);
   }
 
   // .sky-footer__social

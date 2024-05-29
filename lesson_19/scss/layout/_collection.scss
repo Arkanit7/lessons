@@ -60,7 +60,8 @@
     }
 
     & > :not(:last-child) {
-      margin-block-end: rsv-clamp(rem(16px), rem(55px));
+      // Make sure we've removed the "paragraph spacing"
+      margin-block-end: rsv-clamp(rem(16px), rem(55px - 4.5px));
     }
   }
 
@@ -79,12 +80,15 @@
   &__filling {
     font-family: $ff-roboto;
     font-size: rsv-clamp(rem(16px), rem(26px));
-    line-height: 1.82;
+    line-height: line-height(40px + 9px, 26px);
   }
 
   // .collection__button
 
   &__button {
+    @include media-width-to(em($x-small)) {
+      width: 100%;
+    }
   }
 
   // .collection__shadow

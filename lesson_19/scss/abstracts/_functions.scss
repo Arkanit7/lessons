@@ -167,6 +167,6 @@
   @return color.mix(black, $color, $percentage);
 }
 
-@function calc-line-height($divisor, $dividend) {
+@function line-height($divisor, $dividend) {
   @return precision(math.div($divisor, $dividend));
 }

@@ -15,7 +15,7 @@
   color: $clr-white;
   font-family: $ff-roboto;
   font-size: rsv-clamp(rem(18px), rem($fs));
-  line-height: calc-line-height(34px, $fs);
+  line-height: line-height(34px, $fs);
 
   @include response(background-color 0.3s) {
     background-color: $clr-bittersweet;

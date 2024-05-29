@@ -92,18 +92,18 @@ body {
 }
 
 .menu-lock {
-  @include media-width-to($bp-menu) {
+  @include media-width-to(em($bp-menu)) {
     overflow: hidden;
   }
 }
 
 [class*="container"] {
-  max-width: $canvas;
-  padding-inline: $padding-sm;
+  max-width: rem($canvas);
+  padding-inline: rem($padding-sm);
   margin-inline: auto;
 
-  @include media-width-from($xx-small) {
-    padding-inline: $padding;
+  @include media-width-from(em($xx-small)) {
+    padding-inline: rem($padding);
   }
 }
 

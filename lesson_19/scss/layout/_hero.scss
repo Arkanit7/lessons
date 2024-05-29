@@ -10,7 +10,7 @@
     position: absolute;
     inset: percent(20, 562) 0 0 percent(18, 442);
     border-radius: percent(160, 442) 0;
-    border: 2px solid hsl(0deg 0% 0% / 25%);
+    border: rem(2px) solid hsl(0deg 0% 0% / 25%);
   }
 
   // .paint-hero__frame
@@ -68,10 +68,10 @@
   &__title {
     font-family: $ff-roboto;
     font-size: rsv-clamp(rem(36px), rem(74px));
-    line-height: 0.7432;
+    line-height: line-height(55, 74);
 
     @include not-last {
-      margin-block-end: rsv-clamp(rem(12px), rem(52px));
+      margin-block-end: rsv-clamp(rem(12px), rem(52px - 4.5px));
     }
   }
 
@@ -82,11 +82,11 @@
     font-size: rsv-clamp(rem(16px), rem(30px));
 
     @include media-width-from(em($small)) {
-      line-height: 2;
+      line-height: line-height(55px + 9px, 30px);
     }
 
     @include not-last {
-      margin-block-end: rsv-clamp(rem(12px), rem(66px));
+      margin-block-end: rsv-clamp(rem(12px), rem(66px - 4.5px));
     }
   }
 
@@ -98,7 +98,7 @@
     }
 
     @include not-last {
-      margin-block-end: rsv-clamp(rem(12px), rem(52px));
+      margin-block-end: rsv-clamp(rem(12px), rem(52px - 4.5px));
     }
   }
 

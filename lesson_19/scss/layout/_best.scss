@@ -18,7 +18,7 @@
 
   &__interactive {
     @include not-last {
-      margin-block-end: rsv-clamp(rem(16px), rem(30px));
+      margin-block-end: rsv-clamp(rem(16px), rem(35px));
     }
   }
 

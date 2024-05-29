@@ -4,14 +4,14 @@
   @extend %interaction;
 
   padding: rem(8px 15px);
-  border-block-end: 2px solid;
+  border-block-end: rem(2px) solid;
 
   /* Input text */
   color: $clr-ebony-clay;
   font-feature-settings: "clig" off, "liga" off;
   font-family: $ff-roboto;
   font-weight: $fw-medium;
-  line-height: calc-line-height(19px, 16px);
+  line-height: line-height(19px, 16px);
 
   &::placeholder {
     text-transform: capitalize;
@@ -26,11 +26,11 @@
   align-items: center;
   gap: rem(8px);
   padding: rem(6px 15px 10px);
-  border-block-end: 2px solid;
+  border-block-end: rem(2px) solid;
   cursor: pointer;
   color: $clr-ebony-clay;
   text-align: center;
   font-feature-settings: "clig" off, "liga" off;
-  line-height: calc-line-height(19px, 16px);
+  line-height: line-height(19px, 16px);
   text-transform: uppercase;
 }
