@@ -1,0 +1,60 @@
+@use "sass:color";
+
+// 1 rem = $fs-root px
+// $fs-root: 1px;
+
+// Default paddings
+$padding-sm: 12px;
+$padding: 16px;
+$content: 1320px;
+
+/// Canvas - content with paddings
+$canvas: $content + 2 * $padding;
+
+// Scrollbar's inline-width
+
+$scrollbar: 17px;
+
+// Material UI BP
+$xs: 0;
+$sm: 600px;
+$md: 900px;
+$lg: 1200px;
+$xl: 1536px;
+
+// Bootstrap BP
+$xx-small: 375px;
+$x-small: 480px;
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+$x-large: 1200px;
+$xx-large: 1400px;
+
+// Custom BP
+
+$bp-menu: $medium;
+
+// Font Families
+
+// Font Sizes
+$ff-open-sans: "Open Sans", sans-serif;
+$ff-roboto: "Roboto", sans-serif;
+
+// Font weights
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semi-bold: 600;
+
+// Colors
+$clr-white: hsl(0deg 0% 100%);
+$clr-mercury: hsl(0deg 0% 89%);
+$clr-athens-gray: hsl(240deg 5% 96%);
+$clr-black: hsl(0deg 0% 0%);
+$clr-ebony: hsl(220deg 60% 1%);
+$clr-ebony-clay: hsl(210deg 25% 16%);
+$clr-bittersweet: hsl(5deg 100% 69%);
+$clr-canary: hsl(71deg 100% 69%);
+
+// $clr-opacity: color.change($clr-bittersweet, $alpha: 0.2);
+// $clr-darken: color.mix(black, $clr-bittersweet, 0.2);

@@ -1,0 +1,37 @@
+@use "../abstracts" as *;
+
+.stickers {
+  color: $clr-white;
+
+  // .stickers__item
+  &__item {
+    padding: rem(4px 12px);
+    text-align: center;
+    font-size: rem(12px);
+    font-weight: $fw-semi-bold;
+    line-height: calc-line-height(16, 12);
+    text-transform: uppercase;
+
+    @include not-last {
+      margin-block-end: rem(8px);
+    }
+
+    &--bg {
+      // .stickers__item--bg--white
+      &--white {
+        color: $clr-ebony-clay;
+        background-color: $clr-white;
+      }
+
+      // .stickers__item--bg--ebony-clay
+      &--ebony {
+        background-color: $clr-ebony-clay;
+      }
+
+      // .stickers__item--bg--bittersweet
+      &--bittersweet {
+        background-color: $clr-bittersweet;
+      }
+    }
+  }
+}

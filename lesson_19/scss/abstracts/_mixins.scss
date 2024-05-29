@@ -1,0 +1,93 @@
+@use "sass:math";
+@use "variables" as *;
+@use "functions" as *;
+
+@mixin media-height-from($height) {
+  @media ($height <= height) {
+    @content;
+  }
+}
+
+@mixin media-height-to($height) {
+  @media (height < $height) {
+    @content;
+  }
+}
+
+@mixin media-width-from($width) {
+  @media ($width <= width) {
+    @content;
+  }
+}
+
+@mixin media-width-to($width) {
+  @media (width < $width) {
+    @content;
+  }
+}
+
+@mixin responsive-value(
+  $property,
+  $min-value,
+  $max-value,
+  $min-view-width,
+  $max-view-width
+) {
+  //responsive-value(property, наймешне значення, найбільше значення, найменша ширина екрану, найбільша ширина екрану)
+
+  $multiplier: math.div(
+    rem($max-value - $min-value),
+    rem($max-view-width - $min-view-width)
+  );
+
+  #{$property}: $min-value;
+
+  @media (min-width: #{$min-view-width}) {
+    #{$property}: calc(
+      #{$min-value} + #{$multiplier} * (100vw - #{$min-view-width})
+    );
+  }
+
+  @media (min-width: #{$max-view-width}) {
+    #{$property}: $max-value;
+  }
+}
+
+@mixin hover {
+  @media (any-hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin not-first {
+  * + & {
+    @content;
+  }
+}
+
+@mixin not-last {
+  &:not(:last-child) {
+    @content;
+  }
+}
+
+@mixin flex-wrap($gap) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $gap;
+}
+
+@mixin response($transition: null) {
+  transition: $transition;
+
+  &:focus-visible {
+    @content;
+  }
+
+  @include hover {
+    @content;
+  }
+}

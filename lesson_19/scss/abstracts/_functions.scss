@@ -1,0 +1,172 @@
+@use "sass:math";
+@use "sass:meta";
+@use "sass:list";
+@use "variables" as *;
+
+@function strip-units($number) {
+  @if meta.type-of($number) == "number" and not math.is-unitless($number) {
+    @return math.div($number, ($number * 0 + 1));
+  }
+
+  @return $number;
+}
+
+/// Round numbers wit a certain precision
+@function precision($number, $decimals: 4) {
+  $power: math.pow(10, $decimals);
+  $rounded: math.div(math.round($number * $power), $power);
+
+  @return $rounded;
+}
+
+@function percent($divisor, $dividend) {
+  $quotient: math.percentage(math.div($divisor, $dividend));
+
+  @return precision($quotient);
+}
+
+@function _px($val) {
+  $fs-root: 16px !default;
+  $support: "px" "rem" "em";
+  $val-unit: math.unit($val);
+
+  @if not list.index($support, $val-unit) {
+    @error "Can't convert '#{$val}' to px! Supported units: #{$support}.";
+  }
+
+  @if $val-unit == "px" {
+    @return $val;
+  }
+
+  @return strip-units($val) * $fs-root;
+}
+
+@function px($val-list) {
+  $px-list: ();
+
+  @each $item in $val-list {
+    $px-list: list.append($px-list, _px($item));
+  }
+
+  @return $px-list;
+}
+
+@function _rem($val) {
+  $fs-root: 16px !default;
+  $support: "px" "rem" "em";
+  $val-unit: math.unit($val);
+
+  @if not list.index($support, $val-unit) {
+    @error "Can't convert '#{$val}' to rem! Supported units: #{$support}.";
+  }
+
+  @if $val-unit == "rem" {
+    @return $val;
+  }
+
+  @if $val-unit == "em" {
+    @return strip-units($val) * 1rem;
+  }
+
+  @return strip-units(math.div($val, $fs-root)) * 1rem;
+}
+
+@function rem($val-list) {
+  $rem-list: ();
+
+  @each $item in $val-list {
+    $rem-list: list.append($rem-list, _rem($item));
+  }
+
+  // If result is only one value - we should convert list to number
+  @if list.length($rem-list) == 1 {
+    $rem-list: list.nth($rem-list, 1);
+  }
+
+  @return $rem-list;
+}
+
+@function to-rem($val-list) {
+  @return rem($val-list);
+}
+
+@function em($val, $base: 16px) {
+  $val: rem($val);
+  $base: rem($base);
+  $result: math.div($val, $base) * 1em;
+
+  @return precision($result);
+}
+
+@function clamped(
+  $min-value,
+  $max-value,
+  $min-view-width: $bp-canvas-min,
+  $max-view-width: $canvas
+) {
+  $multiplier: precision(
+    math.div(
+      rem($max-value - $min-value),
+      rem($max-view-width - $min-view-width)
+    )
+  );
+
+  @return clamp(
+    $min-value,
+    calc(#{$min-value} + #{$multiplier} * (100vw - #{$min-view-width})),
+    $max-value
+  );
+}
+
+@function maxed(
+  $min-value,
+  $max-value,
+  $min-view-width: $xx-small,
+  $max-view-width: $canvas
+) {
+  $multiplier: precision(
+    math.div(
+      rem($max-value - $min-value),
+      rem($max-view-width - $min-view-width)
+    )
+  );
+
+  @return max(
+    $min-value,
+    calc(#{$min-value} + #{$multiplier} * (100vw - #{$min-view-width}))
+  );
+}
+
+@function calculate-root-fs() {
+  $fs-root: 16px !default;
+
+  @if math.unit($fs-root) != "px" {
+    @error "`#{unit($fs-root)}` is not a valid unit for $fs-root. Use `px`.";
+  }
+
+  @return math.div(strip-units($fs-root), 16) * 1rem;
+}
+
+/// Slightly lighten a color
+/// @access public
+/// @param {Color} $color - color to tint
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+///
+@function tint($color, $percentage) {
+  @return color.mix(white, $color, $percentage);
+}
+
+/// Slightly darken a color
+/// @access public
+/// @param {Color} $color - color to shade
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+///
+@function shade($color, $percentage) {
+  @return color.mix(black, $color, $percentage);
+}
+
+@function calc-line-height($divisor, $dividend) {
+  @return precision(math.div($divisor, $dividend));
+}

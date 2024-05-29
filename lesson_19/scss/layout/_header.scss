@@ -1,0 +1,254 @@
+@use "../abstracts" as *;
+
+.search-header {
+  // .search-header__container
+  &__container {
+    display: flex;
+    gap: rem($padding-sm);
+  }
+
+  // .search-header__field
+
+  &__field {
+    flex: 1;
+    width: 0;
+    padding: rem(4px 12px);
+  }
+
+  // .search-header__submit
+
+  &__submit {
+    flex: none;
+    padding: rem(4px 12px);
+
+    @include media-width-to(em($small)) {
+      font-size: 0;
+    }
+
+    .icon {
+      font-size: rem(28px);
+    }
+  }
+}
+
+.nav-header {
+  // .nav-header__list
+  @include media-width-to(em($bp-menu)) {
+    overflow: auto;
+    padding: rem(2 * $padding $padding-sm);
+
+    @include media-width-from(em($xx-small)) {
+      padding: rem(2 * $padding $padding);
+    }
+  }
+
+  &__list {
+    @include flex-wrap(rem(10px 22px));
+
+    justify-content: space-between;
+
+    @include media-width-to(em($bp-menu)) {
+      flex-direction: column;
+      gap: rem(20px);
+      text-align: center;
+    }
+  }
+
+  // .nav-header__item
+
+  &__item {
+    line-height: 1.5;
+
+    @include media-width-to(em($bp-menu)) {
+      font-size: rem(24px);
+      color: $clr-white;
+      line-height: unset;
+    }
+  }
+
+  // .nav-header__link
+
+  &__link {
+    @extend %interaction;
+  }
+}
+
+.header {
+  // .header__inner
+  &__inner {
+    position: relative;
+    z-index: 110;
+    background-color: $clr-athens-gray;
+  }
+
+  // .header__container
+
+  &__container {
+  }
+
+  // .header__sky
+
+  &__sky {
+    // display: grid;
+    // grid-template-columns: 1fr minmax(rem(120px), rem(180px)) 1fr;
+    display: flex;
+    align-items: center;
+    padding-block: rem(12px);
+    gap: rem(10px) rsv-min(rem(12px), rem(22px));
+
+    @include media-width-from(em($large)) {
+      min-height: rem(85px);
+    }
+  }
+
+  // .header__wing
+
+  &__wing {
+    @include flex-wrap(inherit);
+
+    &:not(:first-child) {
+      justify-content: flex-end;
+    }
+
+    @include media-width-from(em($small)) {
+      flex: 1;
+    }
+  }
+
+  // .header__link
+
+  &__link {
+    @extend %interaction;
+
+    flex: none;
+
+    // typography
+    color: $clr-ebony-clay;
+    font-family: $ff-roboto;
+    font-size: rem(18px);
+    line-height: calc-line-height(21, 18);
+
+    @include media-width-to(em($bp-menu)) {
+      font-size: 0;
+    }
+
+    @include media-width-from(em($bp-menu)) {
+      display: inline-flex;
+      align-items: center;
+      gap: rem(8px);
+    }
+  }
+
+  // .header__link
+
+  &__icon {
+    @include media-width-to(em($bp-menu)) {
+      font-size: rem(32px);
+    }
+
+    @include media-width-to(em($small)) {
+      font-size: rem(28px);
+    }
+  }
+
+  // .header__brand
+
+  &__brand {
+    flex: 0 0 rsv-min(rem(144px), rem(180px), $max-vw: $small);
+
+    @include media-width-to(em($small)) {
+      order: -1;
+      margin-inline-end: auto;
+    }
+
+    img,
+    svg {
+      inline-size: 100%;
+      aspect-ratio: 180 / 34;
+      object-fit: contain;
+    }
+  }
+
+  // .header__burger
+
+  &__burger {
+    @extend %interaction;
+
+    @include media-width-from(em($bp-menu)) {
+      display: none;
+    }
+  }
+
+  // .header__earth
+
+  &__earth {
+    @include media-width-from(em($bp-menu)) {
+      display: grid;
+      align-items: center;
+      padding-block: rem(12px);
+      min-height: rem(85px);
+    }
+  }
+
+  // .header__nav
+
+  &__nav {
+  }
+
+  // .header__menu
+
+  &__menu {
+    @include media-width-to(em($bp-menu)) {
+      // position & size
+      position: fixed;
+      z-index: 100;
+      inset: 0 0 0 auto;
+      width: min(100%, 45ch);
+      padding-block-start: rem(59px);
+
+      // grid
+      display: grid;
+
+      // style & other
+      background-color: $clr-ebony-clay;
+      transition: visibility 0.5s, transform 0.5s;
+
+      &:not(&--active) {
+        visibility: hidden;
+        transform: translateX(100%);
+      }
+    }
+  }
+
+  // .header__search
+
+  &__search {
+    position: absolute;
+    z-index: 100;
+    inset: rem(52px) 0 auto;
+    padding-block: rem($padding-sm);
+    transition: transform 0.4s, opacity 0.4s, visibility 0.4s;
+    background-color: $clr-athens-gray;
+    border: 1px solid $clr-mercury;
+    box-shadow: 0 0 rem(32px) 0 rgb(0 0 0 / 10%);
+
+    @include media-width-from(em($bp-menu)) {
+      top: rem(143px);
+    }
+
+    @include media-width-from(em($large)) {
+      top: rem(170px);
+    }
+
+    &:not(&--active) {
+      transform: translateY(-100%);
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  &__sky + &__earth,
+  &__earth + &__sky {
+    border-block-start: 1px solid $clr-mercury;
+  }
+}

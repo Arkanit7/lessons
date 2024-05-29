@@ -1,0 +1,33 @@
+@use "../abstracts" as *;
+
+.brands {
+  // .brands__container
+
+  &__container {
+  }
+
+  // .brands__list
+
+  &__list {
+    @include flex-wrap(rem(16px 12px));
+
+    justify-content: space-around;
+  }
+
+  // .brands__item
+
+  &__item {
+    position: relative;
+    flex: 0 rem(200px);
+    aspect-ratio: 200 / 70;
+
+    img,
+    svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}

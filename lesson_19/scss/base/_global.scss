@@ -1,0 +1,115 @@
+@use "../abstracts" as *;
+@use "sass:math";
+
+/* Global styles */
+
+:root {
+  scroll-behavior: smooth;
+
+  // scroll-padding-top: 64px;
+}
+
+body {
+  font-family: $ff-open-sans;
+  line-height: 1.375;
+  text-transform: capitalize;
+
+  // Do I need this???
+  font-feature-settings: "clig" off, "liga" off;
+}
+
+.main {
+  // .main__hero
+
+  &__hero {
+    @include not-last {
+      margin-block-end: rsv-clamp(rem(48px), rem(90px));
+    }
+  }
+
+  // .main__brands
+
+  &__brands {
+    @include not-last {
+      margin-block-end: rsv-clamp(rem(48px), rem(90px));
+    }
+  }
+
+  // .main__explore
+
+  &__explore {
+    @include not-last {
+      margin-block-end: rsv-clamp(rem(48px), rem(140px));
+    }
+  }
+
+  // .main__products
+
+  &__products {
+    @include not-last {
+      margin-block-end: rsv-clamp(rem(48px), rem(140px));
+    }
+  }
+
+  // .main__collection
+
+  &__collection {
+    @include not-last {
+      margin-block-end: rsv-clamp(rem(48px), rem(140px));
+    }
+  }
+
+  // .main__best
+
+  &__best {
+    @include not-last {
+      margin-block-end: rsv-clamp(rem(48px), rem(140px - 12px - $scrollbar));
+    }
+  }
+
+  // .main__follow
+
+  &__follow {
+    @include not-last {
+      margin-block-end: rsv-clamp(rem(48px), rem(140px));
+    }
+  }
+}
+
+.wrapper {
+  overflow: clip;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__main {
+    flex: auto;
+
+    @include not-last {
+      margin-block-end: rsv-clamp(rem(48px), rem(140px));
+    }
+  }
+}
+
+.menu-lock {
+  @include media-width-to($bp-menu) {
+    overflow: hidden;
+  }
+}
+
+[class*="container"] {
+  max-width: $canvas;
+  padding-inline: $padding-sm;
+  margin-inline: auto;
+
+  @include media-width-from($xx-small) {
+    padding-inline: $padding;
+  }
+}
+
+.title {
+  text-align: center;
+  font-family: $ff-roboto;
+  font-size: rsv-clamp(rem(32px), rem(50px));
+  font-weight: $fw-medium;
+}

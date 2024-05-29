@@ -1,0 +1,31 @@
+@use "../abstracts" as *;
+
+.button {
+  $fs: 29px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: em(8px, $fs);
+  padding: em(19px, $fs) em(26px, $fs);
+  background-color: $clr-ebony;
+
+  // typography
+  text-align: center;
+  color: $clr-white;
+  font-family: $ff-roboto;
+  font-size: rsv-clamp(rem(18px), rem($fs));
+  line-height: calc-line-height(34px, $fs);
+
+  @include response(background-color 0.3s) {
+    background-color: $clr-bittersweet;
+  }
+
+  &--bg {
+    // .button--bg--plain
+    &--plain {
+      background-color: $clr-white;
+      color: $clr-ebony-clay;
+    }
+  }
+}

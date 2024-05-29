@@ -1,0 +1,172 @@
+// SCSS RSV
+
+// Responsive values
+
+// Author: Arkanit (https://github.com/Arkanit7)
+
+@use "variables" as *;
+@use "functions" as *;
+@use "mixins" as *;
+@use "sass:math";
+@use "sass:string";
+@use "sass:map";
+
+$unit-map: (
+  "px": 1px,
+  "rem": 1rem,
+  "em": 1em,
+  "%": 1%,
+);
+
+// Main function of the module
+@function rsv-value($min-val, $max-val, $min-vw: $xx-small, $max-vw: $canvas) {
+  @if math.unit($min-val) == "rem" {
+    $min-vw: rem($min-vw);
+    $max-vw: rem($max-vw);
+  }
+
+  @if math.unit($min-vw) == "em" {
+    $min-vw: rem($min-vw);
+  }
+
+  @if math.unit($max-vw) == "em" {
+    $max-vw: rem($max-vw);
+  }
+
+  $multiplier: math.div($max-val - $min-val, $max-vw - $min-vw);
+  $base-val: precision($min-val - $multiplier * $min-vw);
+  $coefficient-vw: precision(100 * $multiplier);
+  $result: "#{$base-val} + #{$coefficient-vw}vw";
+
+  @return $result;
+}
+
+// Uses calc()
+@function rsv-calc($min-val, $max-val, $min-vw: $xx-small, $max-vw: $canvas) {
+  @return calc(#{rsv-value($min-val, $max-val, $min-vw, $max-vw)});
+}
+
+// Uses min()
+@function rsv-min($min-val, $max-val, $min-vw: $xx-small, $max-vw: $canvas) {
+  @return min(#{rsv-value($min-val, $max-val, $min-vw, $max-vw)}, $max-val);
+}
+
+// Uses max()
+@function rsv-max($min-val, $max-val, $min-vw: $xx-small, $max-vw: $canvas) {
+  @return max($min-val, #{rsv-value($min-val, $max-val, $min-vw, $max-vw)});
+}
+
+// Uses clamp()
+@function rsv-clamp($min-val, $max-val, $min-vw: $xx-small, $max-vw: $canvas) {
+  // 0 value fix
+  @if $min-val == 0 {
+    $min-val: $max-val * 0;
+  }
+
+  @if $max-val == 0 {
+    $min-val: $min-val * 0;
+  }
+
+  @return clamp(
+    $min-val,
+    #{rsv-value($min-val, $max-val, $min-vw, $max-vw)},
+    $max-val
+  );
+}
+
+// @function rsv-auto($max-val, $max-vw: $canvas) {
+//   $max-val-unit: math.unit($max-val);
+//   $max-val-unitless: strip-units($max-val);
+//   $min-val: 7 * math.sqrt($max-val-unitless) - 14;
+//   $min-val: $min-val * map-get($unit-map, $max-val-unit);
+
+//   @return rsv-calc($min-val, $max-val, $xx-small, $max-vw);
+//   @return 20px;
+// }
+
+// @function rsv-max-auto($max-val, $max-vw: $canvas) {
+//   @return rsv-max(
+//     math.div($max-val, 2.5),
+//     $max-val,
+//     0 * $max-vw,
+//     $max-vw
+//   );
+// }
+
+// @function rsv-min-auto($max-val, $max-vw: $canvas) {
+//   @return rsv-min(
+//     math.div($max-val, 2.5),
+//     $max-val,
+//     0 * $max-vw,
+//     $max-vw
+//   );
+// }
+
+// @function rsv-clamp-auto($max-val, $max-vw: $canvas) {
+//   @return rsv-clamp(
+//     math.div($max-val, 2.5),
+//     $max-val,
+//     0 * $max-vw,
+//     $max-vw
+//   );
+// }
+
+/// Creates a responsive value for the given property, restricting it at specified maximal viewport width via @media.
+///
+/// @param $property - the name of a css property
+/// @param $min-val - the minimum value of the property
+/// @param $max-val - the maximum value of the property
+/// @param $min-vw  -the minimum viewport width
+/// @param $max-vw - the maximum viewport width
+
+@mixin rsv(
+  $property,
+  $min-val,
+  $max-val,
+  $min-vw: $xx-small,
+  $max-vw: $canvas
+) {
+  @if math.unit($min-val) == "rem" {
+    $min-vw: em($min-vw);
+    $max-vw: em($max-vw);
+  } @else if math.unit($min-val) == "px" {
+    $min-vw: px($min-vw);
+    $max-vw: px($max-vw);
+  }
+
+  #{$property}: rsv-calc($min-val, $max-val, $min-vw, $max-vw);
+
+  @media (#{$max-vw} <= width) {
+    #{$property}: $max-val;
+  }
+}
+
+/// Internal function to calculate font size at small screens
+@function _get-small-font($big-font) {
+  @return 7 * math.sqrt($big-font) - 14;
+}
+
+/// Creates an auto responsive font size
+@mixin font-size($max-val, $max-vw: $canvas) {
+  $min-val: null;
+  $max-val-unit: math.unit($max-val);
+  $min-vw: $xx-small;
+
+  @if $max-val-unit == "rem" {
+    // Now we need our main value in px for the calculations -_-
+    $max-val: px($max-val);
+    $max-val: strip-units($max-val);
+    $min-val: _get-small-font($max-val);
+    $min-val: $min-val * 1px;
+    $min-val: rem($min-val);
+    $max-val: $max-val * 1px;
+    $max-val: rem($max-val);
+  } @else if $max-val-unit == "px" {
+    $max-val: strip-units($max-val);
+    $min-val: _get-small-font($max-val);
+    $max-val: $max-val * 1px;
+    $min-val: $min-val * map.get($unit-map, $max-val-unit);
+  }
+
+  @include rsv(font-size, $min-val, $max-val, $min-vw, $max-vw);
+}

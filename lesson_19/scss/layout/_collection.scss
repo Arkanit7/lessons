@@ -1,0 +1,102 @@
+@use "../abstracts" as *;
+
+.collection {
+  position: relative;
+  isolation: isolate;
+  color: hsl(0deg 0% 100%);
+  background: url("../img/collection/bg.webp") center / cover, $clr-ebony;
+  overflow: hidden;
+
+  // .collection__container
+
+  &__container {
+    padding-block-start: rsv-clamp(rem(24px), rem(112px));
+  }
+
+  // .collection__layout
+
+  &__layout {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: rem(18px 36px);
+
+    @include media-width-to(em(700px)) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  // .collection__picture
+
+  &__picture {
+    inline-size: rem(636px);
+    aspect-ratio: 636 / 663;
+    position: relative;
+
+    @include media-width-from(em(700px)) {
+      margin-inline-start: rem(-85px);
+    }
+  }
+
+  // .collection__img
+
+  &__img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  // .collection__main
+
+  &__main {
+    inline-size: rem(504px + 33px);
+
+    @include media-width-from(em(700px)) {
+      padding-block-end: rsv-clamp(rem(60px), rem(93px), em(700px));
+    }
+
+    & > :not(:last-child) {
+      margin-block-end: rsv-clamp(rem(16px), rem(55px));
+    }
+  }
+
+  // .collection__title
+
+  &__title {
+    img {
+      inline-size: rsv-clamp(rem(95px), rem(191px));
+      aspect-ratio: 191 / 81;
+      object-fit: contain;
+    }
+  }
+
+  // .collection__filling
+
+  &__filling {
+    font-family: $ff-roboto;
+    font-size: rsv-clamp(rem(16px), rem(26px));
+    line-height: 1.82;
+  }
+
+  // .collection__button
+
+  &__button {
+  }
+
+  // .collection__shadow
+
+  &__shadow {
+    position: absolute;
+    z-index: -1;
+    inline-size: rsv-clamp(rem(320px), rem(732px));
+    aspect-ratio: 732 / 309;
+    object-fit: contain;
+    opacity: 0.08;
+    top: rem(51px);
+    right: rem(-56px);
+  }
+}

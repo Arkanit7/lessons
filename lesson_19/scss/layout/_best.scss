@@ -1,0 +1,45 @@
+@use "../abstracts" as *;
+
+.best {
+  // .best__container
+
+  &__container {
+  }
+
+  // .best__title
+
+  &__title {
+    @include not-last {
+      margin-block-end: rsv-clamp(rem(16px), rem(30px));
+    }
+  }
+
+  // .best__interactive
+
+  &__interactive {
+    @include not-last {
+      margin-block-end: rsv-clamp(rem(16px), rem(30px));
+    }
+  }
+
+  // .best__layout
+
+  &__layout {
+    display: flex;
+    gap: rsv-clamp(rem(12px), rem(24px));
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    padding-block-end: rem(12px);
+
+    @include not-last {
+      margin-block-end: rsv-clamp(rem(16px), rem(35px));
+    }
+  }
+
+  // .best__card
+
+  &__card {
+    scroll-snap-align: start;
+    flex: 0 0 rem(312px);
+  }
+}

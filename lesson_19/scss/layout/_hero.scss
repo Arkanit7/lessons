@@ -1,0 +1,113 @@
+@use "../abstracts" as *;
+
+.paint-hero {
+  position: relative;
+  inline-size: min(100%, rem(442px));
+  aspect-ratio: 442 / 562;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: percent(20, 562) 0 0 percent(18, 442);
+    border-radius: percent(160, 442) 0;
+    border: 2px solid hsl(0deg 0% 0% / 25%);
+  }
+
+  // .paint-hero__frame
+
+  &__frame {
+    position: absolute;
+    inset: 0 percent(18, 442) percent(20, 562) 0;
+  }
+
+  // .paint-hero__img
+
+  &__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: percent(160, 442) 0;
+  }
+}
+
+.hero {
+  // .hero__container
+  background-color: $clr-athens-gray;
+
+  @include media-width-from(em($large)) {
+    background: url("../img/hero/branch.svg") 0 80% / rem(120px 125px) no-repeat,
+      url("../img/hero/plant.svg") 100% 57% / rem(168px 265px) no-repeat
+        $clr-athens-gray;
+  }
+
+  &__container {
+    padding-block: rsv-clamp(rem(20px), rem(50px))
+      rsv-clamp(rem(20px), rem(60px));
+
+    // grid
+    display: grid;
+    gap: rem(18px 36px);
+
+    @include media-width-from(em($small)) {
+      justify-content: space-between;
+      grid-template-columns: minmax(0, rem(698px)) minmax(0, rem(442px + 94px));
+    }
+  }
+
+  // .hero__main
+
+  &__main {
+    @include media-width-from(em($small)) {
+      padding-block: rsv-clamp(rem(24px), rem(74px), em($small));
+    }
+  }
+
+  // .hero__title
+
+  &__title {
+    font-family: $ff-roboto;
+    font-size: rsv-clamp(rem(36px), rem(74px));
+    line-height: 0.7432;
+
+    @include not-last {
+      margin-block-end: rsv-clamp(rem(12px), rem(52px));
+    }
+  }
+
+  // .hero__filling
+
+  &__filling {
+    font-family: $ff-roboto;
+    font-size: rsv-clamp(rem(16px), rem(30px));
+
+    @include media-width-from(em($small)) {
+      line-height: 2;
+    }
+
+    @include not-last {
+      margin-block-end: rsv-clamp(rem(12px), rem(66px));
+    }
+  }
+
+  // .hero__button
+
+  &__button {
+    @include media-width-to(em($x-small)) {
+      width: 100%;
+    }
+
+    @include not-last {
+      margin-block-end: rsv-clamp(rem(12px), rem(52px));
+    }
+  }
+
+  // .hero__painting
+
+  &__paint {
+    @include media-width-to(em($small)) {
+      justify-self: center;
+      order: -1;
+    }
+  }
+}

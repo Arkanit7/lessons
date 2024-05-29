@@ -1,0 +1,127 @@
+@use "../abstracts" as *;
+
+.instagram {
+  // .instagram__title
+
+  &__title {
+    @include not-last {
+      margin-block-end: rsv-clamp(rem(16px), rem(60px));
+    }
+  }
+
+  // .instagram__layout
+
+  &__layout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: rsv-clamp(rem(12px), rem(24px));
+
+    @include not-last {
+      margin-block-end: rsv-clamp(rem(16px), rem(60px));
+    }
+  }
+
+  // .instagram__item
+
+  &__item {
+    flex: 0 rem(200px);
+  }
+
+  // .instagram__link
+
+  &__link {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url("../img/follow/instagram.svg") center / rem(48px 48px)
+          no-repeat,
+        rgba($clr-black, 0.5);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    @include response {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  // .instagram__img
+
+  &__img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.news {
+  // .news__title
+
+  &__title {
+    @include not-last {
+      margin-block-end: rsv-clamp(rem(16px), rem(60px));
+    }
+  }
+
+  // .news__form
+
+  &__form {
+    display: flex;
+    gap: rsv-clamp(rem(12px), rem(26px));
+    max-width: rem(760px);
+    margin-inline: auto;
+
+    @include not-last {
+      margin-block-end: rsv-clamp(rem(16px), rem(60px));
+    }
+  }
+
+  // .news__field
+
+  &__field {
+    flex: 1;
+    width: 0;
+  }
+
+  // .news__submit
+
+  &__submit {
+  }
+}
+
+.follow {
+  background-color: $clr-athens-gray;
+
+  // .follow__container
+
+  &__container {
+    padding-block: rsv-clamp(rem(30px), rem(100px));
+  }
+
+  // .follow__instagram
+
+  &__instagram {
+    @include not-last {
+      margin-block-end: rsv-clamp(rem(24px), rem(70px));
+    }
+  }
+
+  // .follow__news
+
+  &__news {
+    @include not-last {
+      margin-block-end: rsv-clamp(rem(16px), rem(70px));
+    }
+  }
+}

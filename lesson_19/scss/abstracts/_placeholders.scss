@@ -1,0 +1,16 @@
+@use "variables" as *;
+@use "functions" as *;
+@use "mixins" as *;
+
+/// Hover and focus color change
+%interaction {
+  transition: color 0.3s;
+
+  &:focus-visible {
+    color: $clr-bittersweet;
+  }
+
+  @include hover {
+    color: $clr-bittersweet;
+  }
+}
