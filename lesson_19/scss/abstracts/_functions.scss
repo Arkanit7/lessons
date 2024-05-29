@@ -25,6 +25,14 @@
   @return precision($quotient);
 }
 
+@function divide($divisor, $dividend) {
+  @return precision(math.div($divisor, $dividend));
+}
+
+@function line-height($divisor, $dividend) {
+  @return divide($divisor, $dividend);
+}
+
 @function _px($val) {
   $fs-root: 16px !default;
   $support: "px" "rem" "em";
@@ -86,55 +94,12 @@
   @return $rem-list;
 }
 
-@function to-rem($val-list) {
-  @return rem($val-list);
-}
-
 @function em($val, $base: 16px) {
   $val: rem($val);
   $base: rem($base);
   $result: math.div($val, $base) * 1em;
 
   @return precision($result);
-}
-
-@function clamped(
-  $min-value,
-  $max-value,
-  $min-view-width: $bp-canvas-min,
-  $max-view-width: $canvas
-) {
-  $multiplier: precision(
-    math.div(
-      rem($max-value - $min-value),
-      rem($max-view-width - $min-view-width)
-    )
-  );
-
-  @return clamp(
-    $min-value,
-    calc(#{$min-value} + #{$multiplier} * (100vw - #{$min-view-width})),
-    $max-value
-  );
-}
-
-@function maxed(
-  $min-value,
-  $max-value,
-  $min-view-width: $xx-small,
-  $max-view-width: $canvas
-) {
-  $multiplier: precision(
-    math.div(
-      rem($max-value - $min-value),
-      rem($max-view-width - $min-view-width)
-    )
-  );
-
-  @return max(
-    $min-value,
-    calc(#{$min-value} + #{$multiplier} * (100vw - #{$min-view-width}))
-  );
 }
 
 @function calculate-root-fs() {
@@ -165,8 +130,4 @@
 ///
 @function shade($color, $percentage) {
   @return color.mix(black, $color, $percentage);
-}
-
-@function line-height($divisor, $dividend) {
-  @return precision(math.div($divisor, $dividend));
 }

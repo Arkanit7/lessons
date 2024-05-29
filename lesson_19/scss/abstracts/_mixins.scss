@@ -26,35 +26,8 @@
   }
 }
 
-@mixin responsive-value(
-  $property,
-  $min-value,
-  $max-value,
-  $min-view-width,
-  $max-view-width
-) {
-  //responsive-value(property, наймешне значення, найбільше значення, найменша ширина екрану, найбільша ширина екрану)
-
-  $multiplier: math.div(
-    rem($max-value - $min-value),
-    rem($max-view-width - $min-view-width)
-  );
-
-  #{$property}: $min-value;
-
-  @media (min-width: #{$min-view-width}) {
-    #{$property}: calc(
-      #{$min-value} + #{$multiplier} * (100vw - #{$min-view-width})
-    );
-  }
-
-  @media (min-width: #{$max-view-width}) {
-    #{$property}: $max-value;
-  }
-}
-
 @mixin hover {
-  @media (any-hover: hover) {
+  @media (any-hover) {
     &:hover {
       @content;
     }
@@ -67,8 +40,20 @@
   }
 }
 
+@mixin not-first-children {
+  & > * + * {
+    @content;
+  }
+}
+
 @mixin not-last {
   &:not(:last-child) {
+    @content;
+  }
+}
+
+@mixin not-last-children {
+  & > :not(:last-child) {
     @content;
   }
 }

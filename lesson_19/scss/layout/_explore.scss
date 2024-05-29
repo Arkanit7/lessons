@@ -125,15 +125,16 @@
     display: grid;
     gap: rsv-clamp(rem(12px), rem(24px));
 
-    @include media-width-from(em($small)) {
+    // All breakpoints are synchronized with other card like sections
+    @include media-width-from(em(536px)) {
       grid-template-columns: 1fr 1fr;
     }
 
-    @include media-width-from(em($medium)) {
+    @include media-width-from(em(802px)) {
       grid-template-columns: repeat(3, 1fr);
     }
 
-    @include media-width-from(em($large)) {
+    @include media-width-from(em(1074px)) {
       grid-template-columns: repeat(4, 1fr);
     }
 
@@ -147,8 +148,8 @@
   &__item {
     aspect-ratio: 1 / 1;
 
-    @include media-width-from(em($medium)) {
-      @include media-width-to(em($large)) {
+    @include media-width-from(em(802px)) {
+      @include media-width-to(em(1074px)) {
         &:nth-child(6n + 1),
         &:nth-child(6n + 5) {
           grid-area: span 2 / span 2;
@@ -156,7 +157,7 @@
       }
     }
 
-    @include media-width-from(em($large)) {
+    @include media-width-from(em(1074px)) {
       &:nth-child(10n + 1),
       &:nth-child(10n + 8) {
         grid-area: span 2 / span 2;

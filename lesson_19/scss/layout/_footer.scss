@@ -112,7 +112,7 @@
 
   &__filling {
     color: rgba($clr-ebony-clay, 0.75);
-    line-height: line-height(21.8px + 9px, 16px);
+    line-height: divide(21.8px + 9px, 16px);
   }
 
   // .sky-footer__social
