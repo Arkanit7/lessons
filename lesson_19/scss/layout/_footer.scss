@@ -1,7 +1,11 @@
 @use "../abstracts" as *;
 
 .social {
-  @include flex-wrap(rem(12px) rsv-clamp(rem(24px), rem(36px)));
+  // .social__list
+
+  &__list {
+    @include flex-wrap(rem(12px) rsv-clamp(rem(24px), rem(36px)));
+  }
 
   // .social__item
 
