@@ -67,32 +67,21 @@
   // .sky-footer__container
 
   &__container {
-    display: grid;
+    display: flex;
     gap: rem(30px 56px);
 
-    @include media-width-from(em($x-small)) {
-      grid-template-areas: "main main";
-    }
-
-    @include media-width-from(em($small)) {
-      grid-template-areas: "main .";
-    }
-
-    @include media-width-from(em($medium)) {
-      grid-template-areas: "main main main";
-    }
-
-    @include media-width-from(em($x-large)) {
-      grid-template-areas: "main . . .";
-      grid-template-columns: minmax(0, rem(392px)) repeat(3, 1fr);
+    @include media-width-to(em(891px)) {
+      flex-wrap: wrap;
     }
   }
 
   // .sky-footer__main
 
   &__main {
-    @include media-width-from(em($x-small)) {
-      grid-area: main;
+    flex: 0 rem(392px);
+
+    @include media-width-from(em(891px)) {
+      flex-shrink: 0;
     }
 
     & > :not(:last-child) {
@@ -124,9 +113,20 @@
   &__social {
   }
 
+  // .sky-footer__map
+
+  &__map {
+    flex: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: rem(24px);
+  }
+
   // .sky-footer__section
 
   &__section {
+    flex: 0 rem(200px);
   }
 }
 

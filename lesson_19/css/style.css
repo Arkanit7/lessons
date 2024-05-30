@@ -493,12 +493,12 @@ body {
   content: "";
   position: absolute;
   inset: 3.5587% 0 0 4.0724%;
-  border-radius: 36.1991% 0;
+  border-radius: 37.7358% 0/29.5203% 0;
   border: 0.125rem solid hsla(0, 0%, 0%, 0.25);
 }
 .paint-hero__frame {
   position: absolute;
-  inset: 0 4.0724% 3.5587% 0;
+  inset: 0 4.2453% 3.69% 0;
 }
 .paint-hero__img {
   position: absolute;
@@ -506,7 +506,7 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 36.1991% 0;
+  border-radius: 37.7358% 0/29.5203% 0;
 }
 
 .hero {
@@ -804,8 +804,11 @@ body {
   margin-block-end: 0.75rem;
 }
 .sky-footer__container {
-  display: grid;
+  display: flex;
   gap: 1.875rem 3.5rem;
+}
+.sky-footer__main {
+  flex: 0 24.5rem;
 }
 .sky-footer__main > :not(:last-child) {
   margin-block-end: clamp(0.75rem, 0.3782rem + 1.5865vw, 1.71875rem);
@@ -821,6 +824,17 @@ body {
   color: rgba(31, 41, 51, 0.75);
   line-height: 1.925;
 }
+.sky-footer__map {
+  flex: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.sky-footer__section {
+  flex: 0 12.5rem;
+}
+
 .earth-footer {
   padding-block: 0.875rem;
   background-color: hsl(210, 25%, 16%);
@@ -870,6 +884,11 @@ body {
     margin-block-end: clamp(0.75rem, 0.4621rem + 1.2282vw, 1.5rem);
   }
 }
+@media (width < 55.6875em){
+  .sky-footer__container {
+    flex-wrap: wrap;
+  }
+}
 @media (50.125em <= width) and (width < 67.125em){
   .explore__item:nth-child(6n+1), .explore__item:nth-child(6n+5) {
     grid-area: span 2/span 2;
@@ -878,14 +897,6 @@ body {
 @media (23.4375em <= width){
   [class*=container] {
     padding-inline: 1rem;
-  }
-}
-@media (30em <= width){
-  .sky-footer__container {
-    grid-template-areas: "main main";
-  }
-  .sky-footer__main {
-    grid-area: main;
   }
 }
 @media (33.5em <= width){
@@ -906,9 +917,6 @@ body {
   }
   .hero__filling {
     line-height: 2.1333;
-  }
-  .sky-footer__container {
-    grid-template-areas: "main .";
   }
 }
 @media (43.75em <= width){
@@ -1003,9 +1011,6 @@ body {
   .section-sky-footer__item {
     font-size: 0.875rem;
   }
-  .sky-footer__container {
-    grid-template-areas: "main main main";
-  }
   .earth-footer__copyrights {
     order: -1;
   }
@@ -1013,6 +1018,11 @@ body {
 @media (50.125em <= width){
   .explore__layout {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (55.6875em <= width){
+  .sky-footer__main {
+    flex-shrink: 0;
   }
 }
 @media (62em <= width){
@@ -1062,12 +1072,6 @@ body {
   .collection__layout {
     flex-wrap: wrap;
     justify-content: center;
-  }
-}
-@media (75em <= width){
-  .sky-footer__container {
-    grid-template-areas: "main . . .";
-    grid-template-columns: minmax(0, 24.5rem) repeat(3, 1fr);
   }
 }
 @media (any-hover){
