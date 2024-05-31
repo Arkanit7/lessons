@@ -17,8 +17,9 @@
 
   &__header {
     position: absolute;
-    inset: auto 0 0;
-    min-height: rem(52px);
+    inset-block-end: 0;
+    inset-inline: 0;
+    min-block-size: rem(52px);
     padding: rem(8px 15px);
     background-color: $clr-ebony-clay;
 
@@ -61,7 +62,7 @@
 
   &__stickers {
     position: absolute;
-    top: rem(22px);
+    inset-block-start: rem(22px);
   }
 
   // .item-explore__picture
@@ -75,8 +76,8 @@
     position: absolute;
     z-index: -1;
     inset: 0;
-    width: 100%;
-    height: 100%;
+    inline-size: 100%;
+    block-size: 100%;
     object-fit: cover;
 
     // transition: transform 0.3s;
@@ -112,8 +113,8 @@
 
     @include media-width-from(em($canvas + 7px + 47px + $padding)) {
       position: absolute;
-      top: rem(30px);
-      left: rem(7px);
+      inset-block-end: rem(7px);
+      inset-inline-end: rem(30px);
       writing-mode: vertical-rl;
       transform: rotate(180deg) translateX(100%);
     }

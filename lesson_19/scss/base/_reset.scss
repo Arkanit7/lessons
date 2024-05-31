@@ -15,7 +15,7 @@ html {
 
 html,
 body {
-  height: 100%;
+  block-size: 100%;
 }
 
 a {
@@ -42,7 +42,7 @@ video,
 canvas,
 svg {
   display: block;
-  max-width: 100%;
+  max-inline-size: 100%;
 }
 
 /* Form */

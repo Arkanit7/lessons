@@ -21,17 +21,16 @@
   &__icon {
     display: block;
     position: relative;
-    width: $width;
-    height: $height;
+    inline-size: $width;
+    block-size: $height;
   }
 
   &__icon::before,
   &__line,
   &__icon::after {
     position: absolute;
-    left: 0;
-    right: 0;
-    height: $thickness;
+    inset-inline: 0;
+    block-size: $thickness;
     border-radius: calc($thickness / 2);
     content: "";
     background-color: currentcolor;

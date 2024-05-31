@@ -7,7 +7,8 @@
   align-items: center;
   justify-content: center;
   gap: em(8px, $fs);
-  padding: em(19px, $fs) em(26px, $fs);
+  padding-block: em(19px, $fs);
+  padding-inline: em(26px, $fs);
   background-color: $clr-ebony-clay;
 
   // typography

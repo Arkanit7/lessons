@@ -40,7 +40,7 @@
     @include flex-wrap(rem(12px));
 
     white-space: nowrap;
-    text-align: right;
+    text-align: end;
     font-weight: $fw-semi-bold;
   }
 
@@ -63,7 +63,7 @@
 }
 
 .actions-card-product {
-  min-height: rem(52px);
+  min-block-size: rem(52px);
   padding: rem(8px 15px);
   background-color: $clr-ebony-clay;
 
@@ -121,8 +121,8 @@
     position: absolute;
     z-index: -1;
     inset: 0;
-    width: 100%;
-    height: 100%;
+    inline-size: 100%;
+    block-size: 100%;
     object-fit: cover;
   }
 
@@ -130,7 +130,7 @@
 
   &__stickers {
     position: absolute;
-    top: rem(22px);
+    inset-block-start: rem(22px);
   }
 
   // .body-card-product__actions
@@ -138,7 +138,8 @@
   &__actions {
     @media (any-hover) {
       position: absolute;
-      inset: auto 0 0;
+      inset-block-end: 0;
+      inset-inline: 0;
       transition: opacity 0.3s, visibility 0.3s;
       opacity: 0;
       visibility: hidden;

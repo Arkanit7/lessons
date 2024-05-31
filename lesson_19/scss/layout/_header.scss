@@ -11,7 +11,7 @@
 
   &__field {
     flex: 1;
-    width: 0;
+    inline-size: 0;
     padding: rem(4px 12px);
   }
 
@@ -100,7 +100,7 @@
     gap: rem(10px) rsv-min(rem(12px), rem(22px));
 
     @include media-width-from(em($large)) {
-      min-height: rem(50px + 33px);
+      min-block-size: rem(50px + 33px);
     }
   }
 
@@ -189,7 +189,7 @@
       display: grid;
       align-items: center;
       padding-block: rem(12px);
-      min-height: rem(85px);
+      min-block-size: rem(85px);
     }
   }
 
@@ -205,8 +205,9 @@
       // position & size
       position: fixed;
       z-index: 100;
-      inset: 0 0 0 auto;
-      width: min(100%, 45ch);
+      inset-block: 0;
+      inset-inline-end: 0;
+      inline-size: min(100%, 45ch);
       padding-block-start: rem(59px);
 
       // grid
@@ -228,7 +229,8 @@
   &__search {
     position: absolute;
     z-index: 100;
-    inset: rem(52px) 0 auto;
+    inset-block-start: rem(52px);
+    inset-inline: 0;
     padding-block: rem($padding-sm);
     transition: transform 0.4s, opacity 0.4s, visibility 0.4s;
     background-color: $clr-athens-gray;
@@ -236,11 +238,11 @@
     box-shadow: 0 0 rem(32px) 0 rgb(0 0 0 / 10%);
 
     @include media-width-from(em($bp-menu)) {
-      top: rem(143px);
+      inset-block-start: rem(143px);
     }
 
     @include media-width-from(em($large)) {
-      top: rem(170px);
+      inset-block-start: rem(170px);
     }
 
     &:not(&--active) {

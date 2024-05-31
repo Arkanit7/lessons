@@ -45,8 +45,8 @@
   &__img {
     position: absolute;
     inset: 0;
-    width: 100%;
-    height: 100%;
+    inline-size: 100%;
+    block-size: 100%;
     object-fit: contain;
   }
 
@@ -87,7 +87,7 @@
 
   &__button {
     @include media-width-to(em($x-small)) {
-      width: 100%;
+      inline-size: 100%;
     }
   }
 
@@ -100,7 +100,7 @@
     aspect-ratio: 732 / 309;
     object-fit: contain;
     opacity: 0.08;
-    top: rem(51px);
-    right: rem(-56px);
+    inset-block-start: rem(51px);
+    inset-inline-end: rem(-56px);
   }
 }

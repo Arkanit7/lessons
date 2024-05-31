@@ -28,7 +28,10 @@
     display: flex;
     gap: rsv-clamp(rem(12px), rem(24px));
     overflow-x: auto;
+
+    // overflow-inline: auto;
     scroll-snap-type: x proximity;
+    scroll-snap-type: inline proximity;
     padding-block-end: rem(12px);
 
     @include not-last {

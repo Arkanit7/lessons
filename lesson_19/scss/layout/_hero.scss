@@ -8,7 +8,8 @@
   &::before {
     content: "";
     position: absolute;
-    inset: percent(20, 562) 0 0 percent(18, 442);
+    inset-block: percent(20, 562) 0;
+    inset-inline: percent(18, 442) 0;
     border-radius: percent(160, 424) 0 / #{percent(160, 542)} 0;
     border: rem(2px) solid hsl(0deg 0% 0% / 25%);
   }
@@ -17,15 +18,16 @@
 
   &__frame {
     position: absolute;
-    inset: 0 percent(18, 424) percent(20, 542) 0;
+    inset-block: 0 percent(20, 542);
+    inset-inline: 0 percent(18, 424);
   }
 
   // .paint-hero__img
 
   &__img {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    inline-size: 100%;
+    block-size: 100%;
     object-fit: cover;
     border-radius: percent(160, 424) 0 / #{percent(160, 542)} 0;
   }
@@ -36,9 +38,8 @@
   background-color: $clr-athens-gray;
 
   @include media-width-from(em($large)) {
-    background: url("../img/hero/branch.svg") 0 80% / rem(120px 125px) no-repeat,
-      url("../img/hero/plant.svg") 100% 57% / rem(168px 265px) no-repeat
-        $clr-athens-gray;
+    background: url("../img/hero/branch.svg") 0 80% / #{rem(120px)} no-repeat,
+      url("../img/hero/plant.svg") 100% 57% / #{rem(168px)} no-repeat $clr-athens-gray;
   }
 
   &__container {
@@ -94,7 +95,7 @@
 
   &__button {
     @include media-width-to(em($x-small)) {
-      width: 100%;
+      inline-size: 100%;
     }
 
     @include not-last {

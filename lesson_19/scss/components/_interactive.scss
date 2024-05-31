@@ -19,7 +19,8 @@
     align-items: center;
     justify-content: center;
     gap: rem(4px);
-    padding: em(5px, 16px) em(15px, 16px);
+    padding-block: em(5px, 16px);
+    padding-inline: em(15px, 16px);
     background-color: $clr-ebony-clay;
 
     // typography
