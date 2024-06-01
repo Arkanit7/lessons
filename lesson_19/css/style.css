@@ -626,7 +626,7 @@ body {
 .products__layout {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15.3125rem, 1fr));
-  gap: clamp(0.75rem, 0.4621rem + 1.2282vw, 1.5rem);
+  gap: 1.5rem clamp(0.75rem, 0.4621rem + 1.2282vw, 1.5rem);
 }
 .products__layout:not(:last-child) {
   margin-block-end: clamp(1rem, 0.5442rem + 1.9447vw, 2.1875rem);

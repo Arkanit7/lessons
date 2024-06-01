@@ -27,7 +27,7 @@
   &__layout {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(rem(245px), 1fr));
-    gap: rsv-clamp(rem(12px), rem(24px));
+    gap: rem(24px) rsv-clamp(rem(12px), rem(24px));
 
     @include not-last {
       margin-block-end: rsv-clamp(rem(16px), rem(35px));

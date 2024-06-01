@@ -6,11 +6,7 @@
 %interaction {
   transition: color 0.3s;
 
-  &:focus-visible {
-    color: $clr-bittersweet;
-  }
-
-  @include hover {
+  @include response {
     color: $clr-bittersweet;
   }
 }

@@ -94,12 +94,27 @@
   @return $rem-list;
 }
 
-@function em($val, $base: 16px) {
+@function _em($val, $base: 16px) {
   $val: rem($val);
   $base: rem($base);
   $result: math.div($val, $base) * 1em;
 
   @return precision($result);
+}
+
+@function em($val-list, $base: 16px) {
+  $em-list: ();
+
+  @each $item in $val-list {
+    $em-list: list.append($em-list, _em($item, $base));
+  }
+
+  // If result is only one value - we should convert list to number
+  @if list.length($em-list) == 1 {
+    $em-list: list.nth($em-list, 1);
+  }
+
+  @return $em-list;
 }
 
 @function calculate-root-fs() {
