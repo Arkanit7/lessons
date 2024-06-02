@@ -69,7 +69,7 @@
   &__title {
     font-family: $ff-roboto;
     font-size: rsv-clamp(rem(36px), rem(74px));
-    line-height: line-height(55, 74);
+    line-height: divide(55, 74);
 
     @include not-last {
       margin-block-end: rsv-clamp(rem(12px), rem(52px - 4.5px));
@@ -83,7 +83,7 @@
     font-size: rsv-clamp(rem(16px), rem(30px));
 
     @include media-width-from(em($small)) {
-      line-height: line-height(55px + 9px, 30px);
+      line-height: divide(55px + 9px, 30px);
     }
 
     @include not-last {

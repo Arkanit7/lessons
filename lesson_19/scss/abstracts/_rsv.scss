@@ -1,25 +1,36 @@
-// SCSS RSV
+// SCSS RSV v1.3
 
 // Responsive values
 
 // Author: Arkanit (https://github.com/Arkanit7)
 
+// Features:
+// Support for multiple input values (SASS lists)
+// [EXPERIMENTAL] font-size mixin for auto font-sizes
+
+// Requirements
+// rem(), em(), px(), strip-units(), precision() custom functions (all can be found in the "_functions.scss" partial)
+// $xx-small property for default MIN viewport width
+// $canvas property for default MAX viewport width
+
+// @use "sass:string";
+// @use "sass:map";
+@use "sass:math";
+@use "sass:meta";
+@use "sass:list";
 @use "variables" as *;
 @use "functions" as *;
-@use "mixins" as *;
-@use "sass:math";
-@use "sass:string";
-@use "sass:map";
 
-$unit-map: (
-  "px": 1px,
-  "rem": 1rem,
-  "em": 1em,
-  "%": 1%,
-);
+// $unit-map: (
+//   "px": 1px,
+//   "rem": 1rem,
+//   "em": 1em,
+//   "%": 1%,
+// );
 
 // Main function of the module
 @function rsv-value($min-val, $max-val, $min-vw: $xx-small, $max-vw: $canvas) {
+  // Enforce same units
   @if math.unit($min-val) == "rem" {
     $min-vw: rem($min-vw);
     $max-vw: rem($max-vw);
@@ -33,38 +44,140 @@ $unit-map: (
     $max-vw: rem($max-vw);
   }
 
-  $multiplier: math.div($max-val - $min-val, $max-vw - $min-vw);
-  $base-val: precision($min-val - $multiplier * $min-vw);
-  $coefficient-vw: precision(100 * $multiplier);
-  $result: "#{$base-val} + #{$coefficient-vw}vw";
+  // Ok let's make linear function like this:
+  // y = kx + b
+  $val-range: $max-val - $min-val;
+  $vw-range: $max-vw - $min-vw;
+  $k: math.div($val-range, $vw-range);
+  $b: $min-val - $k * $min-vw;
 
-  @return $result;
+  // Combine all variables with a certain precision
+  $y: "#{precision($b)} + #{precision($k * 100vw)}";
+
+  @return $y;
+}
+
+@function _rsv-calc($min-val, $max-val, $min-vw: $xx-small, $max-vw: $canvas) {
+  @return calc(#{rsv-value($min-val, $max-val, $min-vw, $max-vw)});
 }
 
 // Uses calc()
 @function rsv-calc($min-val, $max-val, $min-vw: $xx-small, $max-vw: $canvas) {
-  @return calc(#{rsv-value($min-val, $max-val, $min-vw, $max-vw)});
+  @if meta.type-of($min-val) != "list" {
+    @return _rsv-calc($min-val, $max-val, $min-vw, $max-vw);
+  }
+
+  $val-list: ();
+
+  @for $i from 1 through list.length($min-val) {
+    $iteration: _rsv-calc(
+      list.nth($min-val, $i),
+      list.nth($max-val, $i),
+      $min-vw,
+      $max-vw
+    );
+    $val-list: list.append($val-list, $iteration);
+  }
+
+  @return $val-list;
 }
 
-// Uses min()
-@function rsv-min($min-val, $max-val, $min-vw: $xx-small, $max-vw: $canvas) {
-  @return min(#{rsv-value($min-val, $max-val, $min-vw, $max-vw)}, $max-val);
-}
-
-// Uses max()
-@function rsv-max($min-val, $max-val, $min-vw: $xx-small, $max-vw: $canvas) {
-  @return max($min-val, #{rsv-value($min-val, $max-val, $min-vw, $max-vw)});
-}
-
-// Uses clamp()
-@function rsv-clamp($min-val, $max-val, $min-vw: $xx-small, $max-vw: $canvas) {
+@function _rsv-min($min-val, $max-val, $min-vw: $xx-small, $max-vw: $canvas) {
   // 0 value fix
   @if $min-val == 0 {
     $min-val: $max-val * 0;
   }
 
   @if $max-val == 0 {
-    $min-val: $min-val * 0;
+    $max-val: $min-val * 0;
+  }
+
+  $max: $max-val;
+
+  @if $min-val > $max-val {
+    $max: $min-val;
+  }
+
+  @return min(#{rsv-value($min-val, $max-val, $min-vw, $max-vw)}, $max);
+}
+
+// Uses min()
+@function rsv-min($min-val, $max-val, $min-vw: $xx-small, $max-vw: $canvas) {
+  @if meta.type-of($min-val) != "list" {
+    @return _rsv-min($min-val, $max-val, $min-vw, $max-vw);
+  }
+
+  $val-list: ();
+
+  @for $i from 1 through list.length($min-val) {
+    $iteration: _rsv-min(
+      list.nth($min-val, $i),
+      list.nth($max-val, $i),
+      $min-vw,
+      $max-vw
+    );
+    $val-list: list.append($val-list, $iteration);
+  }
+
+  @return $val-list;
+}
+
+@function _rsv-max($min-val, $max-val, $min-vw: $xx-small, $max-vw: $canvas) {
+  // 0 value fix
+  @if $min-val == 0 {
+    $min-val: $max-val * 0;
+  }
+
+  @if $max-val == 0 {
+    $max-val: $min-val * 0;
+  }
+
+  $min: $min-val;
+
+  @if $min-val > $max-val {
+    $min: $max-val;
+  }
+
+  @return max($min, #{rsv-value($min-val, $max-val, $min-vw, $max-vw)});
+}
+
+// Uses max()
+@function rsv-max($min-val, $max-val, $min-vw: $xx-small, $max-vw: $canvas) {
+  @if meta.type-of($min-val) != "list" {
+    @return _rsv-max($min-val, $max-val, $min-vw, $max-vw);
+  }
+
+  $val-list: ();
+
+  @for $i from 1 through list.length($min-val) {
+    $iteration: _rsv-max(
+      list.nth($min-val, $i),
+      list.nth($max-val, $i),
+      $min-vw,
+      $max-vw
+    );
+    $val-list: list.append($val-list, $iteration);
+  }
+
+  @return $val-list;
+}
+
+@function _rsv-clamp($min-val, $max-val, $min-vw: $xx-small, $max-vw: $canvas) {
+  // 0 value fix
+  @if $min-val == 0 {
+    $min-val: $max-val * 0;
+  }
+
+  @if $max-val == 0 {
+    $max-val: $min-val * 0;
+  }
+
+  $min: $min-val;
+  $max: $max-val;
+
+  @if $min-val > $max-val {
+    $max: $min-val;
+    $min: $max-val;
   }
 
   @return clamp(
@@ -74,42 +187,26 @@ $unit-map: (
   );
 }
 
-// @function rsv-auto($max-val, $max-vw: $canvas) {
-//   $max-val-unit: math.unit($max-val);
-//   $max-val-unitless: strip-units($max-val);
-//   $min-val: 7 * math.sqrt($max-val-unitless) - 14;
-//   $min-val: $min-val * map-get($unit-map, $max-val-unit);
+// Uses clamp()
+@function rsv-clamp($min-val, $max-val, $min-vw: $xx-small, $max-vw: $canvas) {
+  @if meta.type-of($min-val) != "list" {
+    @return _rsv-clamp($min-val, $max-val, $min-vw, $max-vw);
+  }
 
-//   @return rsv-calc($min-val, $max-val, $xx-small, $max-vw);
-//   @return 20px;
-// }
+  $val-list: ();
 
-// @function rsv-max-auto($max-val, $max-vw: $canvas) {
-//   @return rsv-max(
-//     math.div($max-val, 2.5),
-//     $max-val,
-//     0 * $max-vw,
-//     $max-vw
-//   );
-// }
+  @for $i from 1 through list.length($min-val) {
+    $iteration: _rsv-clamp(
+      list.nth($min-val, $i),
+      list.nth($max-val, $i),
+      $min-vw,
+      $max-vw
+    );
+    $val-list: list.append($val-list, $iteration);
+  }
 
-// @function rsv-min-auto($max-val, $max-vw: $canvas) {
-//   @return rsv-min(
-//     math.div($max-val, 2.5),
-//     $max-val,
-//     0 * $max-vw,
-//     $max-vw
-//   );
-// }
-
-// @function rsv-clamp-auto($max-val, $max-vw: $canvas) {
-//   @return rsv-clamp(
-//     math.div($max-val, 2.5),
-//     $max-val,
-//     0 * $max-vw,
-//     $max-vw
-//   );
-// }
+  @return $val-list;
+}
 
 /// Creates a responsive value for the given property, restricting it at specified maximal viewport width via @media.
 ///
@@ -126,34 +223,50 @@ $unit-map: (
   $min-vw: $xx-small,
   $max-vw: $canvas
 ) {
-  @if math.unit($min-val) == "rem" {
+  // Force usage only rem and em OR only px
+  @if math.unit(list.nth($min-val, 1)) == "rem" {
     $min-vw: em($min-vw);
     $max-vw: em($max-vw);
-  } @else if math.unit($min-val) == "px" {
+  } @else if math.unit(list.nth($min-val, 1)) == "px" {
     $min-vw: px($min-vw);
     $max-vw: px($max-vw);
   }
 
+  // Properly set the upper limit
+  $max: ();
+
+  @for $i from 1 through list.length($max-val) {
+    $i-min: list.nth($min-val, $i);
+    $i-max: list.nth($max-val, $i);
+
+    @if $i-min > $i-max {
+      $max: list.append($max, $i-min);
+    } @else {
+      $max: list.append($max, $i-max);
+    }
+  }
+
   #{$property}: rsv-calc($min-val, $max-val, $min-vw, $max-vw);
 
+  // Here I use this limit
   @media (#{$max-vw} <= width) {
-    #{$property}: $max-val;
+    #{$property}: $max;
   }
 }
 
-/// Internal function to calculate font size at small screens
+/// Internal function to calculate font size on small screens
 @function _get-small-font($big-font) {
   @return 7 * math.sqrt($big-font) - 14;
 }
 
-/// Creates an auto responsive font size
+/// [EXPERIMENTAL] Creates an auto responsive font size
 @mixin font-size($max-val, $max-vw: $canvas) {
-  $min-val: null;
+  $min-val: 0;
   $max-val-unit: math.unit($max-val);
   $min-vw: $xx-small;
 
   @if $max-val-unit == "rem" {
-    // Now we need our main value in px for the calculations -_-
+    // We need our main value in px for the calculations -_-
     $max-val: px($max-val);
     $max-val: strip-units($max-val);
     $min-val: _get-small-font($max-val);
