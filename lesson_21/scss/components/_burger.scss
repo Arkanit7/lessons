@@ -1,0 +1,62 @@
+@use "../abstracts" as *;
+
+.burger {
+  $width: rem(30px);
+  $height: rem(21px);
+  $thickness: rem(3px);
+
+  // padding: rem(10px 5px);
+  transition: color 0.3s;
+
+  &:focus-visible {
+    // color: $clr-purple;
+  }
+
+  @media (any-hover) {
+    &:hover {
+      // color: $clr-purple;
+    }
+  }
+
+  &__icon {
+    display: block;
+    position: relative;
+    inline-size: $width;
+    block-size: $height;
+  }
+
+  &__icon::before,
+  &__line,
+  &__icon::after {
+    position: absolute;
+    inset-inline: 0;
+    block-size: $thickness;
+    border-radius: calc($thickness / 2);
+    content: "";
+    background-color: currentcolor;
+    transition: transform 0.3s;
+  }
+
+  &__icon::before {
+  }
+
+  &__line {
+    transform: translateY(calc(($height - $thickness) / 2));
+  }
+
+  &__icon::after {
+    transform: translateY($height - $thickness);
+  }
+
+  &[aria-expanded="true"] &__icon::before {
+    transform: translateY(calc(($height - $thickness) / 2)) rotate(-45deg);
+  }
+
+  &[aria-expanded="true"] &__line {
+    transform: translateY(calc(($height - $thickness) / 2)) scaleX(0);
+  }
+
+  &[aria-expanded="true"] &__icon::after {
+    transform: translateY(calc(($height - $thickness) / 2)) rotate(45deg);
+  }
+}

@@ -1,0 +1,35 @@
+@use "../abstracts" as *;
+@use "sass:math";
+
+/* Global styles */
+
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $ff-wix-madefor-display;
+  line-height: 1.4;
+  font-size: rem(18px);
+}
+
+.wrapper {
+  overflow: clip;
+  min-block-size: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__main {
+    flex: auto;
+  }
+}
+
+[class*="container"] {
+  max-inline-size: rem($canvas);
+  padding-inline: rem($padding-sm);
+  margin-inline: auto;
+
+  @include media-width-from(em($xx-small)) {
+    padding-inline: rem($padding);
+  }
+}
