@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок №21</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Content wrapper-->
+    <div class="wrapper">
+      <main class="wrapper__main">
+        <article class="blog">
+          <div class="blog__container">
+            <h1>Урок №21 (Основи JavaScript. Частина №1)</h1>
+            <section class="blog__section">
+              <h2>Задача №1</h2>
+              <p>Яка назва змінної вірна?</p>
+              <ol>
+                <li><code class="language-javascript">let user-name</code></li>
+                <li><code class="language-javascript">let UserName</code></li>
+                <li><code class="language-javascript">let userName</code></li>
+              </ol>
+              <p>Відповідь: варіант №3 - <code class="language-javascript">let userName</code></p>
+              <p>У <abbr title="JavaScript">JS</abbr> для запису змінних використовують стиль <em>lowerCamelCase</em>.</p>
+            </section>
+            <section class="blog__section">
+              <h2>Задача №2</h2>
+              <p>Чи буде помилка при виконанні наступної програми?</p>
+              <pre><code class="language-javascript">const userName = 20
+userName = 'Іштван'</code></pre>
+              <p>Відповідь: Так.</p>
+              <p>Неможливо призначати константі значення після її декларації.</p>
+              <pre><code class="language-javascript">TypeError: invalid assignment to const 'userName'</code></pre>
+            </section>
+            <section class="blog__section">
+              <h2>Задача №3</h2>
+              <p>Що потрапить в консоль?</p>
+              <pre><code class="language-javascript">let numOne = 20
+let numTwo = '20'
+let numSum = numOne + numTwo
+console.log(numSum)</code></pre>
+              <p>Відповідь: <code class="language-javascript">'2020'</code>.</p>
+              <p>Один з операндів є рядком, тож інший операнд було конвертовано в цей самий тип.</p>
+            </section>
+            <p><em>P.S. У браузерній консолі також є завдання та рішення.</em></p>
+          </div>
+        </article>
+      </main>
+    </div>
+  </body>
+  <script src="js/prism.js"></script>
+  <script src="js/script.js"></script>
+</html>
