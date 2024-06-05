@@ -1,0 +1,64 @@
+@use "../abstracts" as *;
+
+.blog {
+  // .blog__container
+
+  &__container {
+    padding-block: rsv-clamp(rem(20px), rem(30px));
+  }
+
+  // .blog__section
+
+  &__section {
+    padding-block-end: rsv-clamp(rem(16px), rem(24px));
+
+    @include not-last {
+      margin-block-end: rsv-clamp(rem(16px), rem(24px));
+      border-block-end: rem(1px) solid silver;
+    }
+
+    @include not-last-children {
+      margin-block-end: rem(4px);
+    }
+  }
+
+  h1 {
+    text-align: center;
+    font-weight: $fw-bold;
+    line-height: 1;
+
+    @include font-size(rem(38px));
+
+    @include not-last {
+      margin-block-end: rsv-clamp(rem(18px), rem(28px));
+    }
+  }
+
+  h2 {
+    font-weight: $fw-bold;
+
+    @include font-size(rem(28px));
+
+    @include not-last {
+      margin-block-end: rsv-clamp(rem(6px), rem(8px));
+    }
+  }
+
+  ol,
+  ul {
+    padding: revert;
+  }
+
+  li {
+    list-style-type: revert;
+
+    @include not-last {
+      margin-block-end: rem(3px);
+    }
+  }
+
+  pre,
+  code {
+    border-radius: rem(4px);
+  }
+}
