@@ -58,34 +58,32 @@ if (someVar) {
             <section class="blog__section">
               <h2>Задача №3</h2>
               <p>Що потрапить в консоль?</p>
-              <pre><code class="language-javascript">if (2 * 20 &lt;= 10 || (30 / 2 &lt; 5 &amp;&amp; 10 &lt;= '10') || 20 === '20') {
+              <pre><code class="language-javascript">if (2 * 20 &lt;= 10 || 30 / 2 &lt; 5 &amp;&amp; 10 &lt;= '10' || 20 === '20') {
   console.log('000')
 }</code></pre>
               <p><b>Рішення:</b> розіб'ємо вираз по пріоритетності операторів за допомогою дужок:</p>
-              <pre><code class="language-javascript">if ((((2 * 20) &lt;= 10) || (((30 / 2) &lt; 5) &amp;&amp; (10 &lt;= &quot;10&quot;))) || (20 === &quot;20&quot;)) {}
-// │││└─ 1. ─┘      │    │││      │    │    │          │││    │           ││
-// │││              │    ││└─ 2. ─┘    │    │          │││    │           ││
-// ││└────── 3. ────┘    ││            │    │          │││    │           ││
-// ││                    │└──── 4. ────┘    │          │││    │           ││
-// ││                    │                  └─── 5. ───┘││    │           ││
-// ││                    │                              ││    └──── 6. ───┘│
-// ││                    └────────────── 7. ────────────┘│                 │
-// │└──────────────────────── 8. ────────────────────────┘                 │
-// └─────────────────────────────────── 9. ────────────────────────────────┘</code></pre>
+              <pre><code class="language-javascript">   ((((2 * 20) &lt;= 10) || (((30 / 2) &lt; 5) &amp;&amp; (10 &lt;= &quot;10&quot;))) || (20 === &quot;20&quot;))
+// │││└─ 1. ─┘      │    │││      │    │                ││    │           ││
+// ││└────── 2. ────┘    │││      │    │                ││    │           ││
+// ││                    ││└─ 3. ─┘    │                ││    │           ││
+// ││                    │└──── 4. ────┘                ││    │           ││
+// ││                    └───────────── 5. ─────────────┘│    │           ││
+// │└──────────────────────── 6. ────────────────────────┘    │           ││
+// │                                                          └──── 7. ───┘│
+// └────────────────────────────────── 8. ─────────────────────────────────┘</code></pre>
               <p>Виконаємо обчислення у заданому вище порядку:</p>
               <ol>
                 <li><code class="language-javascript">2 * 20 // 40</code></li>
-                <li><code class="language-javascript">30 / 2 // 15</code></li>
                 <li><code class="language-javascript">40 &lt;= 10 // false</code></li>
+                <li><code class="language-javascript">30 / 2 // 15</code></li>
                 <li><code class="language-javascript">15 &lt; 5 // false</code></li>
-                <li><code class="language-javascript">10 &lt;= 10 // true</code></li>
-                <li><code class="language-javascript">20 === '20' // false</code></li>
-                <li><code class="language-javascript">false &amp;&amp; true // false</code></li>
+                <li><code class="language-javascript">false &amp;&amp; ... // false</code></li>
                 <li><code class="language-javascript">false || false // false</code></li>
+                <li><code class="language-javascript">20 === '20' // false</code></li>
                 <li><code class="language-javascript">false || false // false</code></li>
               </ol>
-              <p>Результат обчислень - <code class="language-javascript">false</code>.</p>
-              <p>Умова виявилася хибною - інструкція не буде виконана, тож до консолі нічого не потрапить.</p>
+              <p>Результат обчислень - <code class="language-javascript">false</code>. Умова виявилася хибною - інструкція не буде виконана, тож до консолі нічого не потрапить.</p>
+              <p><i>P.S.</i> Номери вказують на порядок виконання обчислень у <abbr title="JavaScript">JS</abbr>.</p>
             </section>
             <section class="blog__section">
               <h2>Задача №4</h2>
@@ -117,7 +115,7 @@ divide() // Щось пішло не так!</code></pre>
               <p>Перевіряйте елемент на відповідність числу 10, та у разі відповідності, виводьте в консоль</p>
               <p><b>Рішення:</b></p>
               <pre><code class="language-javascript">function logIfItemInArray(item, array) {
-	array.includes(item) &amp;&amp; console.log(item)
+  array.includes(item) &amp;&amp; console.log(item)
 }
 
 const myArray = ['10', null, 22, true, 10]
