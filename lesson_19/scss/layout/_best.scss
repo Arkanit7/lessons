@@ -1,5 +1,49 @@
 @use "../abstracts" as *;
 
+.slider {
+  position: relative;
+
+  // .slider__swiper
+  &__swiper {
+  }
+
+  // .slider__wrapper
+  &__wrapper {
+  }
+
+  // .slider__slide
+  &__slide {
+    // inline-size: rem(312px);
+  }
+
+  // .slider__controls
+  &__controls {
+  }
+
+  // .slider__navigation
+  &__navigation {
+    @extend %interaction;
+
+    position: absolute;
+    z-index: 10;
+    inset-block-start: calc(50% - rem(divide(59px, 2)));
+    font-size: rem(32px);
+    color: rgba($clr-ebony-clay, 0.25);
+    transform: translateY(-50%);
+
+    // .slider__navigation--previous
+    &--previous {
+      transform: translateY(-50%) rotate(180deg);
+      inset-inline-start: rem(10px);
+    }
+
+    // .slider__navigation--next
+    &--next {
+      inset-inline-end: rem(10px);
+    }
+  }
+}
+
 .best {
   // .best__container
 
@@ -22,27 +66,11 @@
     }
   }
 
-  // .best__layout
+  // .best__slider
 
-  &__layout {
-    display: flex;
-    gap: rsv-clamp(rem(12px), rem(24px));
-    overflow-x: auto;
-
-    // overflow-inline: auto;
-    scroll-snap-type: x proximity;
-    scroll-snap-type: inline proximity;
-    padding-block-end: rem(12px);
-
+  &__slider {
     @include not-last {
       margin-block-end: rsv-clamp(rem(16px), rem(35px));
     }
-  }
-
-  // .best__card
-
-  &__card {
-    scroll-snap-align: start;
-    flex: 0 0 rem(312px);
   }
 }

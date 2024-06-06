@@ -1,8 +1,11 @@
 import mover from './mover.js'
+import accordion from './accordion.js'
+import slider from './modules/slider.js'
 
 mover()
+accordion()
 
-function menu() {
+function mobileMenu() {
   const burger = document.querySelector('.burger')
   const menuElement = document.getElementById(
     burger.getAttribute('aria-controls')
@@ -33,7 +36,7 @@ function menu() {
   })
 }
 
-menu()
+mobileMenu()
 
 // .header__search
 function headerSearch() {

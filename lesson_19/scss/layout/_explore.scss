@@ -150,11 +150,8 @@
     aspect-ratio: 1 / 1;
 
     @include media-width-from(em(802px)) {
-      @include media-width-to(em(1074px)) {
-        &:nth-child(6n + 1),
-        &:nth-child(6n + 5) {
-          grid-area: span 2 / span 2;
-        }
+      &:first-child {
+        grid-area: span 2 / span 2;
       }
     }
 

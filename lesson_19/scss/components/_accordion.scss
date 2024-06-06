@@ -1,0 +1,113 @@
+@use "../abstracts" as *;
+
+.accordion {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: rem(24px 36px);
+
+  @include media-width-from(em(468px)) {
+    justify-content: space-between;
+  }
+
+  &__panel {
+    flex: 0 rem(200px);
+  }
+
+  &__title {
+    font-weight: $fw-semi-bold;
+  }
+
+  &__trigger {
+    @extend %interaction;
+
+    inline-size: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    text-align: start;
+
+    &:disabled {
+      cursor: auto;
+      color: unset;
+    }
+  }
+
+  &__icon {
+    flex: none;
+    align-self: center;
+    position: relative;
+    inline-size: 0.9em;
+    block-size: 0.9em;
+    user-select: none;
+    transition: transform 0.4s ease-in-out;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      inline-size: 100%;
+      block-size: em(3px);
+      border-radius: em(1.5px);
+      background-color: currentcolor;
+      inset-block-start: 50%;
+      inset-inline-start: 50%;
+    }
+
+    &::before {
+      transform: translate(-50%) rotate(90deg);
+    }
+
+    &::after {
+      transform: translate(-50%);
+    }
+
+    [aria-expanded="true"] & {
+      transform: rotate(45deg);
+    }
+
+    :disabled & {
+      display: none;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-rows: 1fr;
+    transition: grid-template-rows 0.4s ease-in-out, visibility 0.4s ease-in-out;
+
+    &[hidden] {
+      grid-template-rows: 0fr;
+      visibility: hidden;
+    }
+
+    & > * {
+      // Necessary for the accordion to hide
+      overflow: hidden;
+    }
+  }
+
+  &__body {
+    padding-block: rsv-clamp(rem(16px), rem(22px));
+  }
+
+  &__list {
+  }
+
+  &__item {
+    color: $clr-ebony-clay;
+    line-height: 1.7143;
+
+    @include media-width-from(em($medium)) {
+      font-size: rem(14px);
+    }
+
+    @include not-last {
+      margin-block-end: rem(12px);
+    }
+  }
+
+  &__link {
+    @extend %interaction;
+  }
+}

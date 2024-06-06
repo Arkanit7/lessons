@@ -17,6 +17,10 @@
     text-transform: capitalize;
     opacity: 0.5;
   }
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .submit {
@@ -33,4 +37,8 @@
   font-feature-settings: "clig" off, "liga" off;
   line-height: line-height(19px, 16px);
   text-transform: uppercase;
+
+  &:focus {
+    outline: none;
+  }
 }

@@ -22,47 +22,6 @@
   }
 }
 
-.section-sky-footer {
-  // .section-sky-footer__title
-
-  & > :not(:last-child) {
-    margin-block-end: rsv-clamp(rem(16px), rem(22px));
-  }
-
-  &__title {
-    @extend %interaction;
-
-    font-weight: $fw-semi-bold;
-    cursor: pointer;
-  }
-
-  // .section-sky-footer__list
-
-  &__list {
-  }
-
-  // .section-sky-footer__item
-
-  &__item {
-    color: $clr-ebony-clay;
-    line-height: 1.7143;
-
-    @include media-width-from(em($medium)) {
-      font-size: rem(14px);
-    }
-
-    @include not-last {
-      margin-block-end: rem(12px);
-    }
-  }
-
-  // .section-sky-footer__link
-
-  &__link {
-    @extend %interaction;
-  }
-}
-
 .sky-footer {
   // .sky-footer__container
 
@@ -115,18 +74,8 @@
 
   // .sky-footer__map
 
-  &__map {
+  &__accordion {
     flex: auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: rem(24px);
-  }
-
-  // .sky-footer__section
-
-  &__section {
-    flex: 0 rem(200px);
   }
 }
 

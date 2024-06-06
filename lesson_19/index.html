@@ -21,6 +21,10 @@
       sizes="16x16"
       href="img/favicon-16x16.png"
     >
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    >
     <link href="css/style.css" rel="stylesheet">
     <script src="js/script.js" type="module"></script>
   </head>
@@ -76,7 +80,7 @@
               <!-- Nav-->
               <nav
                 class="header__nav nav-header"
-                data-mover=".header__menu; afterbegin; (width &lt; 768px)"
+                data-mover=".header__menu; afterbegin; (width &lt; 48em)"
               >
                 <ul class="nav-header__list">
                   <li class="nav-header__item">
@@ -1175,671 +1179,744 @@
               </ul>
               <button class="interactive__button">show all</button>
             </aside>
-            <div class="best__layout">
-              <article class="best__card card-product">
-                <!-- Header-->
-                <header class="card-product__header header-card-product">
-                  <h3 class="header-card-product__title">
-                    <a class="header-card-product__link" href="#"
-                      >Adicolor Classics Joggers</a
-                    >
-                  </h3>
-                  <div class="header-card-product__details">
-                    <div class="header-card-product__type">Dress</div>
-                    <div class="header-card-product__costs">
-                      <s class="header-card-product__old-price">$3 653.99</s>
-                      <div class="header-card-product__price">$2 623.99</div>
+            <div class="best__slider slider">
+              <div class="slider__controls">
+                <button
+                  class="slider__navigation slider__navigation--previous"
+                  type="button"
+                >
+                  <svg class="icon">
+                    <use
+                      xlink:href="img/icons/symbol-defs.svg#icon-slide"
+                    ></use>
+                  </svg></button
+                ><button
+                  class="slider__navigation slider__navigation--next"
+                  type="button"
+                >
+                  <svg class="icon">
+                    <use
+                      xlink:href="img/icons/symbol-defs.svg#icon-slide"
+                    ></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="slider__swiper swiper">
+                <div class="slider__wrapper swiper-wrapper">
+                  <article class="swiper-slide slider__slide card-product">
+                    <!-- Header-->
+                    <header class="card-product__header header-card-product">
+                      <h3 class="header-card-product__title">
+                        <a class="header-card-product__link" href="#"
+                          >Adicolor Classics Joggers</a
+                        >
+                      </h3>
+                      <div class="header-card-product__details">
+                        <div class="header-card-product__type">Dress</div>
+                        <div class="header-card-product__costs">
+                          <s class="header-card-product__old-price"
+                            >$3 653.99</s
+                          >
+                          <div class="header-card-product__price">
+                            $2 623.99
+                          </div>
+                        </div>
+                      </div>
+                    </header>
+                    <!-- Body-->
+                    <div class="card-product__body body-card-product">
+                      <!-- Frame--><a class="body-card-product__frame" href="#"
+                        ><picture
+                          ><source
+                            srcset="img/card-product/1.avif"
+                            type="image/avif">
+                          <source
+                            srcset="img/card-product/1.webp"
+                            type="image/webp">
+                          <img
+                            class="body-card-product__img"
+                            src="img/card-product/1.jpg"
+                            alt="boring"></picture
+                        ><!-- Stickers-->
+                        <ul class="body-card-product__stickers stickers">
+                          <li
+                            class="stickers__item stickers__item--bg--bittersweet"
+                          >
+                            hot
+                          </li>
+                          <li class="stickers__item stickers__item--bg--ebony">
+                            sale
+                          </li>
+                          <li class="stickers__item stickers__item--bg--white">
+                            limited
+                          </li>
+                        </ul></a
+                      ><!-- Actions-->
+                      <div
+                        class="body-card-product__actions actions-card-product"
+                      >
+                        <div class="actions-card-product__box">
+                          <button
+                            class="actions-card-product__button"
+                            type="button"
+                            title="Add to favorites"
+                          >
+                            <svg class="icon">
+                              <use
+                                xlink:href="img/icons/symbol-defs.svg#icon-heart"
+                              ></use>
+                            </svg></button
+                          ><button
+                            class="actions-card-product__button"
+                            type="button"
+                          >
+                            <svg class="icon">
+                              <use
+                                xlink:href="img/icons/symbol-defs.svg#icon-zoom"
+                              ></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <button
+                          class="actions-card-product__button actions-card-product__button--small"
+                          type="button"
+                          title="Search for similar"
+                        >
+                          <svg class="icon">
+                            <use
+                              xlink:href="img/icons/symbol-defs.svg#icon-shop"
+                            ></use>
+                          </svg>
+                          Shop now
+                        </button>
+                      </div>
                     </div>
-                  </div>
-                </header>
-                <!-- Body-->
-                <div class="card-product__body body-card-product">
-                  <!-- Frame--><a class="body-card-product__frame" href="#"
-                    ><picture
-                      ><source
-                        srcset="img/card-product/1.avif"
-                        type="image/avif">
-                      <source
-                        srcset="img/card-product/1.webp"
-                        type="image/webp">
-                      <img
-                        class="body-card-product__img"
-                        src="img/card-product/1.jpg"
-                        alt="boring"></picture
-                    ><!-- Stickers-->
-                    <ul class="body-card-product__stickers stickers">
-                      <li
-                        class="stickers__item stickers__item--bg--bittersweet"
+                  </article>
+                  <article class="swiper-slide slider__slide card-product">
+                    <!-- Header-->
+                    <header class="card-product__header header-card-product">
+                      <h3 class="header-card-product__title">
+                        <a class="header-card-product__link" href="#"
+                          >Adicolor Classics Joggers</a
+                        >
+                      </h3>
+                      <div class="header-card-product__details">
+                        <div class="header-card-product__type">Dress</div>
+                        <div class="header-card-product__costs">
+                          <s class="header-card-product__old-price"
+                            >$3 653.99</s
+                          >
+                          <div class="header-card-product__price">
+                            $2 623.99
+                          </div>
+                        </div>
+                      </div>
+                    </header>
+                    <!-- Body-->
+                    <div class="card-product__body body-card-product">
+                      <!-- Frame--><a class="body-card-product__frame" href="#"
+                        ><picture
+                          ><source
+                            srcset="img/card-product/2.avif"
+                            type="image/avif">
+                          <source
+                            srcset="img/card-product/2.webp"
+                            type="image/webp">
+                          <img
+                            class="body-card-product__img"
+                            src="img/card-product/2.jpg"
+                            alt="boring"></picture
+                        ><!-- Stickers-->
+                        <ul class="body-card-product__stickers stickers">
+                          <li
+                            class="stickers__item stickers__item--bg--bittersweet"
+                          >
+                            hot
+                          </li>
+                          <li class="stickers__item stickers__item--bg--ebony">
+                            sale
+                          </li>
+                          <li class="stickers__item stickers__item--bg--white">
+                            limited
+                          </li>
+                        </ul></a
+                      ><!-- Actions-->
+                      <div
+                        class="body-card-product__actions actions-card-product"
                       >
-                        hot
-                      </li>
-                      <li class="stickers__item stickers__item--bg--ebony">
-                        sale
-                      </li>
-                      <li class="stickers__item stickers__item--bg--white">
-                        limited
-                      </li>
-                    </ul></a
-                  ><!-- Actions-->
-                  <div class="body-card-product__actions actions-card-product">
-                    <div class="actions-card-product__box">
-                      <button
-                        class="actions-card-product__button"
-                        type="button"
-                        title="Add to favorites"
-                      >
-                        <svg class="icon">
-                          <use
-                            xlink:href="img/icons/symbol-defs.svg#icon-heart"
-                          ></use>
-                        </svg></button
-                      ><button
-                        class="actions-card-product__button"
-                        type="button"
-                      >
-                        <svg class="icon">
-                          <use
-                            xlink:href="img/icons/symbol-defs.svg#icon-zoom"
-                          ></use>
-                        </svg>
-                      </button>
+                        <div class="actions-card-product__box">
+                          <button
+                            class="actions-card-product__button"
+                            type="button"
+                            title="Add to favorites"
+                          >
+                            <svg class="icon">
+                              <use
+                                xlink:href="img/icons/symbol-defs.svg#icon-heart"
+                              ></use>
+                            </svg></button
+                          ><button
+                            class="actions-card-product__button"
+                            type="button"
+                            title="Search for similar"
+                          >
+                            <svg class="icon">
+                              <use
+                                xlink:href="img/icons/symbol-defs.svg#icon-zoom"
+                              ></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <button
+                          class="actions-card-product__button actions-card-product__button--small"
+                          type="button"
+                        >
+                          <svg class="icon">
+                            <use
+                              xlink:href="img/icons/symbol-defs.svg#icon-shop"
+                            ></use>
+                          </svg>
+                          Shop now
+                        </button>
+                      </div>
                     </div>
-                    <button
-                      class="actions-card-product__button actions-card-product__button--small"
-                      type="button"
-                      title="Search for similar"
-                    >
-                      <svg class="icon">
-                        <use
-                          xlink:href="img/icons/symbol-defs.svg#icon-shop"
-                        ></use>
-                      </svg>
-                      Shop now
-                    </button>
-                  </div>
+                  </article>
+                  <article class="swiper-slide slider__slide card-product">
+                    <!-- Header-->
+                    <header class="card-product__header header-card-product">
+                      <h3 class="header-card-product__title">
+                        <a class="header-card-product__link" href="#"
+                          >Adicolor Classics Joggers</a
+                        >
+                      </h3>
+                      <div class="header-card-product__details">
+                        <div class="header-card-product__type">Dress</div>
+                        <div class="header-card-product__costs">
+                          <s class="header-card-product__old-price"
+                            >$3 653.99</s
+                          >
+                          <div class="header-card-product__price">
+                            $2 623.99
+                          </div>
+                        </div>
+                      </div>
+                    </header>
+                    <!-- Body-->
+                    <div class="card-product__body body-card-product">
+                      <!-- Frame--><a class="body-card-product__frame" href="#"
+                        ><picture
+                          ><source
+                            srcset="img/card-product/3.avif"
+                            type="image/avif">
+                          <source
+                            srcset="img/card-product/3.webp"
+                            type="image/webp">
+                          <img
+                            class="body-card-product__img"
+                            src="img/card-product/3.jpg"
+                            alt="boring"></picture
+                        ><!-- Stickers-->
+                        <ul class="body-card-product__stickers stickers">
+                          <li
+                            class="stickers__item stickers__item--bg--bittersweet"
+                          >
+                            hot
+                          </li>
+                          <li class="stickers__item stickers__item--bg--ebony">
+                            sale
+                          </li>
+                          <li class="stickers__item stickers__item--bg--white">
+                            limited
+                          </li>
+                        </ul></a
+                      ><!-- Actions-->
+                      <div
+                        class="body-card-product__actions actions-card-product"
+                      >
+                        <div class="actions-card-product__box">
+                          <button
+                            class="actions-card-product__button"
+                            type="button"
+                            title="Add to favorites"
+                          >
+                            <svg class="icon">
+                              <use
+                                xlink:href="img/icons/symbol-defs.svg#icon-heart"
+                              ></use>
+                            </svg></button
+                          ><button
+                            class="actions-card-product__button"
+                            type="button"
+                          >
+                            <svg class="icon">
+                              <use
+                                xlink:href="img/icons/symbol-defs.svg#icon-zoom"
+                              ></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <button
+                          class="actions-card-product__button actions-card-product__button--small"
+                          type="button"
+                          title="Search for similar"
+                        >
+                          <svg class="icon">
+                            <use
+                              xlink:href="img/icons/symbol-defs.svg#icon-shop"
+                            ></use>
+                          </svg>
+                          Shop now
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="swiper-slide slider__slide card-product">
+                    <!-- Header-->
+                    <header class="card-product__header header-card-product">
+                      <h3 class="header-card-product__title">
+                        <a class="header-card-product__link" href="#"
+                          >Adicolor Classics Joggers</a
+                        >
+                      </h3>
+                      <div class="header-card-product__details">
+                        <div class="header-card-product__type">Dress</div>
+                        <div class="header-card-product__costs">
+                          <s class="header-card-product__old-price"
+                            >$3 653.99</s
+                          >
+                          <div class="header-card-product__price">
+                            $2 623.99
+                          </div>
+                        </div>
+                      </div>
+                    </header>
+                    <!-- Body-->
+                    <div class="card-product__body body-card-product">
+                      <!-- Frame--><a class="body-card-product__frame" href="#"
+                        ><picture
+                          ><source
+                            srcset="img/card-product/4.avif"
+                            type="image/avif">
+                          <source
+                            srcset="img/card-product/4.webp"
+                            type="image/webp">
+                          <img
+                            class="body-card-product__img"
+                            src="img/card-product/4.jpg"
+                            alt="boring"></picture
+                        ><!-- Stickers-->
+                        <ul class="body-card-product__stickers stickers">
+                          <li
+                            class="stickers__item stickers__item--bg--bittersweet"
+                          >
+                            hot
+                          </li>
+                          <li class="stickers__item stickers__item--bg--ebony">
+                            sale
+                          </li>
+                          <li class="stickers__item stickers__item--bg--white">
+                            limited
+                          </li>
+                        </ul></a
+                      ><!-- Actions-->
+                      <div
+                        class="body-card-product__actions actions-card-product"
+                      >
+                        <div class="actions-card-product__box">
+                          <button
+                            class="actions-card-product__button"
+                            type="button"
+                            title="Add to favorites"
+                          >
+                            <svg class="icon">
+                              <use
+                                xlink:href="img/icons/symbol-defs.svg#icon-heart"
+                              ></use>
+                            </svg></button
+                          ><button
+                            class="actions-card-product__button"
+                            type="button"
+                          >
+                            <svg class="icon">
+                              <use
+                                xlink:href="img/icons/symbol-defs.svg#icon-zoom"
+                              ></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <button
+                          class="actions-card-product__button actions-card-product__button--small"
+                          type="button"
+                          title="Search for similar"
+                        >
+                          <svg class="icon">
+                            <use
+                              xlink:href="img/icons/symbol-defs.svg#icon-shop"
+                            ></use>
+                          </svg>
+                          Shop now
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="swiper-slide slider__slide card-product">
+                    <!-- Header-->
+                    <header class="card-product__header header-card-product">
+                      <h3 class="header-card-product__title">
+                        <a class="header-card-product__link" href="#"
+                          >Adicolor Classics Joggers</a
+                        >
+                      </h3>
+                      <div class="header-card-product__details">
+                        <div class="header-card-product__type">Dress</div>
+                        <div class="header-card-product__costs">
+                          <s class="header-card-product__old-price"
+                            >$3 653.99</s
+                          >
+                          <div class="header-card-product__price">
+                            $2 623.99
+                          </div>
+                        </div>
+                      </div>
+                    </header>
+                    <!-- Body-->
+                    <div class="card-product__body body-card-product">
+                      <!-- Frame--><a class="body-card-product__frame" href="#"
+                        ><picture
+                          ><source
+                            srcset="img/card-product/5.avif"
+                            type="image/avif">
+                          <source
+                            srcset="img/card-product/5.webp"
+                            type="image/webp">
+                          <img
+                            class="body-card-product__img"
+                            src="img/card-product/5.jpg"
+                            alt="boring"></picture
+                        ><!-- Stickers-->
+                        <ul class="body-card-product__stickers stickers">
+                          <li
+                            class="stickers__item stickers__item--bg--bittersweet"
+                          >
+                            hot
+                          </li>
+                          <li class="stickers__item stickers__item--bg--ebony">
+                            sale
+                          </li>
+                          <li class="stickers__item stickers__item--bg--white">
+                            limited
+                          </li>
+                        </ul></a
+                      ><!-- Actions-->
+                      <div
+                        class="body-card-product__actions actions-card-product"
+                      >
+                        <div class="actions-card-product__box">
+                          <button
+                            class="actions-card-product__button"
+                            type="button"
+                            title="Add to favorites"
+                          >
+                            <svg class="icon">
+                              <use
+                                xlink:href="img/icons/symbol-defs.svg#icon-heart"
+                              ></use>
+                            </svg></button
+                          ><button
+                            class="actions-card-product__button"
+                            type="button"
+                          >
+                            <svg class="icon">
+                              <use
+                                xlink:href="img/icons/symbol-defs.svg#icon-zoom"
+                              ></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <button
+                          class="actions-card-product__button actions-card-product__button--small"
+                          type="button"
+                          title="Search for similar"
+                        >
+                          <svg class="icon">
+                            <use
+                              xlink:href="img/icons/symbol-defs.svg#icon-shop"
+                            ></use>
+                          </svg>
+                          Shop now
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="swiper-slide slider__slide card-product">
+                    <!-- Header-->
+                    <header class="card-product__header header-card-product">
+                      <h3 class="header-card-product__title">
+                        <a class="header-card-product__link" href="#"
+                          >Adicolor Classics Joggers</a
+                        >
+                      </h3>
+                      <div class="header-card-product__details">
+                        <div class="header-card-product__type">Dress</div>
+                        <div class="header-card-product__costs">
+                          <s class="header-card-product__old-price"
+                            >$3 653.99</s
+                          >
+                          <div class="header-card-product__price">
+                            $2 623.99
+                          </div>
+                        </div>
+                      </div>
+                    </header>
+                    <!-- Body-->
+                    <div class="card-product__body body-card-product">
+                      <!-- Frame--><a class="body-card-product__frame" href="#"
+                        ><picture
+                          ><source
+                            srcset="img/card-product/6.avif"
+                            type="image/avif">
+                          <source
+                            srcset="img/card-product/6.webp"
+                            type="image/webp">
+                          <img
+                            class="body-card-product__img"
+                            src="img/card-product/6.jpg"
+                            alt="boring"></picture
+                        ><!-- Stickers-->
+                        <ul class="body-card-product__stickers stickers">
+                          <li
+                            class="stickers__item stickers__item--bg--bittersweet"
+                          >
+                            hot
+                          </li>
+                          <li class="stickers__item stickers__item--bg--ebony">
+                            sale
+                          </li>
+                          <li class="stickers__item stickers__item--bg--white">
+                            limited
+                          </li>
+                        </ul></a
+                      ><!-- Actions-->
+                      <div
+                        class="body-card-product__actions actions-card-product"
+                      >
+                        <div class="actions-card-product__box">
+                          <button
+                            class="actions-card-product__button"
+                            type="button"
+                            title="Add to favorites"
+                          >
+                            <svg class="icon">
+                              <use
+                                xlink:href="img/icons/symbol-defs.svg#icon-heart"
+                              ></use>
+                            </svg></button
+                          ><button
+                            class="actions-card-product__button"
+                            type="button"
+                          >
+                            <svg class="icon">
+                              <use
+                                xlink:href="img/icons/symbol-defs.svg#icon-zoom"
+                              ></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <button
+                          class="actions-card-product__button actions-card-product__button--small"
+                          type="button"
+                          title="Search for similar"
+                        >
+                          <svg class="icon">
+                            <use
+                              xlink:href="img/icons/symbol-defs.svg#icon-shop"
+                            ></use>
+                          </svg>
+                          Shop now
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="swiper-slide slider__slide card-product">
+                    <!-- Header-->
+                    <header class="card-product__header header-card-product">
+                      <h3 class="header-card-product__title">
+                        <a class="header-card-product__link" href="#"
+                          >Adicolor Classics Joggers</a
+                        >
+                      </h3>
+                      <div class="header-card-product__details">
+                        <div class="header-card-product__type">Dress</div>
+                        <div class="header-card-product__costs">
+                          <s class="header-card-product__old-price"
+                            >$3 653.99</s
+                          >
+                          <div class="header-card-product__price">
+                            $2 623.99
+                          </div>
+                        </div>
+                      </div>
+                    </header>
+                    <!-- Body-->
+                    <div class="card-product__body body-card-product">
+                      <!-- Frame--><a class="body-card-product__frame" href="#"
+                        ><picture
+                          ><source
+                            srcset="img/card-product/7.avif"
+                            type="image/avif">
+                          <source
+                            srcset="img/card-product/7.webp"
+                            type="image/webp">
+                          <img
+                            class="body-card-product__img"
+                            src="img/card-product/7.jpg"
+                            alt="boring"></picture
+                        ><!-- Stickers-->
+                        <ul class="body-card-product__stickers stickers">
+                          <li
+                            class="stickers__item stickers__item--bg--bittersweet"
+                          >
+                            hot
+                          </li>
+                          <li class="stickers__item stickers__item--bg--ebony">
+                            sale
+                          </li>
+                          <li class="stickers__item stickers__item--bg--white">
+                            limited
+                          </li>
+                        </ul></a
+                      ><!-- Actions-->
+                      <div
+                        class="body-card-product__actions actions-card-product"
+                      >
+                        <div class="actions-card-product__box">
+                          <button
+                            class="actions-card-product__button"
+                            type="button"
+                            title="Add to favorites"
+                          >
+                            <svg class="icon">
+                              <use
+                                xlink:href="img/icons/symbol-defs.svg#icon-heart"
+                              ></use>
+                            </svg></button
+                          ><button
+                            class="actions-card-product__button"
+                            type="button"
+                          >
+                            <svg class="icon">
+                              <use
+                                xlink:href="img/icons/symbol-defs.svg#icon-zoom"
+                              ></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <button
+                          class="actions-card-product__button actions-card-product__button--small"
+                          type="button"
+                          title="Search for similar"
+                        >
+                          <svg class="icon">
+                            <use
+                              xlink:href="img/icons/symbol-defs.svg#icon-shop"
+                            ></use>
+                          </svg>
+                          Shop now
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="swiper-slide slider__slide card-product">
+                    <!-- Header-->
+                    <header class="card-product__header header-card-product">
+                      <h3 class="header-card-product__title">
+                        <a class="header-card-product__link" href="#"
+                          >Adicolor Classics Joggers</a
+                        >
+                      </h3>
+                      <div class="header-card-product__details">
+                        <div class="header-card-product__type">Dress</div>
+                        <div class="header-card-product__costs">
+                          <s class="header-card-product__old-price"
+                            >$3 653.99</s
+                          >
+                          <div class="header-card-product__price">
+                            $2 623.99
+                          </div>
+                        </div>
+                      </div>
+                    </header>
+                    <!-- Body-->
+                    <div class="card-product__body body-card-product">
+                      <!-- Frame--><a class="body-card-product__frame" href="#"
+                        ><picture
+                          ><source
+                            srcset="img/card-product/8.avif"
+                            type="image/avif">
+                          <source
+                            srcset="img/card-product/8.webp"
+                            type="image/webp">
+                          <img
+                            class="body-card-product__img"
+                            src="img/card-product/8.jpg"
+                            alt="boring"></picture
+                        ><!-- Stickers-->
+                        <ul class="body-card-product__stickers stickers">
+                          <li
+                            class="stickers__item stickers__item--bg--bittersweet"
+                          >
+                            hot
+                          </li>
+                          <li class="stickers__item stickers__item--bg--ebony">
+                            sale
+                          </li>
+                          <li class="stickers__item stickers__item--bg--white">
+                            limited
+                          </li>
+                        </ul></a
+                      ><!-- Actions-->
+                      <div
+                        class="body-card-product__actions actions-card-product"
+                      >
+                        <div class="actions-card-product__box">
+                          <button
+                            class="actions-card-product__button"
+                            type="button"
+                            title="Add to favorites"
+                          >
+                            <svg class="icon">
+                              <use
+                                xlink:href="img/icons/symbol-defs.svg#icon-heart"
+                              ></use>
+                            </svg></button
+                          ><button
+                            class="actions-card-product__button"
+                            type="button"
+                          >
+                            <svg class="icon">
+                              <use
+                                xlink:href="img/icons/symbol-defs.svg#icon-zoom"
+                              ></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <button
+                          class="actions-card-product__button actions-card-product__button--small"
+                          type="button"
+                          title="Search for similar"
+                        >
+                          <svg class="icon">
+                            <use
+                              xlink:href="img/icons/symbol-defs.svg#icon-shop"
+                            ></use>
+                          </svg>
+                          Shop now
+                        </button>
+                      </div>
+                    </div>
+                  </article>
                 </div>
-              </article>
-              <article class="best__card card-product">
-                <!-- Header-->
-                <header class="card-product__header header-card-product">
-                  <h3 class="header-card-product__title">
-                    <a class="header-card-product__link" href="#"
-                      >Adicolor Classics Joggers</a
-                    >
-                  </h3>
-                  <div class="header-card-product__details">
-                    <div class="header-card-product__type">Dress</div>
-                    <div class="header-card-product__costs">
-                      <s class="header-card-product__old-price">$3 653.99</s>
-                      <div class="header-card-product__price">$2 623.99</div>
-                    </div>
-                  </div>
-                </header>
-                <!-- Body-->
-                <div class="card-product__body body-card-product">
-                  <!-- Frame--><a class="body-card-product__frame" href="#"
-                    ><picture
-                      ><source
-                        srcset="img/card-product/2.avif"
-                        type="image/avif">
-                      <source
-                        srcset="img/card-product/2.webp"
-                        type="image/webp">
-                      <img
-                        class="body-card-product__img"
-                        src="img/card-product/2.jpg"
-                        alt="boring"></picture
-                    ><!-- Stickers-->
-                    <ul class="body-card-product__stickers stickers">
-                      <li
-                        class="stickers__item stickers__item--bg--bittersweet"
-                      >
-                        hot
-                      </li>
-                      <li class="stickers__item stickers__item--bg--ebony">
-                        sale
-                      </li>
-                      <li class="stickers__item stickers__item--bg--white">
-                        limited
-                      </li>
-                    </ul></a
-                  ><!-- Actions-->
-                  <div class="body-card-product__actions actions-card-product">
-                    <div class="actions-card-product__box">
-                      <button
-                        class="actions-card-product__button"
-                        type="button"
-                        title="Add to favorites"
-                      >
-                        <svg class="icon">
-                          <use
-                            xlink:href="img/icons/symbol-defs.svg#icon-heart"
-                          ></use>
-                        </svg></button
-                      ><button
-                        class="actions-card-product__button"
-                        type="button"
-                        title="Search for similar"
-                      >
-                        <svg class="icon">
-                          <use
-                            xlink:href="img/icons/symbol-defs.svg#icon-zoom"
-                          ></use>
-                        </svg>
-                      </button>
-                    </div>
-                    <button
-                      class="actions-card-product__button actions-card-product__button--small"
-                      type="button"
-                    >
-                      <svg class="icon">
-                        <use
-                          xlink:href="img/icons/symbol-defs.svg#icon-shop"
-                        ></use>
-                      </svg>
-                      Shop now
-                    </button>
-                  </div>
-                </div>
-              </article>
-              <article class="best__card card-product">
-                <!-- Header-->
-                <header class="card-product__header header-card-product">
-                  <h3 class="header-card-product__title">
-                    <a class="header-card-product__link" href="#"
-                      >Adicolor Classics Joggers</a
-                    >
-                  </h3>
-                  <div class="header-card-product__details">
-                    <div class="header-card-product__type">Dress</div>
-                    <div class="header-card-product__costs">
-                      <s class="header-card-product__old-price">$3 653.99</s>
-                      <div class="header-card-product__price">$2 623.99</div>
-                    </div>
-                  </div>
-                </header>
-                <!-- Body-->
-                <div class="card-product__body body-card-product">
-                  <!-- Frame--><a class="body-card-product__frame" href="#"
-                    ><picture
-                      ><source
-                        srcset="img/card-product/3.avif"
-                        type="image/avif">
-                      <source
-                        srcset="img/card-product/3.webp"
-                        type="image/webp">
-                      <img
-                        class="body-card-product__img"
-                        src="img/card-product/3.jpg"
-                        alt="boring"></picture
-                    ><!-- Stickers-->
-                    <ul class="body-card-product__stickers stickers">
-                      <li
-                        class="stickers__item stickers__item--bg--bittersweet"
-                      >
-                        hot
-                      </li>
-                      <li class="stickers__item stickers__item--bg--ebony">
-                        sale
-                      </li>
-                      <li class="stickers__item stickers__item--bg--white">
-                        limited
-                      </li>
-                    </ul></a
-                  ><!-- Actions-->
-                  <div class="body-card-product__actions actions-card-product">
-                    <div class="actions-card-product__box">
-                      <button
-                        class="actions-card-product__button"
-                        type="button"
-                        title="Add to favorites"
-                      >
-                        <svg class="icon">
-                          <use
-                            xlink:href="img/icons/symbol-defs.svg#icon-heart"
-                          ></use>
-                        </svg></button
-                      ><button
-                        class="actions-card-product__button"
-                        type="button"
-                      >
-                        <svg class="icon">
-                          <use
-                            xlink:href="img/icons/symbol-defs.svg#icon-zoom"
-                          ></use>
-                        </svg>
-                      </button>
-                    </div>
-                    <button
-                      class="actions-card-product__button actions-card-product__button--small"
-                      type="button"
-                      title="Search for similar"
-                    >
-                      <svg class="icon">
-                        <use
-                          xlink:href="img/icons/symbol-defs.svg#icon-shop"
-                        ></use>
-                      </svg>
-                      Shop now
-                    </button>
-                  </div>
-                </div>
-              </article>
-              <article class="best__card card-product">
-                <!-- Header-->
-                <header class="card-product__header header-card-product">
-                  <h3 class="header-card-product__title">
-                    <a class="header-card-product__link" href="#"
-                      >Adicolor Classics Joggers</a
-                    >
-                  </h3>
-                  <div class="header-card-product__details">
-                    <div class="header-card-product__type">Dress</div>
-                    <div class="header-card-product__costs">
-                      <s class="header-card-product__old-price">$3 653.99</s>
-                      <div class="header-card-product__price">$2 623.99</div>
-                    </div>
-                  </div>
-                </header>
-                <!-- Body-->
-                <div class="card-product__body body-card-product">
-                  <!-- Frame--><a class="body-card-product__frame" href="#"
-                    ><picture
-                      ><source
-                        srcset="img/card-product/4.avif"
-                        type="image/avif">
-                      <source
-                        srcset="img/card-product/4.webp"
-                        type="image/webp">
-                      <img
-                        class="body-card-product__img"
-                        src="img/card-product/4.jpg"
-                        alt="boring"></picture
-                    ><!-- Stickers-->
-                    <ul class="body-card-product__stickers stickers">
-                      <li
-                        class="stickers__item stickers__item--bg--bittersweet"
-                      >
-                        hot
-                      </li>
-                      <li class="stickers__item stickers__item--bg--ebony">
-                        sale
-                      </li>
-                      <li class="stickers__item stickers__item--bg--white">
-                        limited
-                      </li>
-                    </ul></a
-                  ><!-- Actions-->
-                  <div class="body-card-product__actions actions-card-product">
-                    <div class="actions-card-product__box">
-                      <button
-                        class="actions-card-product__button"
-                        type="button"
-                        title="Add to favorites"
-                      >
-                        <svg class="icon">
-                          <use
-                            xlink:href="img/icons/symbol-defs.svg#icon-heart"
-                          ></use>
-                        </svg></button
-                      ><button
-                        class="actions-card-product__button"
-                        type="button"
-                      >
-                        <svg class="icon">
-                          <use
-                            xlink:href="img/icons/symbol-defs.svg#icon-zoom"
-                          ></use>
-                        </svg>
-                      </button>
-                    </div>
-                    <button
-                      class="actions-card-product__button actions-card-product__button--small"
-                      type="button"
-                      title="Search for similar"
-                    >
-                      <svg class="icon">
-                        <use
-                          xlink:href="img/icons/symbol-defs.svg#icon-shop"
-                        ></use>
-                      </svg>
-                      Shop now
-                    </button>
-                  </div>
-                </div>
-              </article>
-              <article class="best__card card-product">
-                <!-- Header-->
-                <header class="card-product__header header-card-product">
-                  <h3 class="header-card-product__title">
-                    <a class="header-card-product__link" href="#"
-                      >Adicolor Classics Joggers</a
-                    >
-                  </h3>
-                  <div class="header-card-product__details">
-                    <div class="header-card-product__type">Dress</div>
-                    <div class="header-card-product__costs">
-                      <s class="header-card-product__old-price">$3 653.99</s>
-                      <div class="header-card-product__price">$2 623.99</div>
-                    </div>
-                  </div>
-                </header>
-                <!-- Body-->
-                <div class="card-product__body body-card-product">
-                  <!-- Frame--><a class="body-card-product__frame" href="#"
-                    ><picture
-                      ><source
-                        srcset="img/card-product/5.avif"
-                        type="image/avif">
-                      <source
-                        srcset="img/card-product/5.webp"
-                        type="image/webp">
-                      <img
-                        class="body-card-product__img"
-                        src="img/card-product/5.jpg"
-                        alt="boring"></picture
-                    ><!-- Stickers-->
-                    <ul class="body-card-product__stickers stickers">
-                      <li
-                        class="stickers__item stickers__item--bg--bittersweet"
-                      >
-                        hot
-                      </li>
-                      <li class="stickers__item stickers__item--bg--ebony">
-                        sale
-                      </li>
-                      <li class="stickers__item stickers__item--bg--white">
-                        limited
-                      </li>
-                    </ul></a
-                  ><!-- Actions-->
-                  <div class="body-card-product__actions actions-card-product">
-                    <div class="actions-card-product__box">
-                      <button
-                        class="actions-card-product__button"
-                        type="button"
-                        title="Add to favorites"
-                      >
-                        <svg class="icon">
-                          <use
-                            xlink:href="img/icons/symbol-defs.svg#icon-heart"
-                          ></use>
-                        </svg></button
-                      ><button
-                        class="actions-card-product__button"
-                        type="button"
-                      >
-                        <svg class="icon">
-                          <use
-                            xlink:href="img/icons/symbol-defs.svg#icon-zoom"
-                          ></use>
-                        </svg>
-                      </button>
-                    </div>
-                    <button
-                      class="actions-card-product__button actions-card-product__button--small"
-                      type="button"
-                      title="Search for similar"
-                    >
-                      <svg class="icon">
-                        <use
-                          xlink:href="img/icons/symbol-defs.svg#icon-shop"
-                        ></use>
-                      </svg>
-                      Shop now
-                    </button>
-                  </div>
-                </div>
-              </article>
-              <article class="best__card card-product">
-                <!-- Header-->
-                <header class="card-product__header header-card-product">
-                  <h3 class="header-card-product__title">
-                    <a class="header-card-product__link" href="#"
-                      >Adicolor Classics Joggers</a
-                    >
-                  </h3>
-                  <div class="header-card-product__details">
-                    <div class="header-card-product__type">Dress</div>
-                    <div class="header-card-product__costs">
-                      <s class="header-card-product__old-price">$3 653.99</s>
-                      <div class="header-card-product__price">$2 623.99</div>
-                    </div>
-                  </div>
-                </header>
-                <!-- Body-->
-                <div class="card-product__body body-card-product">
-                  <!-- Frame--><a class="body-card-product__frame" href="#"
-                    ><picture
-                      ><source
-                        srcset="img/card-product/6.avif"
-                        type="image/avif">
-                      <source
-                        srcset="img/card-product/6.webp"
-                        type="image/webp">
-                      <img
-                        class="body-card-product__img"
-                        src="img/card-product/6.jpg"
-                        alt="boring"></picture
-                    ><!-- Stickers-->
-                    <ul class="body-card-product__stickers stickers">
-                      <li
-                        class="stickers__item stickers__item--bg--bittersweet"
-                      >
-                        hot
-                      </li>
-                      <li class="stickers__item stickers__item--bg--ebony">
-                        sale
-                      </li>
-                      <li class="stickers__item stickers__item--bg--white">
-                        limited
-                      </li>
-                    </ul></a
-                  ><!-- Actions-->
-                  <div class="body-card-product__actions actions-card-product">
-                    <div class="actions-card-product__box">
-                      <button
-                        class="actions-card-product__button"
-                        type="button"
-                        title="Add to favorites"
-                      >
-                        <svg class="icon">
-                          <use
-                            xlink:href="img/icons/symbol-defs.svg#icon-heart"
-                          ></use>
-                        </svg></button
-                      ><button
-                        class="actions-card-product__button"
-                        type="button"
-                      >
-                        <svg class="icon">
-                          <use
-                            xlink:href="img/icons/symbol-defs.svg#icon-zoom"
-                          ></use>
-                        </svg>
-                      </button>
-                    </div>
-                    <button
-                      class="actions-card-product__button actions-card-product__button--small"
-                      type="button"
-                      title="Search for similar"
-                    >
-                      <svg class="icon">
-                        <use
-                          xlink:href="img/icons/symbol-defs.svg#icon-shop"
-                        ></use>
-                      </svg>
-                      Shop now
-                    </button>
-                  </div>
-                </div>
-              </article>
-              <article class="best__card card-product">
-                <!-- Header-->
-                <header class="card-product__header header-card-product">
-                  <h3 class="header-card-product__title">
-                    <a class="header-card-product__link" href="#"
-                      >Adicolor Classics Joggers</a
-                    >
-                  </h3>
-                  <div class="header-card-product__details">
-                    <div class="header-card-product__type">Dress</div>
-                    <div class="header-card-product__costs">
-                      <s class="header-card-product__old-price">$3 653.99</s>
-                      <div class="header-card-product__price">$2 623.99</div>
-                    </div>
-                  </div>
-                </header>
-                <!-- Body-->
-                <div class="card-product__body body-card-product">
-                  <!-- Frame--><a class="body-card-product__frame" href="#"
-                    ><picture
-                      ><source
-                        srcset="img/card-product/7.avif"
-                        type="image/avif">
-                      <source
-                        srcset="img/card-product/7.webp"
-                        type="image/webp">
-                      <img
-                        class="body-card-product__img"
-                        src="img/card-product/7.jpg"
-                        alt="boring"></picture
-                    ><!-- Stickers-->
-                    <ul class="body-card-product__stickers stickers">
-                      <li
-                        class="stickers__item stickers__item--bg--bittersweet"
-                      >
-                        hot
-                      </li>
-                      <li class="stickers__item stickers__item--bg--ebony">
-                        sale
-                      </li>
-                      <li class="stickers__item stickers__item--bg--white">
-                        limited
-                      </li>
-                    </ul></a
-                  ><!-- Actions-->
-                  <div class="body-card-product__actions actions-card-product">
-                    <div class="actions-card-product__box">
-                      <button
-                        class="actions-card-product__button"
-                        type="button"
-                        title="Add to favorites"
-                      >
-                        <svg class="icon">
-                          <use
-                            xlink:href="img/icons/symbol-defs.svg#icon-heart"
-                          ></use>
-                        </svg></button
-                      ><button
-                        class="actions-card-product__button"
-                        type="button"
-                      >
-                        <svg class="icon">
-                          <use
-                            xlink:href="img/icons/symbol-defs.svg#icon-zoom"
-                          ></use>
-                        </svg>
-                      </button>
-                    </div>
-                    <button
-                      class="actions-card-product__button actions-card-product__button--small"
-                      type="button"
-                      title="Search for similar"
-                    >
-                      <svg class="icon">
-                        <use
-                          xlink:href="img/icons/symbol-defs.svg#icon-shop"
-                        ></use>
-                      </svg>
-                      Shop now
-                    </button>
-                  </div>
-                </div>
-              </article>
-              <article class="best__card card-product">
-                <!-- Header-->
-                <header class="card-product__header header-card-product">
-                  <h3 class="header-card-product__title">
-                    <a class="header-card-product__link" href="#"
-                      >Adicolor Classics Joggers</a
-                    >
-                  </h3>
-                  <div class="header-card-product__details">
-                    <div class="header-card-product__type">Dress</div>
-                    <div class="header-card-product__costs">
-                      <s class="header-card-product__old-price">$3 653.99</s>
-                      <div class="header-card-product__price">$2 623.99</div>
-                    </div>
-                  </div>
-                </header>
-                <!-- Body-->
-                <div class="card-product__body body-card-product">
-                  <!-- Frame--><a class="body-card-product__frame" href="#"
-                    ><picture
-                      ><source
-                        srcset="img/card-product/8.avif"
-                        type="image/avif">
-                      <source
-                        srcset="img/card-product/8.webp"
-                        type="image/webp">
-                      <img
-                        class="body-card-product__img"
-                        src="img/card-product/8.jpg"
-                        alt="boring"></picture
-                    ><!-- Stickers-->
-                    <ul class="body-card-product__stickers stickers">
-                      <li
-                        class="stickers__item stickers__item--bg--bittersweet"
-                      >
-                        hot
-                      </li>
-                      <li class="stickers__item stickers__item--bg--ebony">
-                        sale
-                      </li>
-                      <li class="stickers__item stickers__item--bg--white">
-                        limited
-                      </li>
-                    </ul></a
-                  ><!-- Actions-->
-                  <div class="body-card-product__actions actions-card-product">
-                    <div class="actions-card-product__box">
-                      <button
-                        class="actions-card-product__button"
-                        type="button"
-                        title="Add to favorites"
-                      >
-                        <svg class="icon">
-                          <use
-                            xlink:href="img/icons/symbol-defs.svg#icon-heart"
-                          ></use>
-                        </svg></button
-                      ><button
-                        class="actions-card-product__button"
-                        type="button"
-                      >
-                        <svg class="icon">
-                          <use
-                            xlink:href="img/icons/symbol-defs.svg#icon-zoom"
-                          ></use>
-                        </svg>
-                      </button>
-                    </div>
-                    <button
-                      class="actions-card-product__button actions-card-product__button--small"
-                      type="button"
-                      title="Search for similar"
-                    >
-                      <svg class="icon">
-                        <use
-                          xlink:href="img/icons/symbol-defs.svg#icon-shop"
-                        ></use>
-                      </svg>
-                      Shop now
-                    </button>
-                  </div>
-                </div>
-              </article>
+              </div>
             </div>
           </div>
         </section>
@@ -2010,84 +2087,144 @@
                 </ul>
               </address>
             </div>
-            <!-- section-->
-            <div class="sky-footer__map">
-              <details class="sky-footer__section section-sky-footer">
-                <summary class="section-sky-footer__title">CATALOG</summary>
-                <ul class="section-sky-footer__list">
-                  <li class="section-sky-footer__item">
-                    <a class="section-sky-footer__link" href="#">Necklaces</a>
-                  </li>
-                  <li class="section-sky-footer__item">
-                    <a class="section-sky-footer__link" href="#">hoodies</a>
-                  </li>
-                  <li class="section-sky-footer__item">
-                    <a class="section-sky-footer__link" href="#">Jewelry Box</a>
-                  </li>
-                  <li class="section-sky-footer__item">
-                    <a class="section-sky-footer__link" href="#">t-shirt</a>
-                  </li>
-                  <li class="section-sky-footer__item">
-                    <a class="section-sky-footer__link" href="#">jacket</a>
-                  </li>
-                </ul>
-              </details>
+            <!-- accordion-->
+            <div
+              class="sky-footer__accordion accordion"
+              data-accordion="single; (width &lt; 44em)"
+            >
               <!-- section-->
-              <details class="sky-footer__section section-sky-footer">
-                <summary class="section-sky-footer__title">ABOUT US</summary>
-                <ul class="section-sky-footer__list">
-                  <li class="section-sky-footer__item">
-                    <a class="section-sky-footer__link" href="#"
-                      >Our Producers</a
-                    >
-                  </li>
-                  <li class="section-sky-footer__item">
-                    <a class="section-sky-footer__link" href="#">Sitemap</a>
-                  </li>
-                  <li class="section-sky-footer__item">
-                    <a class="section-sky-footer__link" href="#">FAQ</a>
-                  </li>
-                  <li class="section-sky-footer__item">
-                    <a class="section-sky-footer__link" href="#">About Us</a>
-                  </li>
-                  <li class="section-sky-footer__item">
-                    <a class="section-sky-footer__link" href="#"
-                      >Terms & Conditions</a
-                    >
-                  </li>
-                </ul>
-              </details>
+              <section class="accordion__panel">
+                <h2 class="accordion__title">
+                  <button
+                    class="accordion__trigger"
+                    id="trigger-one"
+                    aria-controls="section-one"
+                    disabled
+                  >
+                    CATALOG<span class="accordion__icon"></span>
+                  </button>
+                </h2>
+                <div
+                  class="accordion__content"
+                  id="section-one"
+                  aria-labelledby="trigger-one"
+                  role="region"
+                >
+                  <div>
+                    <div class="accordion__body">
+                      <ul class="accordion__list">
+                        <li class="accordion__item">
+                          <a class="accordion__link" href="#">Necklaces</a>
+                        </li>
+                        <li class="accordion__item">
+                          <a class="accordion__link" href="#">hoodies</a>
+                        </li>
+                        <li class="accordion__item">
+                          <a class="accordion__link" href="#">Jewelry Box</a>
+                        </li>
+                        <li class="accordion__item">
+                          <a class="accordion__link" href="#">t-shirt</a>
+                        </li>
+                        <li class="accordion__item">
+                          <a class="accordion__link" href="#">jacket</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </section>
               <!-- section-->
-              <details class="sky-footer__section section-sky-footer">
-                <summary class="section-sky-footer__title">
-                  CUSTOMER SERVICES
-                </summary>
-                <ul class="section-sky-footer__list">
-                  <li class="section-sky-footer__item">
-                    <a class="section-sky-footer__link" href="#">Contact Us</a>
-                  </li>
-                  <li class="section-sky-footer__item">
-                    <a class="section-sky-footer__link" href="#"
-                      >Track Your Order</a
-                    >
-                  </li>
-                  <li class="section-sky-footer__item">
-                    <a class="section-sky-footer__link" href="#"
-                      >Product Care & Repair</a
-                    >
-                  </li>
-                  <li class="section-sky-footer__item">
-                    <a class="section-sky-footer__link" href="#"
-                      >Book an Appointment</a
-                    >
-                  </li>
-                  <li class="section-sky-footer__item">
-                    <a class="section-sky-footer__link" href="#"
-                      >Shipping & Returns</a
-                    >
-                  </li>
-                </ul>
-              </details>
+              <section class="accordion__panel">
+                <h2 class="accordion__title">
+                  <button
+                    class="accordion__trigger"
+                    id="trigger-two"
+                    aria-controls="section-two"
+                    disabled
+                  >
+                    ABOUT US<span class="accordion__icon"></span>
+                  </button>
+                </h2>
+                <div
+                  class="accordion__content"
+                  id="section-two"
+                  aria-labelledby="trigger-two"
+                  role="region"
+                >
+                  <div>
+                    <div class="accordion__body">
+                      <ul class="accordion__list">
+                        <li class="accordion__item">
+                          <a class="accordion__link" href="#">Our Producers</a>
+                        </li>
+                        <li class="accordion__item">
+                          <a class="accordion__link" href="#">Sitemap</a>
+                        </li>
+                        <li class="accordion__item">
+                          <a class="accordion__link" href="#">FAQ</a>
+                        </li>
+                        <li class="accordion__item">
+                          <a class="accordion__link" href="#">About Us</a>
+                        </li>
+                        <li class="accordion__item">
+                          <a class="accordion__link" href="#"
+                            >Terms & Conditions</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <!-- section-->
+              <section class="accordion__panel">
+                <h2 class="accordion__title">
+                  <button
+                    class="accordion__trigger"
+                    id="trigger-three"
+                    aria-controls="section-three"
+                    disabled
+                  >
+                    CUSTOMER SERVICES<span class="accordion__icon"></span>
+                  </button>
+                </h2>
+                <div
+                  class="accordion__content"
+                  id="section-three"
+                  aria-labelledby="trigger-three"
+                  role="region"
+                >
+                  <div>
+                    <div class="accordion__body">
+                      <ul class="accordion__list">
+                        <li class="accordion__item">
+                          <a class="accordion__link" href="#">Contact Us</a>
+                        </li>
+                        <li class="accordion__item">
+                          <a class="accordion__link" href="#"
+                            >Track Your Order</a
+                          >
+                        </li>
+                        <li class="accordion__item">
+                          <a class="accordion__link" href="#"
+                            >Product Care & Repair</a
+                          >
+                        </li>
+                        <li class="accordion__item">
+                          <a class="accordion__link" href="#"
+                            >Book an Appointment</a
+                          >
+                        </li>
+                        <li class="accordion__item">
+                          <a class="accordion__link" href="#"
+                            >Shipping & Returns</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </section>
             </div>
           </div>
         </div>
