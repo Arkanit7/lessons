@@ -152,12 +152,11 @@ body {
 
 .accordion {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   gap: 1.5rem 2.25rem;
 }
 .accordion__panel {
-  flex: 0 12.5rem;
+  flex: 100%;
 }
 .accordion__title {
   font-weight: 600;
@@ -171,7 +170,7 @@ body {
 }
 .accordion__trigger:disabled {
   cursor: auto;
-  color: unset;
+  color: unset !important;
 }
 .accordion__icon {
   flex: none;
@@ -977,6 +976,9 @@ body {
 @media (29.25em <= width){
   .accordion {
     justify-content: space-between;
+  }
+  .accordion__panel {
+    flex: 0 12.5rem;
   }
 }
 @media (33.5em <= width){
