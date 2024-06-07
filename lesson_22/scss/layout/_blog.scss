@@ -26,6 +26,15 @@
     text-align: center;
     font-weight: $fw-bold;
     line-height: 1;
+    background-image: linear-gradient(
+      90deg,
+      hsl(190deg 81% 67%),
+      hsl(261deg 100% 75%),
+      hsl(54deg 70% 68%),
+      hsl(80deg 76% 53%)
+    );
+    background-clip: text;
+    color: transparent;
 
     @include font-size(rem(38px));
 

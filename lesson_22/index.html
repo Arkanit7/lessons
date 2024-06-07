@@ -4,9 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Урок №22</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/apple-touch-icon.png"
+    >
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    >
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon-16x16.png"
+    >
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -26,8 +40,22 @@ if (someVar) {
   console.log(someVar);
 }</code></pre>
               <p><b>Відповідь:</b> число 1.</p>
-              <p>Одразу після ініціалізації змінної <code class="language-javascript">someVar</code> зі значенням 0, використано унарний оператор <code class="language-javascript">++</code> <i>(інкремент)</i>. Оператор додає число 1 до змінної: <code class="language-javascript">someVar++ // 0 + 1 = 1</code></p>
-              <p>Далі умовою для виконання <code class="language-javascript">if</code> є змінна <code class="language-javascript">someVar</code>. Підставимо значення змінної в умову. Для перевірки правдивості значення змінної конвертується в логічний тип <i>Boolean</i>: <code class="language-javascript">Boolean(1) // true</code></p>
+              <p>
+                Одразу після ініціалізації змінної
+                <code class="language-javascript">someVar</code> зі значенням 0,
+                використано унарний оператор
+                <code class="language-javascript">++</code> <i>(інкремент)</i>.
+                Оператор додає число 1 до змінної:
+                <code class="language-javascript">someVar++ // 0 + 1 = 1</code>
+              </p>
+              <p>
+                Далі умовою для виконання
+                <code class="language-javascript">if</code> є змінна
+                <code class="language-javascript">someVar</code>. Підставимо
+                значення змінної в умову. Для перевірки правдивості значення
+                змінної конвертується в логічний тип <i>Boolean</i>:
+                <code class="language-javascript">Boolean(1) // true</code>
+              </p>
               <p>Умова виявилася істиною, тож інструкція виконається:</p>
               <pre><code class="language-javascript">if (true) {
   console.log(someVar) // 1
@@ -35,8 +63,10 @@ if (someVar) {
             </section>
             <section class="blog__section">
               <h2>Задача №2</h2>
-              <p>За допомогою циклу FOR виведіть в консоль 10 рядків:<br>Пункт №1<br>
-                Пункт №2<br>
+              <p>
+                За допомогою циклу FOR виведіть в консоль 10 рядків:<br >Пункт
+                №1<br >
+                Пункт №2<br >
                 і т.д.
               </p>
               <p><b>Відповідь:</b></p>
@@ -61,7 +91,10 @@ if (someVar) {
               <pre><code class="language-javascript">if (2 * 20 &lt;= 10 || 30 / 2 &lt; 5 &amp;&amp; 10 &lt;= '10' || 20 === '20') {
   console.log('000')
 }</code></pre>
-              <p><b>Рішення:</b> розіб'ємо вираз по пріоритетності операторів за допомогою дужок:</p>
+              <p>
+                <b>Рішення:</b> розіб'ємо вираз по пріоритетності операторів за
+                допомогою дужок:
+              </p>
               <pre><code class="language-javascript">   ((((2 * 20) &lt;= 10) || (((30 / 2) &lt; 5) &amp;&amp; (10 &lt;= &quot;10&quot;))) || (20 === &quot;20&quot;))
 // │││└─ 1. ─┘      │    │││      │    │                ││    │           ││
 // ││└────── 2. ────┘    │││      │    │                ││    │           ││
@@ -74,25 +107,59 @@ if (someVar) {
               <p>Виконаємо обчислення у заданому вище порядку:</p>
               <ol>
                 <li><code class="language-javascript">2 * 20 // 40</code></li>
-                <li><code class="language-javascript">40 &lt;= 10 // false</code></li>
+                <li>
+                  <code class="language-javascript">40 &lt;= 10 // false</code>
+                </li>
                 <li><code class="language-javascript">30 / 2 // 15</code></li>
-                <li><code class="language-javascript">15 &lt; 5 // false</code></li>
-                <li><code class="language-javascript">false &amp;&amp; ... // false</code></li>
-                <li><code class="language-javascript">false || false // false</code></li>
-                <li><code class="language-javascript">20 === '20' // false</code></li>
-                <li><code class="language-javascript">false || false // false</code></li>
+                <li>
+                  <code class="language-javascript">15 &lt; 5 // false</code>
+                </li>
+                <li>
+                  <code class="language-javascript"
+                    >false &amp;&amp; ... // false</code
+                  >
+                </li>
+                <li>
+                  <code class="language-javascript"
+                    >false || false // false</code
+                  >
+                </li>
+                <li>
+                  <code class="language-javascript">20 === '20' // false</code>
+                </li>
+                <li>
+                  <code class="language-javascript"
+                    >false || false // false</code
+                  >
+                </li>
               </ol>
-              <p>Результат обчислень - <code class="language-javascript">false</code>. Умова виявилася хибною - інструкція не буде виконана, тож до консолі нічого не потрапить.</p>
-              <p><i>P.S.</i> Номери вказують на порядок виконання обчислень у <abbr title="JavaScript">JS</abbr>.</p>
+              <p>
+                Результат обчислень -
+                <code class="language-javascript">false</code>. Умова виявилася
+                хибною - інструкція не буде виконана, тож до консолі нічого не
+                потрапить.
+              </p>
+              <p>
+                <i>P.S.</i> Номери вказують на порядок виконання обчислень у
+                <abbr title="JavaScript">JS</abbr>.
+              </p>
             </section>
             <section class="blog__section">
               <h2>Задача №4</h2>
-              <p>Створіть функцію, яка повертає результат ділення числа 
-                <var>a</var> на число 
-                <var>b</var> з додаванням рядка <i>"Результат ділення: "</i>
+              <p>
+                Створіть функцію, яка повертає результат ділення числа
+                <var>a</var> на число <var>b</var> з додаванням рядка
+                <i>"Результат ділення: "</i>
               </p>
-              <p>Викличте функцію передаючи різні значення, у тому числі не передаючи зовсім.</p>
-              <p>Функція не має повертати <code class="language-javascript">NaN</code>, <code class="language-javascript">Infinity</code> або помилку</p>
+              <p>
+                Викличте функцію передаючи різні значення, у тому числі не
+                передаючи зовсім.
+              </p>
+              <p>
+                Функція не має повертати
+                <code class="language-javascript">NaN</code>,
+                <code class="language-javascript">Infinity</code> або помилку
+              </p>
               <p><b>Рішення:</b></p>
               <pre><code class="language-javascript">function divide(divisor, dividend) {
   const quotient = divisor / dividend
@@ -112,7 +179,10 @@ divide() // Щось пішло не так!</code></pre>
               <h2>Задача №5</h2>
               <p>Створіть масив даних - 5 елементів, один з яких число 10</p>
               <p>Обробіть масив за допомогою методу перебору</p>
-              <p>Перевіряйте елемент на відповідність числу 10, та у разі відповідності, виводьте в консоль</p>
+              <p>
+                Перевіряйте елемент на відповідність числу 10, та у разі
+                відповідності, виводьте в консоль
+              </p>
               <p><b>Рішення:</b></p>
               <pre><code class="language-javascript">function logIfItemInArray(item, array) {
   array.includes(item) &amp;&amp; console.log(item)
@@ -122,7 +192,12 @@ const myArray = ['10', null, 22, true, 10]
 
 logIfItemInArray(10, myArray) // 10</code></pre>
             </section>
-            <p><i>P.S. Результати виконання функцій можна переглянути в консолі.</i></p>
+            <p>
+              <i
+                >P.S. Результати виконання функцій можна переглянути в
+                консолі.</i
+              >
+            </p>
           </div>
         </article>
       </main>

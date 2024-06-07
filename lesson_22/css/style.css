@@ -17,7 +17,6 @@ code[class*=language-], pre[class*=language-] {
   -o-tab-size: 4;
   tab-size: 4;
   -webkit-hyphens: none;
-  -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
 }
@@ -158,21 +157,9 @@ input[type=text],
 input[type=email],
 input[type=tel],
 textarea {
-  appearance: unset;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    scroll-behavior: auto !important;
-    transition-duration: 0.01ms !important;
-  }
+  -webkit-appearance: unset;
+     -moz-appearance: unset;
+          appearance: unset;
 }
 /* End of the reset styles */
 /* Global styles */
@@ -202,11 +189,6 @@ body {
   padding-inline: 0.75rem;
   margin-inline: auto;
 }
-@media (23.4375em <= width) {
-  [class*=container] {
-    padding-inline: 1rem;
-  }
-}
 
 .blog__container {
   padding-block: clamp(1.25rem, 0.8889rem + 1.5408vw, 1.875rem);
@@ -225,12 +207,11 @@ body {
   text-align: center;
   font-weight: 700;
   line-height: 1;
+  background-image: linear-gradient(90deg, hsl(190, 81%, 67%), hsl(261, 100%, 75%), hsl(54, 70%, 68%), hsl(80, 76%, 53%));
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
   font-size: calc(1.5024rem + 1.3635vw);
-}
-@media (64em <= width) {
-  .blog h1 {
-    font-size: 2.375rem;
-  }
 }
 .blog h1:not(:last-child) {
   margin-block-end: clamp(1.125rem, 0.7639rem + 1.5408vw, 1.75rem);
@@ -238,11 +219,6 @@ body {
 .blog h2 {
   font-weight: 700;
   font-size: calc(1.2609rem + 0.7642vw);
-}
-@media (64em <= width) {
-  .blog h2 {
-    font-size: 1.75rem;
-  }
 }
 .blog h2:not(:last-child) {
   margin-block-end: clamp(0.375rem, 0.3028rem + 0.3082vw, 0.5rem);
@@ -260,4 +236,30 @@ body {
 .blog pre,
 .blog code {
   border-radius: 0.25rem;
+}
+@media (23.4375em <= width){
+  [class*=container] {
+    padding-inline: 1rem;
+  }
+}
+@media (64em <= width){
+  .blog h1 {
+    font-size: 2.375rem;
+  }
+  .blog h2 {
+    font-size: 1.75rem;
+  }
+}
+@media (prefers-reduced-motion: reduce){
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }
