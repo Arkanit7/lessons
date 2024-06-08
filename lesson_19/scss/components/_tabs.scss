@@ -19,7 +19,8 @@
     // line-height: normal;
     // .tabs__switch--active
 
-    &--active {
+    &--active,
+    &[data-filter-active] {
       color: $clr-black;
     }
   }

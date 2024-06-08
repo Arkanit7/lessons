@@ -164,6 +164,10 @@
   flex-direction: column;
   gap: rsv-clamp(rem(12px), rem(18px));
 
+  &[hidden] {
+    display: none;
+  }
+
   // .card-product__header
 
   &__header {

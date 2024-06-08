@@ -392,7 +392,7 @@ body {
   font-weight: 600;
   text-transform: capitalize;
 }
-.tabs__switch--active {
+.tabs__switch--active, .tabs__switch[data-filter-active] {
   color: hsl(0, 0%, 0%);
 }
 
@@ -484,6 +484,9 @@ body {
   display: flex;
   flex-direction: column;
   gap: clamp(0.75rem, 0.6061rem + 0.6141vw, 1.125rem);
+}
+.card-product[hidden] {
+  display: none;
 }
 .card-product__header {
   order: 1;

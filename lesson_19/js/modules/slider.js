@@ -29,7 +29,7 @@ const slider = new Swiper('.slider__swiper', {
   // mousewheel: {
   //   sensitivity: 1,
   // },
-  // watchOverflow: false,
+  watchOverflow: false,
 
   speed: 800,
 
