@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок №23</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/apple-touch-icon.png"
+    >
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    >
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon-16x16.png"
+    >
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/prism.js" defer></script>
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <!-- Content wrapper-->
+    <div class="wrapper">
+      <main class="wrapper__main">
+        <article class="blog">
+          <div class="blog__container">
+            <h1>Урок №23 (Основи JavaScript. Частина №3)</h1>
+            <section class="blog__section">
+              <h2>Задача №1</h2>
+              <p>
+                Отримати в константу елемент
+                <code class="language-html">&lt;body&gt;</code>.
+              </p>
+              <p><b>Рішення:</b></p>
+              <pre class="line-numbers" data-src="js/tasks/one.js"></pre>
+            </section>
+            <section class="blog__section">
+              <h2>Задача №2</h2>
+              <p>
+                Написати функцію, яка додає в
+                <code class="language-html">&lt;body&gt;</code> список
+                <code class="language-html">&lt;ul&gt;</code> з певною кількістю
+                <code class="language-html">&lt;li&gt;</code> (кількість має
+                передаватись як параметр функції, також мати значення за
+                замовченням).
+              </p>
+              <p><b>Рішення:</b></p>
+              <pre class="line-numbers" data-src="js/tasks/two.js"></pre>
+              <div class="blog__demo demo" id="demo-two">
+                <div class="demo__control">
+                  <button
+                    class="demo__button button"
+                    type="button"
+                    data-demo="start"
+                  >
+                    Пуск</button
+                  ><button
+                    class="demo__button button"
+                    type="button"
+                    data-demo="reset"
+                  >
+                    Скинути
+                  </button>
+                </div>
+                <iframe class="demo__iframe" src="two.html"></iframe>
+              </div>
+            </section>
+            <section class="blog__section">
+              <h2>Задача №3</h2>
+              <p>
+                Додати до елементу
+                <code class="language-html">&lt;body&gt;</code> клас
+                <code class="language-css">.loaded</code>. Потім перевірити чи є
+                клас <code class="language-css">.loaded</code> у елемента
+                <code class="language-html">&lt;body&gt;</code> і, якщо є,
+                додати стиль кольору тексту зелений.
+              </p>
+              <p><b>Рішення:</b></p>
+              <pre class="line-numbers" data-src="js/tasks/three.js"></pre>
+              <div class="blog__demo demo" id="demo-three">
+                <div class="demo__control">
+                  <button
+                    class="demo__button button"
+                    type="button"
+                    data-demo="start"
+                  >
+                    Пуск</button
+                  ><button
+                    class="demo__button button"
+                    type="button"
+                    data-demo="reset"
+                  >
+                    Скинути
+                  </button>
+                </div>
+                <iframe class="demo__iframe" src="three.html"></iframe>
+              </div>
+            </section>
+            <section class="blog__section">
+              <h2>Задача №4</h2>
+              <p>
+                Дано в <i>html</i>: три елементи з класом
+                <code class="language-css">.item</code>. Треба отримати ці
+                елементи в константу, кожному додати клас
+                <code class="language-css">.active</code>, та перезаписати
+                контент всередині кожного елемента на
+                <i>"Елемент №(тут порядковий номер елементу починаючи з 1)"</i>.
+              </p>
+              <p><b>Рішення:</b></p>
+              <pre class="line-numbers" data-src="js/tasks/four.js"></pre>
+              <div class="blog__demo demo" id="demo-four">
+                <div class="demo__control">
+                  <button
+                    class="demo__button button"
+                    type="button"
+                    data-demo="start"
+                  >
+                    Пуск</button
+                  ><button
+                    class="demo__button button"
+                    type="button"
+                    data-demo="reset"
+                  >
+                    Скинути
+                  </button>
+                </div>
+                <iframe class="demo__iframe" src="four.html"></iframe>
+              </div>
+            </section>
+            <section class="blog__section">
+              <h2>Задача №5</h2>
+              <p>
+                Дано в <i>html</i>: текст, далі кнопка з класом
+                <code class="language-css">.button</code>. Треба прокрутити
+                скрол сторінки до кнопки.
+              </p>
+              <p><b>Рішення:</b></p>
+              <pre class="line-numbers" data-src="js/tasks/five.js"></pre>
+              <div class="blog__demo demo" id="demo-five">
+                <div class="demo__control">
+                  <button
+                    class="demo__button button"
+                    type="button"
+                    data-demo="start"
+                  >
+                    Пуск</button
+                  ><button
+                    class="demo__button button"
+                    type="button"
+                    data-demo="reset"
+                  >
+                    Скинути
+                  </button>
+                </div>
+                <iframe class="demo__iframe" src="five.html"></iframe>
+              </div>
+            </section>
+            <section class="blog__section">
+              <h2>Задача №6</h2>
+              <p>
+                Дано в <i>html</i>: посилання з класом
+                <code class="language-css">.link</code>. Треба додати до
+                посилання дата атрибут зі значенням <i>100</i>. Поім отримати
+                значення атрибуту, та, якщо значення менше
+                <i>200</i> пофарбувати колір тексту посилання в червоний.
+              </p>
+              <p><b>Рішення:</b></p>
+              <pre class="line-numbers" data-src="js/tasks/six.js"></pre>
+              <div class="blog__demo demo" id="demo-six">
+                <div class="demo__control">
+                  <button
+                    class="demo__button button"
+                    type="button"
+                    data-demo="start"
+                  >
+                    Пуск</button
+                  ><button
+                    class="demo__button button"
+                    type="button"
+                    data-demo="reset"
+                  >
+                    Скинути
+                  </button>
+                </div>
+                <iframe class="demo__iframe" src="six.html"></iframe>
+              </div>
+            </section>
+          </div>
+        </article>
+      </main>
+    </div>
+  </body>
+</html>

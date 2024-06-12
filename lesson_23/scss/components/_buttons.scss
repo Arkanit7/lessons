@@ -1,0 +1,19 @@
+@use "../abstracts" as *;
+
+.button {
+  color: hsl(249deg 11% 12%);
+  padding-block: 0.5em;
+  padding-inline: 1em;
+  border-radius: rem(4px);
+  background-color: hsl(41deg 92% 65%);
+  border-block-end: rem(3px) solid hsl(143deg 39% 64%);
+  transition: background-color 0.3s;
+
+  @include response {
+    background-color: hsl(24deg 85% 61%);
+  }
+
+  &:active {
+    border-block-end: none;
+  }
+}
