@@ -7,7 +7,7 @@ function addListWithItems(amount = 1) {
   for (let i = 0; i < amount; i++) {
     const item = document.createElement('li')
 
-    item.innerHTML = '😄'
+    item.textContent = '😄'
     list.prepend(item)
   }
 
