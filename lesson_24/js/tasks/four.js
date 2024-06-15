@@ -6,7 +6,7 @@
  */
 function doCountingInElement(element) {
   const maxCount = parseInt(element.dataset.max) || 3
-  const delaySeconds = parseInt(element.dataset.delay) || 1
+  const delaySeconds = parseFloat(element.dataset.delay) || 1
   let currentCount = 0 // Початковий відлік
 
   const interval = setInterval(() => {
