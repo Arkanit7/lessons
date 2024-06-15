@@ -27,41 +27,41 @@ function doCountingInElement(element) {
  *
  * @param {IntersectionObserverEntry} entry
  * @param {IntersectionObserver} observer
- * @param {HTMLElement} child
+ * @param {HTMLElement} element
  */
-function handleIntersection(entry, observer, child) {
+function handleIntersection(entry, observer, element) {
   if (!entry.isIntersecting) return
 
   // Якщо видно елемент
   entry.target.classList.add('intersecting')
   observer.unobserve(entry.target)
-  doCountingInElement(child)
+  doCountingInElement(element)
 }
 
 /**
  * Наглядає за елментом та анімує
  * дочірній
  *
- * @param {HTMLElement} parent
- * @param {HTMLElement} child
+ * @param {HTMLElement} parentElement
+ * @param {HTMLElement} childElement
  */
-function watchParentAndAnimateChild(parent, child) {
-  if (!parent) return
-  if (!child) return
+function watchParentAndAnimateChild(parentElement, childElement) {
+  if (!parentElement) return
+  if (!childElement) return
 
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        handleIntersection(entry, observer, child)
+        handleIntersection(entry, observer, childElement)
       })
     },
     { threshold: 0.5 },
   )
 
-  observer.observe(parent)
+  observer.observe(parentElement)
 }
 
 const parentElement = document.querySelector('.box')
-const child = document.querySelector('.item')
+const childElement = document.querySelector('.item')
 
-watchParentAndAnimateChild(parentElement, child)
+watchParentAndAnimateChild(parentElement, childElement)

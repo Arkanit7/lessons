@@ -9,6 +9,12 @@
     <style>
       body {
         background-color: #2d2d2d;
+      }
+      
+      .box {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
         padding: 1em;
       }
       
@@ -45,8 +51,10 @@
     </style>
   </head>
   <body>
-    <button class="item" type="button">Елемент</button>
-    <button class="item" type="button">Елемент</button>
-    <button class="item" type="button">Елемент</button>
+    <div class="box">
+      <button class="item" type="button">Елемент</button>
+      <button class="item" type="button">Елемент</button>
+      <button class="item" type="button">Елемент</button>
+    </div>
   </body>
 </html>

@@ -278,7 +278,11 @@ textarea {
 body {
   font-family: ubuntu, sans-serif;
   line-height: 1.4;
-  font-size: 1.125rem;
+}
+@media (30em <= width) {
+  body {
+    font-size: 1.125rem;
+  }
 }
 
 .wrapper {
@@ -402,4 +406,26 @@ body {
 }
 .blog iframe {
   inline-size: 100%;
+}
+.blog a::before {
+  content: "#";
+  display: inline-block;
+  margin-inline-start: -1ch;
+  color: hsla(0, 0%, 80%, 0.651);
+  font-size: 0.7em;
+  visibility: hidden;
+}
+.blog a:focus-visible {
+  text-decoration: underline;
+}
+.blog a:focus-visible::before {
+  visibility: visible;
+}
+@media (any-hover) {
+  .blog a:hover {
+    text-decoration: underline;
+  }
+  .blog a:hover::before {
+    visibility: visible;
+  }
 }

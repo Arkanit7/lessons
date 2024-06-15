@@ -11,7 +11,10 @@
 body {
   font-family: $ff-ubuntu;
   line-height: 1.4;
-  font-size: rem(18px);
+
+  @include media-width-from(em($x-small)) {
+    font-size: rem(18px);
+  }
 
   // background-color: $clr-blue-charcoal;
 }

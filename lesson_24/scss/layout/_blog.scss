@@ -75,4 +75,23 @@
   iframe {
     inline-size: 100%;
   }
+
+  a {
+    &::before {
+      content: "#";
+      display: inline-block;
+      margin-inline-start: -1ch;
+      color: hsl(0deg 0% 80% / 65.1%);
+      font-size: 0.7em;
+      visibility: hidden;
+    }
+
+    @include response {
+      text-decoration: underline;
+
+      &::before {
+        visibility: visible;
+      }
+    }
+  }
 }
