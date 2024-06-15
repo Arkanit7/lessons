@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основи JavaScript. Частина №4 (Задача №1)</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/tasks/one.js" defer></script>
+    <style>
+      body {
+        background-color: #2d2d2d;
+        padding: 1em;
+      }
+      
+      .item {
+        color: hsl(249deg 11% 12%);
+        padding-block: 0.5em;
+        padding-inline: 1em;
+        border-radius: 0.25rem;
+        background-color: hsl(41deg 92% 65%);
+        transition: background-color 0.3s;
+      }
+      
+      .active {
+        background-color: hsl(143deg 39% 64%);
+      }
+      
+      .item:focus-visible {
+        background-color: hsl(24, 85%, 61%);
+      }
+      
+      .item.active:focus-visible {
+        background-color: hsl(143deg 39% 44%);
+      }
+      
+      @media (any-hover) {
+        .item:hover {
+          background-color: hsl(24, 85%, 61%);
+        }
+      
+        .item.active:hover {
+          background-color: hsl(143deg 39% 44%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button class="item" type="button">Елемент</button>
+    <button class="item" type="button">Елемент</button>
+    <button class="item" type="button">Елемент</button>
+  </body>
+</html>

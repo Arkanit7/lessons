@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основи JavaScript. Частина №4 (Задача №4)</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/tasks/four.js" defer></script>
+    <style>
+      body {
+        background-color: #2d2d2d;
+        padding: 1em;
+        max-inline-size: 24rem;
+      }
+      
+      .box__item {
+        transition:
+          transform 0.5s,
+          filter 0.5s,
+          opacity 0.5s;
+      }
+      
+      .box:not(.intersecting) .box__item {
+        transform: translateX(-100%);
+        filter: blur(0.5rem);
+        opacity: 0;
+      }
+      
+      .item {
+        display: inline-grid;
+        background-color: hsl(80deg 76% 53%);
+        border-radius: 0.5em;
+        font-size: 5rem;
+        padding: 0.2em;
+        min-inline-size: 2em;
+        aspect-ratio: 1 / 1;
+        place-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, dignissimos beatae corrupti dolores eos saepe ipsa officiis incidunt sequi vel odit alias soluta illum eligendi. Quidem itaque incidunt excepturi omnis!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, dignissimos beatae corrupti dolores eos saepe ipsa officiis incidunt sequi vel odit alias soluta illum eligendi. Quidem itaque incidunt excepturi omnis!</p>
+    <div class="box">
+      <div class="box__item item" data-max="05" data-delay="1">⏱️</div>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, dignissimos beatae corrupti dolores eos saepe ipsa officiis incidunt sequi vel odit alias soluta illum eligendi. Quidem itaque incidunt excepturi omnis!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, dignissimos beatae corrupti dolores eos saepe ipsa officiis incidunt sequi vel odit alias soluta illum eligendi. Quidem itaque incidunt excepturi omnis!</p>
+  </body>
+</html>

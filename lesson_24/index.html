@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок №24</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/prism.js" defer></script>
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <!-- Content wrapper-->
+    <div class="wrapper">
+      <main class="wrapper__main">
+        <article class="blog">
+          <div class="blog__container">
+            <h1>Урок №24 (Основи JavaScript. Частина №4)</h1>
+            <section class="blog__section">
+              <h2>Задача №1</h2>
+              <p>Дано в <i>html</i>: три елементи з класом <code class="language-css">.item</code>. При кліку на кожен з елементів додати клас <code class="language-css">.active</code>, при повторному кліку прибрати клас </p>
+              <p><b>Рішення:</b></p>
+              <pre class="line-numbers" data-src="js/tasks/one.js"></pre>
+              <div class="blog__demo demo">
+                <iframe class="demo__iframe" src="one.html"></iframe>
+              </div>
+            </section>
+            <section class="blog__section">
+              <h2>Задача №2</h2>
+              <p>Дано в <i>css/scss</i>: <code class="language-html">&lt;body&gt;</code> прозорий. При повному завантаженню сторінки додати клас до <code class="language-html">&lt;body&gt;</code> який прибирає прозорість.</p>
+              <p><b>Рішення:</b></p>
+              <pre class="line-numbers" data-src="css/two.css"></pre>
+              <pre class="line-numbers" data-src="js/tasks/two.js"></pre>
+              <div class="blog__demo demo">
+                <div class="demo__control">
+                  <button class="demo__button button" type="button" data-demo="reset">Перезавантажити</button>
+                </div>
+                <iframe class="demo__iframe" src="two.html"></iframe>
+              </div>
+            </section>
+            <section class="blog__section">
+              <h2>Задача №3</h2>
+              <p>Дано в <i>html</i>: <code class="language-html">&lt;header&gt;</code>, <code class="language-html">&lt;main&gt;</code>, <code class="language-html">&lt;footer&gt;</code>. Пи наведенні курсору на <code class="language-html">&lt;header&gt;</code> змінювати колір фону у <code class="language-html">&lt;footer&gt;</code>. Коли курсор йде з <code class="language-html">&lt;header&gt;</code> повертати початковий фон для <code class="language-html">&lt;footer&gt;</code>.</p>
+              <p><b>Рішення:</b></p>
+              <pre class="line-numbers" data-src="js/tasks/three.js"></pre>
+              <div class="blog__demo demo">
+                <iframe class="demo__iframe demo__iframe--tall" src="three.html"></iframe>
+              </div>
+            </section>
+            <section class="blog__section">
+              <h2>Задача №4</h2>
+              <p>Дано в <i>html</i>: текст, елемент з класом <code class="language-css">.item</code>, текст. Так, що елемент з класом <code class="language-css">.item</code> за межами в'юпорта. Створити функцію яка будує інтервал який буде змінювати контент в елементі <code class="language-css">.item</code> виводячи цифру яка збільшується на одиницю: <i>1 2 3 ...</i> і т.д. Затримка між зміною числа, та до якого числа має працювати інтервал має задаватись в дата атрибутах елемента <code class="language-css">.item</code>. Функція має запускатись коли ми доскролюємо до елементу <code class="language-css">.item</code> (його видно), і не запускатись повторно.</p>
+              <p><b>Рішення:</b></p>
+              <pre class="line-numbers" data-src="js/tasks/four.js"></pre>
+              <div class="blog__demo demo">
+                <div class="demo__control">
+                  <button class="demo__button button" type="button" data-demo="reset">Скинути</button>
+                </div>
+                <iframe class="demo__iframe demo__iframe--tall" src="four.html"></iframe>
+              </div>
+            </section>
+          </div>
+        </article>
+      </main>
+    </div>
+  </body>
+</html>
